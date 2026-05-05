@@ -1,5 +1,10 @@
 # Empathic Computing with EmoSurv + WESAD
 
+> Archival note (May 2026): this document describes the earlier EmoSurv/WESAD
+> pipeline. Current active work is EmoWork-focused in [paper_v2](paper_v2),
+> [runs/emowork](runs/emowork), and [results/emotion/emowork](results/emotion/emowork).
+> Historical WESAD run artefacts now live in [archive/wesad](archive/wesad).
+
 > Multi-modal, subject-independent emotion recognition from keystroke dynamics
 > and wearable physiology, with classical and cutting-edge deep models trained
 > under a unified Russell's Circumplex label space.
