@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-03-10T22:46:23.625815",
+  "task": "Binary stress classification (multimodal)",
+  "dataset": "SWELL-KW",
+  "data_pipeline": {
+    "source": "Behavioral-features xlsx + recovered .S00 physiology",
+    "hr_coverage": "95.7% (recovered from 47.5%)",
+    "normalization": "Per-person z-scoring",
+    "imputation": "Constant 0 (= person mean after z-scoring)",
+    "features": {
+      "computer_interaction": 18,
+      "physiology": 3,
+      "derived": 4,
+      "missingness": 3,
+      "total": 28
+    }
+  },
+  "evaluation": "Leave-One-Subject-Out (25 folds)",
+  "models": {
+    "Transformer": {
+      "accuracy": "0.793\u00b10.196",
+      "f1": "0.812\u00b10.175",
+      "auc": "0.825\u00b10.232"
+    },
+    "RandomForest": {
+      "accuracy": "0.721\u00b10.123",
+      "f1": "0.753\u00b10.112",
+      "auc": "0.792\u00b10.127"
+    },
+    "MLP": {
+      "accuracy": "0.710\u00b10.126",
+      "f1": "0.735\u00b10.122",
+      "auc": "0.785\u00b10.136"
+    },
+    "SVM": {
+      "accuracy": "0.716\u00b10.114",
+      "f1": "0.735\u00b10.112",
+      "auc": "0.783\u00b10.131"
+    },
+    "GradientBoosting": {
+      "accuracy": "0.714\u00b10.125",
+      "f1": "0.735\u00b10.126",
+      "auc": "0.776\u00b10.133"
+    },
+    "LogisticRegression": {
+      "accuracy": "0.703\u00b10.127",
+      "f1": "0.718\u00b10.128",
+      "auc": "0.763\u00b10.139"
+    }
+  },
+  "best_model": "Transformer",
+  "best_auc": 0.8251627722738339
+}

@@ -1,0 +1,844 @@
+[18:32:15] device=cpu (GPU used by deep model: False)
+[18:32:15] [EmoSurv] reading fixed and free typing CSVs
+[18:32:15] [EmoSurv] rows: fixed=46871  free=28412  dropped_timing_values=15793
+[18:32:15] [EmoSurv] neutral_policy=drop: removed 43621 Neutral events
+[18:32:15] [EmoSurv] windowing (size=35, stride=20)
+[18:32:23] [EmoSurv] windows=819  features=65  subjects=70
+[18:32:23] === EMOSURV / target=quadrant ===
+[18:32:23]   samples=819  subjects=70  labels=['HVHA', 'HVLA', 'LVHA', 'LVLA']
+[18:32:23]   feature_cols=65  seq_shape=(819, 35, 5)
+[18:32:23] --- LOSO [Baseline] ---
+[18:32:23]   [Baseline] subject=100  acc=0.600  f1=0.375
+[18:32:23]   [Baseline] subject=101  acc=0.385  f1=0.278
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=103  acc=1.000  f1=1.000
+[18:32:23]   [Baseline] subject=104  acc=0.125  f1=0.056
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=106  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=108  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=109  acc=0.385  f1=0.278
+[18:32:23]   [Baseline] subject=110  acc=0.611  f1=0.379
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=112  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=113  acc=0.222  f1=0.091
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=114  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=115  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=117  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=118  acc=1.000  f1=1.000
+[18:32:23]   [Baseline] subject=120  acc=0.217  f1=0.179
+[18:32:23]   [Baseline] subject=121  acc=0.417  f1=0.294
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=122  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=127  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=128  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=130  acc=0.385  f1=0.278
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=131  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=133  acc=0.160  f1=0.069
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=136  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=138  acc=0.211  f1=0.116
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=139  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=142  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=144  acc=0.185  f1=0.078
+[18:32:23]   [Baseline] subject=147  acc=0.600  f1=0.375
+[18:32:23]   [Baseline] subject=148  acc=0.357  f1=0.263
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=150  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=155  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=164  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=167  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=170  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=171  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=174  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=19  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=25  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=29  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=31  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=35  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=40  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=41  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=44  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=47  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=48  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=49  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=52  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=53  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=55  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=56  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=58  acc=0.167  f1=0.071
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=61  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=63  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=65  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=67  acc=0.455  f1=0.312
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=70  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=72  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=73  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=76  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=77  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=84  acc=1.000  f1=1.000
+[18:32:23]   [Baseline] subject=87  acc=0.119  f1=0.053
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=89  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=93  acc=0.000  f1=0.000
+[18:32:23]   [Baseline] subject=94  acc=0.462  f1=0.316
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=95  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=97  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:23]   [Baseline] subject=98  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:23]   [Baseline] subject=99  acc=0.000  f1=0.000
+[18:32:23] --- LOSO [RandomForest] ---
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:24]   [RandomForest] subject=100  acc=0.150  f1=0.098
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:24]   [RandomForest] subject=101  acc=0.385  f1=0.250
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:25]   [RandomForest] subject=103  acc=0.600  f1=0.375
+[18:32:26]   [RandomForest] subject=104  acc=0.225  f1=0.236
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:26]   [RandomForest] subject=106  acc=0.433  f1=0.290
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:27]   [RandomForest] subject=108  acc=0.846  f1=0.458
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:27]   [RandomForest] subject=109  acc=0.231  f1=0.185
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:28]   [RandomForest] subject=110  acc=0.056  f1=0.050
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:29]   [RandomForest] subject=112  acc=0.167  f1=0.071
+[18:32:29]   [RandomForest] subject=113  acc=0.407  f1=0.398
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:30]   [RandomForest] subject=114  acc=0.167  f1=0.095
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:30]   [RandomForest] subject=115  acc=0.333  f1=0.167
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:31]   [RandomForest] subject=117  acc=0.667  f1=0.400
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:32]   [RandomForest] subject=118  acc=0.286  f1=0.148
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:32]   [RandomForest] subject=120  acc=0.304  f1=0.140
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:33]   [RandomForest] subject=121  acc=0.583  f1=0.317
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:34]   [RandomForest] subject=122  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:34]   [RandomForest] subject=127  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:35]   [RandomForest] subject=128  acc=0.286  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:35]   [RandomForest] subject=130  acc=0.385  f1=0.250
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:36]   [RandomForest] subject=131  acc=0.600  f1=0.250
+[18:32:37]   [RandomForest] subject=133  acc=0.760  f1=0.744
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[18:32:37]   [RandomForest] subject=136  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:38]   [RandomForest] subject=138  acc=0.316  f1=0.261
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:39]   [RandomForest] subject=139  acc=0.400  f1=0.143
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:39]   [RandomForest] subject=142  acc=0.286  f1=0.111
+[18:32:40]   [RandomForest] subject=144  acc=0.370  f1=0.348
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:40]   [RandomForest] subject=147  acc=0.350  f1=0.238
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:41]   [RandomForest] subject=148  acc=0.500  f1=0.300
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:42]   [RandomForest] subject=150  acc=0.571  f1=0.342
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:42]   [RandomForest] subject=155  acc=0.923  f1=0.641
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:43]   [RandomForest] subject=164  acc=0.200  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:44]   [RandomForest] subject=167  acc=0.333  f1=0.125
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:44]   [RandomForest] subject=170  acc=0.429  f1=0.200
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:45]   [RandomForest] subject=171  acc=0.286  f1=0.222
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:45]   [RandomForest] subject=174  acc=0.286  f1=0.148
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:46]   [RandomForest] subject=19  acc=0.400  f1=0.286
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:47]   [RandomForest] subject=25  acc=0.400  f1=0.190
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:47]   [RandomForest] subject=29  acc=0.250  f1=0.100
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:48]   [RandomForest] subject=31  acc=0.400  f1=0.190
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:49]   [RandomForest] subject=35  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:49]   [RandomForest] subject=40  acc=0.143  f1=0.062
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:50]   [RandomForest] subject=41  acc=0.462  f1=0.317
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:50]   [RandomForest] subject=44  acc=0.167  f1=0.071
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:51]   [RandomForest] subject=47  acc=0.375  f1=0.136
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:52]   [RandomForest] subject=48  acc=0.846  f1=0.585
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:52]   [RandomForest] subject=49  acc=0.286  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:53]   [RandomForest] subject=52  acc=0.714  f1=0.417
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:54]   [RandomForest] subject=53  acc=0.429  f1=0.200
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:54]   [RandomForest] subject=55  acc=0.429  f1=0.200
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:55]   [RandomForest] subject=56  acc=0.263  f1=0.166
+[18:32:55]   [RandomForest] subject=58  acc=0.292  f1=0.264
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:56]   [RandomForest] subject=61  acc=0.125  f1=0.056
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:57]   [RandomForest] subject=63  acc=0.429  f1=0.150
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:57]   [RandomForest] subject=65  acc=0.692  f1=0.392
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:58]   [RandomForest] subject=67  acc=0.182  f1=0.125
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:58]   [RandomForest] subject=70  acc=0.364  f1=0.178
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:32:59]   [RandomForest] subject=72  acc=0.333  f1=0.125
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:00]   [RandomForest] subject=73  acc=0.200  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:00]   [RandomForest] subject=76  acc=0.500  f1=0.222
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:01]   [RandomForest] subject=77  acc=0.714  f1=0.417
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:02]   [RandomForest] subject=84  acc=0.750  f1=0.429
+[18:33:02]   [RandomForest] subject=87  acc=0.429  f1=0.428
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:03]   [RandomForest] subject=89  acc=0.529  f1=0.377
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:03]   [RandomForest] subject=93  acc=0.517  f1=0.421
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:04]   [RandomForest] subject=94  acc=0.385  f1=0.236
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:05]   [RandomForest] subject=95  acc=0.250  f1=0.100
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:05]   [RandomForest] subject=97  acc=0.143  f1=0.062
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:06]   [RandomForest] subject=98  acc=0.200  f1=0.083
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:06]   [RandomForest] subject=99  acc=0.429  f1=0.200
+[18:33:07] --- LOSO [LogisticRegression] ---
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=100  acc=0.300  f1=0.189
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=101  acc=0.308  f1=0.220
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=103  acc=0.200  f1=0.111
+[18:33:07]   [LogisticRegression] subject=104  acc=0.350  f1=0.274
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=106  acc=0.400  f1=0.265
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=108  acc=0.538  f1=0.467
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=109  acc=0.154  f1=0.091
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=110  acc=0.278  f1=0.196
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=112  acc=0.333  f1=0.167
+[18:33:07]   [LogisticRegression] subject=113  acc=0.259  f1=0.270
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=114  acc=0.333  f1=0.125
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=115  acc=0.167  f1=0.095
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=117  acc=0.167  f1=0.071
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=118  acc=0.143  f1=0.062
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=120  acc=0.043  f1=0.026
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=121  acc=0.250  f1=0.250
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=122  acc=0.571  f1=0.242
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=127  acc=0.714  f1=0.278
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:07]   [LogisticRegression] subject=128  acc=0.429  f1=0.150
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=130  acc=0.385  f1=0.247
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=131  acc=0.200  f1=0.111
+[18:33:08]   [LogisticRegression] subject=133  acc=0.600  f1=0.548
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=136  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=138  acc=0.263  f1=0.248
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=139  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=142  acc=0.143  f1=0.062
+[18:33:08]   [LogisticRegression] subject=144  acc=0.333  f1=0.312
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=147  acc=0.250  f1=0.174
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=148  acc=0.357  f1=0.233
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=150  acc=0.429  f1=0.258
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=155  acc=0.385  f1=0.208
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=164  acc=0.400  f1=0.190
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=167  acc=0.500  f1=0.222
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=170  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=171  acc=0.571  f1=0.242
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=174  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=19  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=25  acc=0.200  f1=0.083
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:08]   [LogisticRegression] subject=29  acc=0.125  f1=0.056
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=31  acc=0.200  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=35  acc=0.500  f1=0.167
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=40  acc=0.429  f1=0.200
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=41  acc=0.462  f1=0.271
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=44  acc=0.167  f1=0.095
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=47  acc=0.500  f1=0.167
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=48  acc=0.692  f1=0.500
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=49  acc=0.286  f1=0.148
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=52  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=53  acc=0.143  f1=0.083
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=55  acc=0.143  f1=0.062
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=56  acc=0.579  f1=0.419
+[18:33:09]   [LogisticRegression] subject=58  acc=0.208  f1=0.209
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=61  acc=0.375  f1=0.182
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=63  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=65  acc=0.308  f1=0.167
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=67  acc=0.455  f1=0.227
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=70  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=72  acc=0.333  f1=0.167
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=73  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:09]   [LogisticRegression] subject=76  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=77  acc=0.143  f1=0.083
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=84  acc=0.750  f1=0.429
+[18:33:10]   [LogisticRegression] subject=87  acc=0.571  f1=0.453
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=89  acc=0.471  f1=0.292
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=93  acc=0.345  f1=0.306
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=94  acc=0.154  f1=0.091
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=95  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=97  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=98  acc=0.200  f1=0.083
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:10]   [LogisticRegression] subject=99  acc=0.429  f1=0.200
+[18:33:10] --- LOSO [XGBoost] ---
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:11]   [XGBoost] subject=100  acc=0.250  f1=0.171
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:13]   [XGBoost] subject=101  acc=0.308  f1=0.216
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:14]   [XGBoost] subject=103  acc=0.600  f1=0.250
+[18:33:15]   [XGBoost] subject=104  acc=0.275  f1=0.220
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:17]   [XGBoost] subject=106  acc=0.433  f1=0.291
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:18]   [XGBoost] subject=108  acc=0.692  f1=0.545
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:19]   [XGBoost] subject=109  acc=0.231  f1=0.167
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:20]   [XGBoost] subject=110  acc=0.056  f1=0.038
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:22]   [XGBoost] subject=112  acc=0.167  f1=0.095
+[18:33:23]   [XGBoost] subject=113  acc=0.296  f1=0.319
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:24]   [XGBoost] subject=114  acc=0.333  f1=0.250
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:25]   [XGBoost] subject=115  acc=0.500  f1=0.222
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:27]   [XGBoost] subject=117  acc=0.500  f1=0.222
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:28]   [XGBoost] subject=118  acc=0.143  f1=0.125
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:29]   [XGBoost] subject=120  acc=0.217  f1=0.109
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:31]   [XGBoost] subject=121  acc=0.417  f1=0.261
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:32]   [XGBoost] subject=122  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:33]   [XGBoost] subject=127  acc=0.857  f1=0.462
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:34]   [XGBoost] subject=128  acc=0.143  f1=0.062
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:36]   [XGBoost] subject=130  acc=0.385  f1=0.261
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:37]   [XGBoost] subject=131  acc=0.200  f1=0.111
+[18:33:38]   [XGBoost] subject=133  acc=0.720  f1=0.659
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:40]   [XGBoost] subject=136  acc=0.667  f1=0.267
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:41]   [XGBoost] subject=138  acc=0.368  f1=0.230
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:42]   [XGBoost] subject=139  acc=0.600  f1=0.375
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:44]   [XGBoost] subject=142  acc=0.143  f1=0.062
+[18:33:45]   [XGBoost] subject=144  acc=0.407  f1=0.391
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:46]   [XGBoost] subject=147  acc=0.350  f1=0.224
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:48]   [XGBoost] subject=148  acc=0.429  f1=0.303
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:49]   [XGBoost] subject=150  acc=0.714  f1=0.396
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:50]   [XGBoost] subject=155  acc=0.846  f1=0.611
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:52]   [XGBoost] subject=164  acc=0.200  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:53]   [XGBoost] subject=167  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:54]   [XGBoost] subject=170  acc=0.143  f1=0.062
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:56]   [XGBoost] subject=171  acc=0.286  f1=0.222
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:57]   [XGBoost] subject=174  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:33:59]   [XGBoost] subject=19  acc=0.200  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:00]   [XGBoost] subject=25  acc=0.400  f1=0.143
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:01]   [XGBoost] subject=29  acc=0.125  f1=0.056
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:03]   [XGBoost] subject=31  acc=0.600  f1=0.250
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:04]   [XGBoost] subject=35  acc=0.500  f1=0.333
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:06]   [XGBoost] subject=40  acc=0.143  f1=0.083
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:07]   [XGBoost] subject=41  acc=0.538  f1=0.348
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:09]   [XGBoost] subject=44  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:10]   [XGBoost] subject=47  acc=0.125  f1=0.056
+[18:34:11]   [XGBoost] subject=48  acc=1.000  f1=1.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:13]   [XGBoost] subject=49  acc=0.286  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:14]   [XGBoost] subject=52  acc=0.857  f1=0.462
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:15]   [XGBoost] subject=53  acc=0.571  f1=0.242
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:17]   [XGBoost] subject=55  acc=0.429  f1=0.150
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:18]   [XGBoost] subject=56  acc=0.368  f1=0.258
+[18:34:20]   [XGBoost] subject=58  acc=0.250  f1=0.229
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:21]   [XGBoost] subject=61  acc=0.000  f1=0.000
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:22]   [XGBoost] subject=63  acc=0.286  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:24]   [XGBoost] subject=65  acc=0.769  f1=0.436
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:25]   [XGBoost] subject=67  acc=0.364  f1=0.250
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:27]   [XGBoost] subject=70  acc=0.273  f1=0.107
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:28]   [XGBoost] subject=72  acc=0.333  f1=0.167
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:29]   [XGBoost] subject=73  acc=0.200  f1=0.111
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:31]   [XGBoost] subject=76  acc=0.333  f1=0.125
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:32]   [XGBoost] subject=77  acc=0.571  f1=0.242
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:34]   [XGBoost] subject=84  acc=0.500  f1=0.222
+[18:34:35]   [XGBoost] subject=87  acc=0.500  f1=0.465
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:37]   [XGBoost] subject=89  acc=0.412  f1=0.258
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:38]   [XGBoost] subject=93  acc=0.414  f1=0.352
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:39]   [XGBoost] subject=94  acc=0.462  f1=0.317
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:41]   [XGBoost] subject=95  acc=0.250  f1=0.100
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:42]   [XGBoost] subject=97  acc=0.286  f1=0.148
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:43]   [XGBoost] subject=98  acc=0.400  f1=0.190
+X:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[18:34:45]   [XGBoost] subject=99  acc=0.429  f1=0.200
+[18:34:48] Saved results to X:\dev\Empathic\results\emotion\emosurv\quadrant

@@ -1,0 +1,2291 @@
+[emowork/train_calibrated] loading raw bundle (baseline_correct=False, normalization=none) ...
+[03:17:46] [EmoWork] cache hit: C:\dev\datasets\.cache\emowork\emowork_3be866ed962b.pkl  samples=625
+[emowork/train_calibrated] bundle ready in 0.0s (c-samples=625, subjects=31, baseline_windows=255)
+[emowork/train_calibrated] applying per-subject rest-session z-score calibration ...
+[calibrate] subjects fallback (no rest windows -> full c-session norm): 0/31
+[calibrate] tabular post-norm mean|abs|=1.747  std=2.372
+[calibrate] seq     post-norm mean|abs|=1.488  std=2.181
+
+######################################################################
+# CALIBRATED TARGET = stress
+######################################################################
+[03:17:46] === EMOWORK / target=stress ===
+[03:17:46]   samples=625  subjects=31  labels=['low_stress', 'high_stress']
+[03:17:46]   feature_cols=149  seq_shape=(625, 240, 12)
+[03:17:46]   [label-variance] target=stress labels=['low_stress', 'high_stress']
+[03:17:46]   [label-variance] multi-class subjects: 28/31 -> usable for LOSO evaluation
+[03:17:46]   [label-variance] single-class subjects (3): ['P22', 'P28', 'P30'] -> excluded from per-fold metrics
+[03:17:46] --- LOSO [Baseline] ---
+[03:17:46]   [Baseline] subject=P01  acc=0.286  f1=0.222
+[03:17:46]   [Baseline] subject=P02  acc=0.429  f1=0.300
+[03:17:46]   [Baseline] subject=P03  acc=0.389  f1=0.280
+[03:17:46]   [Baseline] subject=P04  acc=0.211  f1=0.174
+[03:17:46]   [Baseline] subject=P05  acc=0.667  f1=0.400
+[03:17:46]   [Baseline] subject=P06  acc=0.500  f1=0.333
+[03:17:46]   [Baseline] subject=P07  acc=0.333  f1=0.250
+[03:17:46]   [Baseline] subject=P08  acc=0.500  f1=0.333
+[03:17:46]   [Baseline] subject=P09  acc=0.700  f1=0.412
+[03:17:46]   [Baseline] subject=P10  acc=0.526  f1=0.345
+[03:17:46]   [Baseline] subject=P11  acc=0.200  f1=0.167
+[03:17:46]   [Baseline] subject=P12  acc=0.526  f1=0.345
+[03:17:46]   [Baseline] subject=P13  acc=0.500  f1=0.333
+[03:17:46]   [Baseline] subject=P14  acc=0.421  f1=0.296
+[03:17:46]   [Baseline] subject=P15  acc=0.400  f1=0.286
+[03:17:46]   [Baseline] subject=P16  acc=0.800  f1=0.444
+[03:17:46]   [Baseline] subject=P17  acc=0.381  f1=0.276
+[03:17:46]   [Baseline] subject=P18  acc=0.450  f1=0.310
+[03:17:46]   [Baseline] subject=P19  acc=0.700  f1=0.412
+[03:17:46]   [Baseline] subject=P20  acc=0.524  f1=0.344
+[03:17:46]   [Baseline] subject=P21  acc=0.600  f1=0.375
+[03:17:46]   [Baseline] subject=P22  SKIP (single-class test)
+[03:17:46]   [Baseline] subject=P23  acc=0.190  f1=0.160
+[03:17:46]   [Baseline] subject=P24  acc=0.095  f1=0.087
+[03:17:46]   [Baseline] subject=P25  acc=0.476  f1=0.323
+[03:17:46]   [Baseline] subject=P26  acc=0.333  f1=0.250
+[03:17:46]   [Baseline] subject=P27  acc=0.364  f1=0.267
+[03:17:46]   [Baseline] subject=P28  SKIP (single-class test)
+[03:17:46]   [Baseline] subject=P29  acc=0.364  f1=0.267
+[03:17:46]   [Baseline] subject=P30  SKIP (single-class test)
+[03:17:46]   [Baseline] subject=P31  acc=0.478  f1=0.324
+[03:17:46] --- LOSO [RandomForest] ---
+[03:17:46]   [RandomForest] subject=P01  acc=0.762  f1=0.571
+[03:17:47]   [RandomForest] subject=P02  acc=0.571  f1=0.533
+[03:17:47]   [RandomForest] subject=P03  acc=0.389  f1=0.280
+[03:17:48]   [RandomForest] subject=P04  acc=0.947  f1=0.912
+[03:17:48]   [RandomForest] subject=P05  acc=0.667  f1=0.667
+[03:17:49]   [RandomForest] subject=P06  acc=0.750  f1=0.744
+[03:17:49]   [RandomForest] subject=P07  acc=0.714  f1=0.714
+[03:17:50]   [RandomForest] subject=P08  acc=0.800  f1=0.792
+[03:17:51]   [RandomForest] subject=P09  acc=0.600  f1=0.600
+[03:17:51]   [RandomForest] subject=P10  acc=0.737  f1=0.725
+[03:17:52]   [RandomForest] subject=P11  acc=0.250  f1=0.233
+[03:17:52]   [RandomForest] subject=P12  acc=0.684  f1=0.683
+[03:17:53]   [RandomForest] subject=P13  acc=0.643  f1=0.591
+[03:17:53]   [RandomForest] subject=P14  acc=0.421  f1=0.296
+[03:17:54]   [RandomForest] subject=P15  acc=0.950  f1=0.947
+[03:17:54]   [RandomForest] subject=P16  acc=0.850  f1=0.657
+[03:17:55]   [RandomForest] subject=P17  acc=0.714  f1=0.714
+[03:17:55]   [RandomForest] subject=P18  acc=0.650  f1=0.642
+[03:17:56]   [RandomForest] subject=P19  acc=0.650  f1=0.498
+[03:17:56]   [RandomForest] subject=P20  acc=0.524  f1=0.344
+[03:17:57]   [RandomForest] subject=P21  acc=0.500  f1=0.451
+[03:17:57]   [RandomForest] subject=P22  SKIP (single-class test)
+[03:17:57]   [RandomForest] subject=P23  acc=0.762  f1=0.432
+[03:17:58]   [RandomForest] subject=P24  acc=0.190  f1=0.190
+[03:17:58]   [RandomForest] subject=P25  acc=0.571  f1=0.571
+[03:17:59]   [RandomForest] subject=P26  acc=0.762  f1=0.646
+[03:17:59]   [RandomForest] subject=P27  acc=0.364  f1=0.358
+[03:17:59]   [RandomForest] subject=P28  SKIP (single-class test)
+[03:18:00]   [RandomForest] subject=P29  acc=0.364  f1=0.267
+[03:18:00]   [RandomForest] subject=P30  SKIP (single-class test)
+[03:18:00]   [RandomForest] subject=P31  acc=0.478  f1=0.324
+[03:18:00] --- LOSO [LogisticRegression] ---
+[03:18:00]   [LogisticRegression] subject=P01  acc=0.619  f1=0.382
+[03:18:00]   [LogisticRegression] subject=P02  acc=0.619  f1=0.596
+[03:18:01]   [LogisticRegression] subject=P03  acc=0.389  f1=0.387
+[03:18:01]   [LogisticRegression] subject=P04  acc=0.263  f1=0.244
+[03:18:01]   [LogisticRegression] subject=P05  acc=0.889  f1=0.862
+[03:18:01]   [LogisticRegression] subject=P06  acc=0.750  f1=0.744
+[03:18:01]   [LogisticRegression] subject=P07  acc=0.667  f1=0.667
+[03:18:01]   [LogisticRegression] subject=P08  acc=0.800  f1=0.792
+[03:18:01]   [LogisticRegression] subject=P09  acc=0.750  f1=0.567
+[03:18:01]   [LogisticRegression] subject=P10  acc=0.632  f1=0.614
+[03:18:01]   [LogisticRegression] subject=P11  acc=0.700  f1=0.670
+[03:18:01]   [LogisticRegression] subject=P12  acc=0.579  f1=0.513
+[03:18:01]   [LogisticRegression] subject=P13  acc=0.643  f1=0.626
+[03:18:01]   [LogisticRegression] subject=P14  acc=0.421  f1=0.296
+[03:18:01]   [LogisticRegression] subject=P15  acc=0.800  f1=0.792
+[03:18:01]   [LogisticRegression] subject=P16  acc=0.800  f1=0.444
+[03:18:01]   [LogisticRegression] subject=P17  acc=0.714  f1=0.650
+[03:18:01]   [LogisticRegression] subject=P18  acc=0.600  f1=0.467
+[03:18:01]   [LogisticRegression] subject=P19  acc=0.700  f1=0.412
+[03:18:01]   [LogisticRegression] subject=P20  acc=0.524  f1=0.344
+[03:18:01]   [LogisticRegression] subject=P21  acc=0.550  f1=0.436
+[03:18:01]   [LogisticRegression] subject=P22  SKIP (single-class test)
+[03:18:01]   [LogisticRegression] subject=P23  acc=0.810  f1=0.447
+[03:18:01]   [LogisticRegression] subject=P24  acc=0.476  f1=0.430
+[03:18:01]   [LogisticRegression] subject=P25  acc=0.238  f1=0.236
+[03:18:01]   [LogisticRegression] subject=P26  acc=0.524  f1=0.514
+[03:18:01]   [LogisticRegression] subject=P27  acc=0.682  f1=0.646
+[03:18:01]   [LogisticRegression] subject=P28  SKIP (single-class test)
+[03:18:01]   [LogisticRegression] subject=P29  acc=0.591  f1=0.590
+[03:18:01]   [LogisticRegression] subject=P30  SKIP (single-class test)
+[03:18:01]   [LogisticRegression] subject=P31  acc=0.435  f1=0.303
+[03:18:01] --- LOSO [XGBoost] ---
+x:\dev\Empathic\.venv\Lib\site-packages\xgboost\core.py:751: UserWarning: [03:18:02] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\common\error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+[03:18:02]   [XGBoost] subject=P01  acc=0.810  f1=0.691
+[03:18:03]   [XGBoost] subject=P02  acc=0.429  f1=0.427
+[03:18:04]   [XGBoost] subject=P03  acc=0.389  f1=0.280
+[03:18:05]   [XGBoost] subject=P04  acc=0.947  f1=0.912
+[03:18:06]   [XGBoost] subject=P05  acc=0.722  f1=0.721
+[03:18:07]   [XGBoost] subject=P06  acc=0.750  f1=0.744
+[03:18:08]   [XGBoost] subject=P07  acc=0.762  f1=0.760
+[03:18:09]   [XGBoost] subject=P08  acc=0.750  f1=0.733
+[03:18:10]   [XGBoost] subject=P09  acc=0.500  f1=0.495
+[03:18:10]   [XGBoost] subject=P10  acc=0.737  f1=0.725
+[03:18:11]   [XGBoost] subject=P11  acc=0.200  f1=0.167
+[03:18:12]   [XGBoost] subject=P12  acc=0.632  f1=0.614
+[03:18:13]   [XGBoost] subject=P13  acc=0.571  f1=0.475
+[03:18:14]   [XGBoost] subject=P14  acc=0.526  f1=0.474
+[03:18:15]   [XGBoost] subject=P15  acc=0.900  f1=0.896
+[03:18:16]   [XGBoost] subject=P16  acc=0.850  f1=0.657
+[03:18:17]   [XGBoost] subject=P17  acc=0.619  f1=0.611
+[03:18:18]   [XGBoost] subject=P18  acc=0.600  f1=0.583
+[03:18:19]   [XGBoost] subject=P19  acc=0.700  f1=0.531
+[03:18:20]   [XGBoost] subject=P20  acc=0.571  f1=0.446
+[03:18:20]   [XGBoost] subject=P21  acc=0.500  f1=0.451
+[03:18:20]   [XGBoost] subject=P22  SKIP (single-class test)
+[03:18:21]   [XGBoost] subject=P23  acc=0.762  f1=0.432
+[03:18:22]   [XGBoost] subject=P24  acc=0.143  f1=0.141
+[03:18:23]   [XGBoost] subject=P25  acc=0.714  f1=0.714
+[03:18:24]   [XGBoost] subject=P26  acc=0.714  f1=0.537
+[03:18:25]   [XGBoost] subject=P27  acc=0.455  f1=0.411
+[03:18:25]   [XGBoost] subject=P28  SKIP (single-class test)
+[03:18:26]   [XGBoost] subject=P29  acc=0.364  f1=0.267
+[03:18:26]   [XGBoost] subject=P30  SKIP (single-class test)
+[03:18:27]   [XGBoost] subject=P31  acc=0.478  f1=0.324
+[03:18:27] --- LOSO [conformer] ---
+[03:18:34]   [conformer_fusion] subject=P01  acc=0.762  f1=0.571
+[03:18:40]   [conformer_fusion] subject=P02  acc=0.476  f1=0.387
+[03:18:47]   [conformer_fusion] subject=P03  acc=0.389  f1=0.280
+[03:18:53]   [conformer_fusion] subject=P04  acc=0.474  f1=0.460
+[03:18:59]   [conformer_fusion] subject=P05  acc=0.833  f1=0.829
+[03:19:04]   [conformer_fusion] subject=P06  acc=0.450  f1=0.310
+[03:19:08]   [conformer_fusion] subject=P07  acc=1.000  f1=1.000
+[03:19:14]   [conformer_fusion] subject=P08  acc=0.800  f1=0.792
+[03:19:19]   [conformer_fusion] subject=P09  acc=0.700  f1=0.412
+[03:19:22]   [conformer_fusion] subject=P10  acc=0.789  f1=0.789
+[03:19:28]   [conformer_fusion] subject=P11  acc=0.600  f1=0.583
+[03:19:32]   [conformer_fusion] subject=P12  acc=0.474  f1=0.435
+[03:19:36]   [conformer_fusion] subject=P13  acc=0.571  f1=0.475
+[03:19:42]   [conformer_fusion] subject=P14  acc=0.632  f1=0.614
+[03:19:49]   [conformer_fusion] subject=P15  acc=0.900  f1=0.890
+[03:19:55]   [conformer_fusion] subject=P16  acc=0.800  f1=0.444
+[03:20:00]   [conformer_fusion] subject=P17  acc=0.810  f1=0.809
+[03:20:04]   [conformer_fusion] subject=P18  acc=0.750  f1=0.744
+[03:20:08]   [conformer_fusion] subject=P19  acc=0.300  f1=0.231
+[03:20:13]   [conformer_fusion] subject=P20  acc=0.571  f1=0.446
+[03:20:17]   [conformer_fusion] subject=P21  acc=0.450  f1=0.437
+[03:20:17]   [conformer] subject=P22  SKIP (single-class test)
+[03:20:22]   [conformer_fusion] subject=P23  acc=0.810  f1=0.447
+[03:20:28]   [conformer_fusion] subject=P24  acc=0.143  f1=0.141
+[03:20:32]   [conformer_fusion] subject=P25  acc=0.619  f1=0.596
+[03:20:37]   [conformer_fusion] subject=P26  acc=0.667  f1=0.400
+[03:20:43]   [conformer_fusion] subject=P27  acc=0.500  f1=0.499
+[03:20:43]   [conformer] subject=P28  SKIP (single-class test)
+[03:20:48]   [conformer_fusion] subject=P29  acc=0.455  f1=0.411
+[03:20:48]   [conformer] subject=P30  SKIP (single-class test)
+[03:20:53]   [conformer_fusion] subject=P31  acc=0.565  f1=0.544
+[03:20:53] --- LOSO [tiny_tcn] ---
+[03:20:55]   [tiny_tcn_fusion] subject=P01  acc=0.667  f1=0.505
+[03:20:57]   [tiny_tcn_fusion] subject=P02  acc=0.619  f1=0.596
+[03:20:58]   [tiny_tcn_fusion] subject=P03  acc=0.389  f1=0.280
+[03:21:00]   [tiny_tcn_fusion] subject=P04  acc=0.895  f1=0.864
+[03:21:01]   [tiny_tcn_fusion] subject=P05  acc=0.833  f1=0.829
+[03:21:03]   [tiny_tcn_fusion] subject=P06  acc=0.550  f1=0.549
+[03:21:05]   [tiny_tcn_fusion] subject=P07  acc=1.000  f1=1.000
+[03:21:07]   [tiny_tcn_fusion] subject=P08  acc=0.800  f1=0.792
+[03:21:09]   [tiny_tcn_fusion] subject=P09  acc=0.850  f1=0.785
+[03:21:11]   [tiny_tcn_fusion] subject=P10  acc=0.789  f1=0.774
+[03:21:13]   [tiny_tcn_fusion] subject=P11  acc=0.450  f1=0.449
+[03:21:14]   [tiny_tcn_fusion] subject=P12  acc=0.211  f1=0.174
+[03:21:16]   [tiny_tcn_fusion] subject=P13  acc=0.643  f1=0.591
+[03:21:18]   [tiny_tcn_fusion] subject=P14  acc=0.789  f1=0.784
+[03:21:19]   [tiny_tcn_fusion] subject=P15  acc=0.900  f1=0.890
+[03:21:21]   [tiny_tcn_fusion] subject=P16  acc=0.800  f1=0.444
+[03:21:23]   [tiny_tcn_fusion] subject=P17  acc=0.810  f1=0.809
+[03:21:25]   [tiny_tcn_fusion] subject=P18  acc=0.750  f1=0.749
+[03:21:27]   [tiny_tcn_fusion] subject=P19  acc=0.300  f1=0.231
+[03:21:30]   [tiny_tcn_fusion] subject=P20  acc=0.762  f1=0.760
+[03:21:32]   [tiny_tcn_fusion] subject=P21  acc=0.450  f1=0.449
+[03:21:32]   [tiny_tcn] subject=P22  SKIP (single-class test)
+[03:21:34]   [tiny_tcn_fusion] subject=P23  acc=0.810  f1=0.447
+[03:21:36]   [tiny_tcn_fusion] subject=P24  acc=0.190  f1=0.190
+[03:21:38]   [tiny_tcn_fusion] subject=P25  acc=0.571  f1=0.555
+[03:21:40]   [tiny_tcn_fusion] subject=P26  acc=0.667  f1=0.400
+[03:21:42]   [tiny_tcn_fusion] subject=P27  acc=0.636  f1=0.633
+[03:21:42]   [tiny_tcn] subject=P28  SKIP (single-class test)
+[03:21:43]   [tiny_tcn_fusion] subject=P29  acc=0.364  f1=0.267
+[03:21:43]   [tiny_tcn] subject=P30  SKIP (single-class test)
+[03:21:45]   [tiny_tcn_fusion] subject=P31  acc=0.609  f1=0.596
+[03:21:45] --- LOSO [bilstm] ---
+[03:21:47]   [bilstm_fusion] subject=P01  acc=0.667  f1=0.569
+[03:21:49]   [bilstm_fusion] subject=P02  acc=0.619  f1=0.596
+[03:21:50]   [bilstm_fusion] subject=P03  acc=0.389  f1=0.280
+[03:21:52]   [bilstm_fusion] subject=P04  acc=0.526  f1=0.521
+[03:21:54]   [bilstm_fusion] subject=P05  acc=0.833  f1=0.829
+[03:21:55]   [bilstm_fusion] subject=P06  acc=0.650  f1=0.649
+[03:21:57]   [bilstm_fusion] subject=P07  acc=0.905  f1=0.899
+[03:21:59]   [bilstm_fusion] subject=P08  acc=0.750  f1=0.733
+[03:22:01]   [bilstm_fusion] subject=P09  acc=0.950  f1=0.937
+[03:22:03]   [bilstm_fusion] subject=P10  acc=0.789  f1=0.784
+[03:22:05]   [bilstm_fusion] subject=P11  acc=0.300  f1=0.293
+[03:22:07]   [bilstm_fusion] subject=P12  acc=0.526  f1=0.474
+[03:22:09]   [bilstm_fusion] subject=P13  acc=0.786  f1=0.775
+[03:22:11]   [bilstm_fusion] subject=P14  acc=0.789  f1=0.789
+[03:22:13]   [bilstm_fusion] subject=P15  acc=0.900  f1=0.890
+[03:22:15]   [bilstm_fusion] subject=P16  acc=0.800  f1=0.444
+[03:22:17]   [bilstm_fusion] subject=P17  acc=0.619  f1=0.596
+[03:22:19]   [bilstm_fusion] subject=P18  acc=0.500  f1=0.479
+[03:22:21]   [bilstm_fusion] subject=P19  acc=0.350  f1=0.307
+[03:22:23]   [bilstm_fusion] subject=P20  acc=0.476  f1=0.323
+[03:22:24]   [bilstm_fusion] subject=P21  acc=0.500  f1=0.451
+[03:22:24]   [bilstm] subject=P22  SKIP (single-class test)
+[03:22:27]   [bilstm_fusion] subject=P23  acc=0.810  f1=0.447
+[03:22:28]   [bilstm_fusion] subject=P24  acc=0.095  f1=0.087
+[03:22:30]   [bilstm_fusion] subject=P25  acc=0.667  f1=0.664
+[03:22:32]   [bilstm_fusion] subject=P26  acc=0.714  f1=0.537
+[03:22:34]   [bilstm_fusion] subject=P27  acc=0.364  f1=0.267
+[03:22:34]   [bilstm] subject=P28  SKIP (single-class test)
+[03:22:36]   [bilstm_fusion] subject=P29  acc=0.364  f1=0.267
+[03:22:36]   [bilstm] subject=P30  SKIP (single-class test)
+[03:22:38]   [bilstm_fusion] subject=P31  acc=0.652  f1=0.652
+[03:22:38] --- LOSO [cnn1d] ---
+[03:22:39]   [cnn1d_fusion] subject=P01  acc=0.524  f1=0.464
+[03:22:41]   [cnn1d_fusion] subject=P02  acc=0.619  f1=0.596
+[03:22:43]   [cnn1d_fusion] subject=P03  acc=0.389  f1=0.280
+[03:22:45]   [cnn1d_fusion] subject=P04  acc=0.842  f1=0.655
+[03:22:47]   [cnn1d_fusion] subject=P05  acc=0.722  f1=0.721
+[03:22:48]   [cnn1d_fusion] subject=P06  acc=0.400  f1=0.375
+[03:22:51]   [cnn1d_fusion] subject=P07  acc=0.952  f1=0.948
+[03:22:52]   [cnn1d_fusion] subject=P08  acc=0.650  f1=0.601
+[03:22:53]   [cnn1d_fusion] subject=P09  acc=0.900  f1=0.867
+[03:22:55]   [cnn1d_fusion] subject=P10  acc=0.895  f1=0.892
+[03:22:56]   [cnn1d_fusion] subject=P11  acc=0.550  f1=0.540
+[03:22:58]   [cnn1d_fusion] subject=P12  acc=0.368  f1=0.352
+[03:22:59]   [cnn1d_fusion] subject=P13  acc=0.786  f1=0.775
+[03:23:00]   [cnn1d_fusion] subject=P14  acc=0.526  f1=0.474
+[03:23:02]   [cnn1d_fusion] subject=P15  acc=0.900  f1=0.890
+[03:23:03]   [cnn1d_fusion] subject=P16  acc=0.800  f1=0.444
+[03:23:04]   [cnn1d_fusion] subject=P17  acc=0.857  f1=0.856
+[03:23:06]   [cnn1d_fusion] subject=P18  acc=0.700  f1=0.700
+[03:23:08]   [cnn1d_fusion] subject=P19  acc=0.300  f1=0.231
+[03:23:10]   [cnn1d_fusion] subject=P20  acc=0.667  f1=0.637
+[03:23:12]   [cnn1d_fusion] subject=P21  acc=0.400  f1=0.341
+[03:23:12]   [cnn1d] subject=P22  SKIP (single-class test)
+[03:23:14]   [cnn1d_fusion] subject=P23  acc=0.238  f1=0.192
+[03:23:17]   [cnn1d_fusion] subject=P24  acc=0.381  f1=0.326
+[03:23:18]   [cnn1d_fusion] subject=P25  acc=0.571  f1=0.555
+[03:23:20]   [cnn1d_fusion] subject=P26  acc=0.667  f1=0.400
+[03:23:23]   [cnn1d_fusion] subject=P27  acc=0.500  f1=0.499
+[03:23:23]   [cnn1d] subject=P28  SKIP (single-class test)
+[03:23:24]   [cnn1d_fusion] subject=P29  acc=0.500  f1=0.473
+[03:23:24]   [cnn1d] subject=P30  SKIP (single-class test)
+[03:23:25]   [cnn1d_fusion] subject=P31  acc=0.609  f1=0.580
+[03:23:25] --- LOSO [multistream] ---
+[03:23:29]   [multistream_fusion] subject=P01  acc=0.714  f1=0.537
+[03:23:32]   [multistream_fusion] subject=P02  acc=0.619  f1=0.596
+[03:23:37]   [multistream_fusion] subject=P03  acc=0.444  f1=0.375
+[03:23:42]   [multistream_fusion] subject=P04  acc=0.368  f1=0.367
+[03:23:46]   [multistream_fusion] subject=P05  acc=0.556  f1=0.550
+[03:23:51]   [multistream_fusion] subject=P06  acc=0.450  f1=0.437
+[03:23:55]   [multistream_fusion] subject=P07  acc=0.810  f1=0.798
+[03:23:59]   [multistream_fusion] subject=P08  acc=0.800  f1=0.798
+[03:24:04]   [multistream_fusion] subject=P09  acc=0.450  f1=0.437
+[03:24:08]   [multistream_fusion] subject=P10  acc=0.737  f1=0.725
+[03:24:11]   [multistream_fusion] subject=P11  acc=0.500  f1=0.495
+[03:24:13]   [multistream_fusion] subject=P12  acc=0.632  f1=0.627
+[03:24:17]   [multistream_fusion] subject=P13  acc=0.571  f1=0.571
+[03:24:22]   [multistream_fusion] subject=P14  acc=0.684  f1=0.683
+[03:24:27]   [multistream_fusion] subject=P15  acc=0.900  f1=0.890
+[03:24:32]   [multistream_fusion] subject=P16  acc=0.700  f1=0.412
+[03:24:36]   [multistream_fusion] subject=P17  acc=0.857  f1=0.844
+[03:24:40]   [multistream_fusion] subject=P18  acc=0.600  f1=0.596
+[03:24:45]   [multistream_fusion] subject=P19  acc=0.450  f1=0.449
+[03:24:50]   [multistream_fusion] subject=P20  acc=0.524  f1=0.344
+[03:24:52]   [multistream_fusion] subject=P21  acc=0.500  f1=0.495
+[03:24:52]   [multistream] subject=P22  SKIP (single-class test)
+[03:24:56]   [multistream_fusion] subject=P23  acc=0.762  f1=0.646
+[03:25:00]   [multistream_fusion] subject=P24  acc=0.238  f1=0.236
+[03:25:04]   [multistream_fusion] subject=P25  acc=0.524  f1=0.344
+[03:25:08]   [multistream_fusion] subject=P26  acc=0.571  f1=0.364
+[03:25:12]   [multistream_fusion] subject=P27  acc=0.455  f1=0.450
+[03:25:12]   [multistream] subject=P28  SKIP (single-class test)
+[03:25:18]   [multistream_fusion] subject=P29  acc=0.591  f1=0.583
+[03:25:18]   [multistream] subject=P30  SKIP (single-class test)
+[03:25:22]   [multistream_fusion] subject=P31  acc=0.652  f1=0.652
+[03:25:22] --- LOSO [dann] ---
+[03:25:27]   [dann] subject=P01  acc=0.810  f1=0.691
+[03:25:32]   [dann] subject=P02  acc=0.667  f1=0.667
+[03:25:37]   [dann] subject=P03  acc=0.389  f1=0.280
+[03:25:42]   [dann] subject=P04  acc=0.632  f1=0.552
+[03:25:48]   [dann] subject=P05  acc=0.722  f1=0.699
+[03:25:54]   [dann] subject=P06  acc=0.450  f1=0.310
+[03:25:57]   [dann] subject=P07  acc=0.714  f1=0.714
+[03:26:02]   [dann] subject=P08  acc=0.850  f1=0.850
+[03:26:08]   [dann] subject=P09  acc=0.850  f1=0.785
+[03:26:13]   [dann] subject=P10  acc=0.737  f1=0.708
+[03:26:18]   [dann] subject=P11  acc=0.200  f1=0.167
+[03:26:23]   [dann] subject=P12  acc=0.526  f1=0.504
+[03:26:29]   [dann] subject=P13  acc=0.786  f1=0.775
+[03:26:35]   [dann] subject=P14  acc=0.947  f1=0.947
+[03:26:40]   [dann] subject=P15  acc=0.950  f1=0.947
+[03:26:45]   [dann] subject=P16  acc=0.850  f1=0.657
+[03:26:50]   [dann] subject=P17  acc=0.714  f1=0.714
+[03:26:55]   [dann] subject=P18  acc=0.700  f1=0.700
+[03:27:01]   [dann] subject=P19  acc=0.300  f1=0.231
+[03:27:06]   [dann] subject=P20  acc=0.857  f1=0.856
+[03:27:11]   [dann] subject=P21  acc=0.400  f1=0.375
+[03:27:11]   [dann] subject=P22  SKIP (single-class test)
+[03:27:16]   [dann] subject=P23  acc=0.810  f1=0.447
+[03:27:21]   [dann] subject=P24  acc=0.476  f1=0.323
+[03:27:26]   [dann] subject=P25  acc=0.762  f1=0.753
+[03:27:31]   [dann] subject=P26  acc=0.905  f1=0.883
+[03:27:36]   [dann] subject=P27  acc=0.636  f1=0.633
+[03:27:36]   [dann] subject=P28  SKIP (single-class test)
+[03:27:41]   [dann] subject=P29  acc=0.364  f1=0.267
+[03:27:41]   [dann] subject=P30  SKIP (single-class test)
+[03:27:47]   [dann] subject=P31  acc=0.696  f1=0.693
+[03:27:47] --- LOSO [tstcc] ---
+[03:27:48]   [tstcc-pretrain] epoch 10/40  loss=8.1774
+[03:27:50]   [tstcc-pretrain] epoch 20/40  loss=8.0002
+[03:27:52]   [tstcc-pretrain] epoch 30/40  loss=7.9380
+[03:27:54]   [tstcc-pretrain] epoch 40/40  loss=7.9189
+[03:27:54]   [tstcc] subject=P01  acc=0.667  f1=0.637
+[03:27:56]   [tstcc-pretrain] epoch 10/40  loss=8.2182
+[03:27:58]   [tstcc-pretrain] epoch 20/40  loss=8.0257
+[03:28:00]   [tstcc-pretrain] epoch 30/40  loss=7.9564
+[03:28:02]   [tstcc-pretrain] epoch 40/40  loss=7.9378
+[03:28:02]   [tstcc] subject=P02  acc=0.667  f1=0.654
+[03:28:04]   [tstcc-pretrain] epoch 10/40  loss=8.1853
+[03:28:06]   [tstcc-pretrain] epoch 20/40  loss=8.0058
+[03:28:08]   [tstcc-pretrain] epoch 30/40  loss=7.9359
+[03:28:10]   [tstcc-pretrain] epoch 40/40  loss=7.9175
+[03:28:10]   [tstcc] subject=P03  acc=0.389  f1=0.280
+[03:28:12]   [tstcc-pretrain] epoch 10/40  loss=8.1864
+[03:28:14]   [tstcc-pretrain] epoch 20/40  loss=8.0165
+[03:28:16]   [tstcc-pretrain] epoch 30/40  loss=7.9394
+[03:28:17]   [tstcc-pretrain] epoch 40/40  loss=7.9274
+[03:28:18]   [tstcc] subject=P04  acc=0.842  f1=0.808
+[03:28:20]   [tstcc-pretrain] epoch 10/40  loss=8.1662
+[03:28:22]   [tstcc-pretrain] epoch 20/40  loss=8.0309
+[03:28:23]   [tstcc-pretrain] epoch 30/40  loss=7.9537
+[03:28:25]   [tstcc-pretrain] epoch 40/40  loss=7.9579
+[03:28:26]   [tstcc] subject=P05  acc=1.000  f1=1.000
+[03:28:28]   [tstcc-pretrain] epoch 10/40  loss=8.1980
+[03:28:30]   [tstcc-pretrain] epoch 20/40  loss=8.0069
+[03:28:31]   [tstcc-pretrain] epoch 30/40  loss=7.9420
+[03:28:33]   [tstcc-pretrain] epoch 40/40  loss=7.9586
+[03:28:34]   [tstcc] subject=P06  acc=0.400  f1=0.286
+[03:28:36]   [tstcc-pretrain] epoch 10/40  loss=8.1792
+[03:28:37]   [tstcc-pretrain] epoch 20/40  loss=8.0122
+[03:28:39]   [tstcc-pretrain] epoch 30/40  loss=7.9326
+[03:28:41]   [tstcc-pretrain] epoch 40/40  loss=7.9334
+[03:28:42]   [tstcc] subject=P07  acc=0.667  f1=0.667
+[03:28:43]   [tstcc-pretrain] epoch 10/40  loss=8.1748
+[03:28:45]   [tstcc-pretrain] epoch 20/40  loss=7.9906
+[03:28:47]   [tstcc-pretrain] epoch 30/40  loss=7.9428
+[03:28:49]   [tstcc-pretrain] epoch 40/40  loss=7.9249
+[03:28:49]   [tstcc] subject=P08  acc=0.800  f1=0.792
+[03:28:51]   [tstcc-pretrain] epoch 10/40  loss=8.1914
+[03:28:53]   [tstcc-pretrain] epoch 20/40  loss=7.9882
+[03:28:55]   [tstcc-pretrain] epoch 30/40  loss=7.9178
+[03:28:57]   [tstcc-pretrain] epoch 40/40  loss=7.8990
+[03:28:57]   [tstcc] subject=P09  acc=0.800  f1=0.762
+[03:28:59]   [tstcc-pretrain] epoch 10/40  loss=8.1523
+[03:29:01]   [tstcc-pretrain] epoch 20/40  loss=8.0013
+[03:29:03]   [tstcc-pretrain] epoch 30/40  loss=7.9251
+[03:29:05]   [tstcc-pretrain] epoch 40/40  loss=7.9123
+[03:29:05]   [tstcc] subject=P10  acc=0.737  f1=0.708
+[03:29:07]   [tstcc-pretrain] epoch 10/40  loss=8.1700
+[03:29:09]   [tstcc-pretrain] epoch 20/40  loss=8.0039
+[03:29:11]   [tstcc-pretrain] epoch 30/40  loss=7.9428
+[03:29:13]   [tstcc-pretrain] epoch 40/40  loss=7.9170
+[03:29:13]   [tstcc] subject=P11  acc=0.750  f1=0.715
+[03:29:15]   [tstcc-pretrain] epoch 10/40  loss=8.1939
+[03:29:17]   [tstcc-pretrain] epoch 20/40  loss=8.0139
+[03:29:19]   [tstcc-pretrain] epoch 30/40  loss=7.9545
+[03:29:21]   [tstcc-pretrain] epoch 40/40  loss=7.9169
+[03:29:21]   [tstcc] subject=P12  acc=0.421  f1=0.394
+[03:29:23]   [tstcc-pretrain] epoch 10/40  loss=8.1973
+[03:29:25]   [tstcc-pretrain] epoch 20/40  loss=8.0018
+[03:29:26]   [tstcc-pretrain] epoch 30/40  loss=7.9560
+[03:29:28]   [tstcc-pretrain] epoch 40/40  loss=7.9065
+[03:29:29]   [tstcc] subject=P13  acc=0.500  f1=0.333
+[03:29:31]   [tstcc-pretrain] epoch 10/40  loss=8.1896
+[03:29:33]   [tstcc-pretrain] epoch 20/40  loss=8.0111
+[03:29:34]   [tstcc-pretrain] epoch 30/40  loss=7.9520
+[03:29:36]   [tstcc-pretrain] epoch 40/40  loss=7.9291
+[03:29:37]   [tstcc] subject=P14  acc=0.421  f1=0.296
+[03:29:38]   [tstcc-pretrain] epoch 10/40  loss=8.1905
+[03:29:40]   [tstcc-pretrain] epoch 20/40  loss=7.9859
+[03:29:42]   [tstcc-pretrain] epoch 30/40  loss=7.9256
+[03:29:44]   [tstcc-pretrain] epoch 40/40  loss=7.9174
+[03:29:45]   [tstcc] subject=P15  acc=0.900  f1=0.890
+[03:29:46]   [tstcc-pretrain] epoch 10/40  loss=8.1946
+[03:29:48]   [tstcc-pretrain] epoch 20/40  loss=8.0406
+[03:29:50]   [tstcc-pretrain] epoch 30/40  loss=7.9513
+[03:29:52]   [tstcc-pretrain] epoch 40/40  loss=7.9319
+[03:29:52]   [tstcc] subject=P16  acc=0.800  f1=0.444
+[03:29:54]   [tstcc-pretrain] epoch 10/40  loss=8.2169
+[03:29:56]   [tstcc-pretrain] epoch 20/40  loss=8.0285
+[03:29:58]   [tstcc-pretrain] epoch 30/40  loss=7.9534
+[03:30:00]   [tstcc-pretrain] epoch 40/40  loss=7.9262
+[03:30:01]   [tstcc] subject=P17  acc=0.762  f1=0.762
+[03:30:02]   [tstcc-pretrain] epoch 10/40  loss=8.2008
+[03:30:04]   [tstcc-pretrain] epoch 20/40  loss=7.9949
+[03:30:06]   [tstcc-pretrain] epoch 30/40  loss=7.9483
+[03:30:08]   [tstcc-pretrain] epoch 40/40  loss=7.9228
+[03:30:08]   [tstcc] subject=P18  acc=0.500  f1=0.451
+[03:30:10]   [tstcc-pretrain] epoch 10/40  loss=8.2064
+[03:30:12]   [tstcc-pretrain] epoch 20/40  loss=8.0001
+[03:30:14]   [tstcc-pretrain] epoch 30/40  loss=7.9432
+[03:30:16]   [tstcc-pretrain] epoch 40/40  loss=7.9628
+[03:30:16]   [tstcc] subject=P19  acc=0.300  f1=0.231
+[03:30:18]   [tstcc-pretrain] epoch 10/40  loss=8.1910
+[03:30:20]   [tstcc-pretrain] epoch 20/40  loss=7.9767
+[03:30:22]   [tstcc-pretrain] epoch 30/40  loss=7.9404
+[03:30:23]   [tstcc-pretrain] epoch 40/40  loss=7.9294
+[03:30:24]   [tstcc] subject=P20  acc=0.476  f1=0.323
+[03:30:26]   [tstcc-pretrain] epoch 10/40  loss=8.1765
+[03:30:28]   [tstcc-pretrain] epoch 20/40  loss=7.9980
+[03:30:29]   [tstcc-pretrain] epoch 30/40  loss=7.9335
+[03:30:31]   [tstcc-pretrain] epoch 40/40  loss=7.9193
+[03:30:32]   [tstcc] subject=P21  acc=0.600  f1=0.596
+[03:30:32]   [tstcc] subject=P22  SKIP (single-class test)
+[03:30:34]   [tstcc-pretrain] epoch 10/40  loss=8.1687
+[03:30:36]   [tstcc-pretrain] epoch 20/40  loss=7.9845
+[03:30:37]   [tstcc-pretrain] epoch 30/40  loss=7.9384
+[03:30:39]   [tstcc-pretrain] epoch 40/40  loss=7.9255
+[03:30:40]   [tstcc] subject=P23  acc=0.429  f1=0.300
+[03:30:42]   [tstcc-pretrain] epoch 10/40  loss=8.1957
+[03:30:44]   [tstcc-pretrain] epoch 20/40  loss=7.9838
+[03:30:45]   [tstcc-pretrain] epoch 30/40  loss=7.9352
+[03:30:47]   [tstcc-pretrain] epoch 40/40  loss=7.9253
+[03:30:48]   [tstcc] subject=P24  acc=0.667  f1=0.569
+[03:30:50]   [tstcc-pretrain] epoch 10/40  loss=8.1926
+[03:30:52]   [tstcc-pretrain] epoch 20/40  loss=8.0001
+[03:30:53]   [tstcc-pretrain] epoch 30/40  loss=7.9517
+[03:30:55]   [tstcc-pretrain] epoch 40/40  loss=7.9290
+[03:30:56]   [tstcc] subject=P25  acc=0.714  f1=0.714
+[03:30:58]   [tstcc-pretrain] epoch 10/40  loss=8.2205
+[03:30:59]   [tstcc-pretrain] epoch 20/40  loss=8.0347
+[03:31:01]   [tstcc-pretrain] epoch 30/40  loss=7.9735
+[03:31:03]   [tstcc-pretrain] epoch 40/40  loss=7.9360
+[03:31:04]   [tstcc] subject=P26  acc=0.810  f1=0.767
+[03:31:06]   [tstcc-pretrain] epoch 10/40  loss=8.1944
+[03:31:07]   [tstcc-pretrain] epoch 20/40  loss=8.0189
+[03:31:09]   [tstcc-pretrain] epoch 30/40  loss=7.9358
+[03:31:11]   [tstcc-pretrain] epoch 40/40  loss=7.9423
+[03:31:12]   [tstcc] subject=P27  acc=0.318  f1=0.317
+[03:31:12]   [tstcc] subject=P28  SKIP (single-class test)
+[03:31:13]   [tstcc-pretrain] epoch 10/40  loss=8.2127
+[03:31:15]   [tstcc-pretrain] epoch 20/40  loss=7.9976
+[03:31:17]   [tstcc-pretrain] epoch 30/40  loss=7.9611
+[03:31:19]   [tstcc-pretrain] epoch 40/40  loss=7.9326
+[03:31:19]   [tstcc] subject=P29  acc=0.364  f1=0.267
+[03:31:19]   [tstcc] subject=P30  SKIP (single-class test)
+[03:31:21]   [tstcc-pretrain] epoch 10/40  loss=8.1958
+[03:31:23]   [tstcc-pretrain] epoch 20/40  loss=7.9958
+[03:31:25]   [tstcc-pretrain] epoch 30/40  loss=7.9351
+[03:31:27]   [tstcc-pretrain] epoch 40/40  loss=7.9295
+[03:31:27]   [tstcc] subject=P31  acc=0.739  f1=0.735
+[03:31:27] [ensemble] 'RandomForest' calibrated T=1.00 (NLL=0.641)
+[03:31:27] [ensemble] 'LogisticRegression' calibrated T=4.00 (NLL=0.681)
+[03:31:27] [ensemble] 'XGBoost' calibrated T=4.00 (NLL=0.651)
+[03:31:27] [ensemble] 'conformer_fusion' calibrated T=4.00 (NLL=0.655)
+[03:31:27] [ensemble] 'tiny_tcn_fusion' calibrated T=4.00 (NLL=0.635)
+[03:31:27] [ensemble] 'multistream_fusion' calibrated T=4.00 (NLL=0.666)
+[03:31:27] [ensemble] 'DANN_Conformer' calibrated T=3.00 (NLL=0.632)
+[03:31:27] [ensemble] 'TSTCC' calibrated T=4.00 (NLL=0.656)
+[03:31:28] [ensemble] built 'Ensemble_RandomForest+LogisticRegression+XGBoost+conformer_fusion+tiny_tcn_fusion+multistream_fusion+DANN_Conformer+TSTCC' over 8 members  acc=0.657  f1=0.657
+[03:31:31] Saved results to results\emotion\emowork\calibrated\emowork\stress
+
+######################################################################
+# CALIBRATED TARGET = arousal
+######################################################################
+[03:31:32] === EMOWORK / target=arousal ===
+[03:31:32]   samples=625  subjects=31  labels=['LA', 'HA']
+[03:31:32]   feature_cols=149  seq_shape=(625, 240, 12)
+[03:31:32]   [label-variance] target=arousal labels=['LA', 'HA']
+[03:31:32]   [label-variance] multi-class subjects: 29/31 -> usable for LOSO evaluation
+[03:31:32]   [label-variance] single-class subjects (2): ['P22', 'P29'] -> excluded from per-fold metrics
+[03:31:32] --- LOSO [Baseline] ---
+[03:31:32]   [Baseline] subject=P01  acc=0.381  f1=0.276
+[03:31:32]   [Baseline] subject=P02  acc=0.095  f1=0.087
+[03:31:32]   [Baseline] subject=P03  acc=0.611  f1=0.379
+[03:31:32]   [Baseline] subject=P04  acc=0.105  f1=0.095
+[03:31:32]   [Baseline] subject=P05  acc=0.667  f1=0.400
+[03:31:32]   [Baseline] subject=P06  acc=0.050  f1=0.048
+[03:31:32]   [Baseline] subject=P07  acc=0.905  f1=0.475
+[03:31:32]   [Baseline] subject=P08  acc=0.100  f1=0.091
+[03:31:32]   [Baseline] subject=P09  acc=0.600  f1=0.375
+[03:31:32]   [Baseline] subject=P10  acc=0.737  f1=0.424
+[03:31:32]   [Baseline] subject=P11  acc=0.150  f1=0.130
+[03:31:32]   [Baseline] subject=P12  acc=0.632  f1=0.387
+[03:31:32]   [Baseline] subject=P13  acc=0.571  f1=0.364
+[03:31:32]   [Baseline] subject=P14  acc=0.421  f1=0.296
+[03:31:32]   [Baseline] subject=P15  acc=0.400  f1=0.286
+[03:31:32]   [Baseline] subject=P16  acc=0.350  f1=0.259
+[03:31:32]   [Baseline] subject=P17  acc=0.667  f1=0.400
+[03:31:32]   [Baseline] subject=P18  acc=0.350  f1=0.259
+[03:31:32]   [Baseline] subject=P19  acc=0.650  f1=0.394
+[03:31:32]   [Baseline] subject=P20  acc=0.190  f1=0.160
+[03:31:32]   [Baseline] subject=P21  acc=0.350  f1=0.259
+[03:31:32]   [Baseline] subject=P22  SKIP (single-class test)
+[03:31:32]   [Baseline] subject=P23  acc=0.286  f1=0.222
+[03:31:32]   [Baseline] subject=P24  acc=0.333  f1=0.250
+[03:31:32]   [Baseline] subject=P25  acc=0.048  f1=0.045
+[03:31:32]   [Baseline] subject=P26  acc=0.524  f1=0.344
+[03:31:32]   [Baseline] subject=P27  acc=0.227  f1=0.185
+[03:31:32]   [Baseline] subject=P28  acc=0.810  f1=0.447
+[03:31:32]   [Baseline] subject=P29  SKIP (single-class test)
+[03:31:32]   [Baseline] subject=P30  acc=0.048  f1=0.045
+[03:31:32]   [Baseline] subject=P31  acc=0.522  f1=0.343
+[03:31:32] --- LOSO [RandomForest] ---
+[03:31:32]   [RandomForest] subject=P01  acc=0.619  f1=0.382
+[03:31:33]   [RandomForest] subject=P02  acc=0.762  f1=0.432
+[03:31:33]   [RandomForest] subject=P03  acc=0.500  f1=0.458
+[03:31:34]   [RandomForest] subject=P04  acc=0.842  f1=0.655
+[03:31:34]   [RandomForest] subject=P05  acc=0.611  f1=0.610
+[03:31:35]   [RandomForest] subject=P06  acc=0.200  f1=0.192
+[03:31:35]   [RandomForest] subject=P07  acc=0.190  f1=0.190
+[03:31:35]   [RandomForest] subject=P08  acc=0.600  f1=0.524
+[03:31:36]   [RandomForest] subject=P09  acc=0.500  f1=0.333
+[03:31:36]   [RandomForest] subject=P10  acc=0.526  f1=0.526
+[03:31:37]   [RandomForest] subject=P11  acc=0.300  f1=0.300
+[03:31:37]   [RandomForest] subject=P12  acc=0.368  f1=0.269
+[03:31:38]   [RandomForest] subject=P13  acc=0.429  f1=0.300
+[03:31:38]   [RandomForest] subject=P14  acc=0.526  f1=0.345
+[03:31:39]   [RandomForest] subject=P15  acc=0.650  f1=0.498
+[03:31:39]   [RandomForest] subject=P16  acc=0.700  f1=0.531
+[03:31:40]   [RandomForest] subject=P17  acc=0.286  f1=0.259
+[03:31:40]   [RandomForest] subject=P18  acc=0.450  f1=0.437
+[03:31:41]   [RandomForest] subject=P19  acc=0.450  f1=0.413
+[03:31:41]   [RandomForest] subject=P20  acc=0.571  f1=0.533
+[03:31:42]   [RandomForest] subject=P21  acc=0.700  f1=0.643
+[03:31:42]   [RandomForest] subject=P22  SKIP (single-class test)
+[03:31:42]   [RandomForest] subject=P23  acc=0.476  f1=0.430
+[03:31:43]   [RandomForest] subject=P24  acc=0.667  f1=0.505
+[03:31:43]   [RandomForest] subject=P25  acc=0.619  f1=0.382
+[03:31:44]   [RandomForest] subject=P26  acc=0.381  f1=0.358
+[03:31:44]   [RandomForest] subject=P27  acc=0.636  f1=0.482
+[03:31:45]   [RandomForest] subject=P28  acc=0.143  f1=0.125
+[03:31:45]   [RandomForest] subject=P29  SKIP (single-class test)
+[03:31:45]   [RandomForest] subject=P30  acc=0.571  f1=0.364
+[03:31:46]   [RandomForest] subject=P31  acc=0.739  f1=0.739
+[03:31:46] --- LOSO [LogisticRegression] ---
+[03:31:46]   [LogisticRegression] subject=P01  acc=0.571  f1=0.364
+[03:31:46]   [LogisticRegression] subject=P02  acc=0.714  f1=0.417
+[03:31:46]   [LogisticRegression] subject=P03  acc=0.556  f1=0.532
+[03:31:46]   [LogisticRegression] subject=P04  acc=0.474  f1=0.435
+[03:31:46]   [LogisticRegression] subject=P05  acc=0.833  f1=0.819
+[03:31:46]   [LogisticRegression] subject=P06  acc=0.150  f1=0.148
+[03:31:46]   [LogisticRegression] subject=P07  acc=0.571  f1=0.446
+[03:31:46]   [LogisticRegression] subject=P08  acc=0.550  f1=0.436
+[03:31:46]   [LogisticRegression] subject=P09  acc=0.800  f1=0.762
+[03:31:46]   [LogisticRegression] subject=P10  acc=0.474  f1=0.472
+[03:31:46]   [LogisticRegression] subject=P11  acc=0.300  f1=0.300
+[03:31:46]   [LogisticRegression] subject=P12  acc=0.632  f1=0.490
+[03:31:46]   [LogisticRegression] subject=P13  acc=0.571  f1=0.562
+[03:31:46]   [LogisticRegression] subject=P14  acc=0.526  f1=0.474
+[03:31:46]   [LogisticRegression] subject=P15  acc=0.750  f1=0.744
+[03:31:46]   [LogisticRegression] subject=P16  acc=0.400  f1=0.400
+[03:31:46]   [LogisticRegression] subject=P17  acc=0.524  f1=0.514
+[03:31:46]   [LogisticRegression] subject=P18  acc=0.550  f1=0.355
+[03:31:46]   [LogisticRegression] subject=P19  acc=0.600  f1=0.524
+[03:31:46]   [LogisticRegression] subject=P20  acc=0.429  f1=0.357
+[03:31:46]   [LogisticRegression] subject=P21  acc=0.650  f1=0.561
+[03:31:46]   [LogisticRegression] subject=P22  SKIP (single-class test)
+[03:31:46]   [LogisticRegression] subject=P23  acc=0.381  f1=0.375
+[03:31:46]   [LogisticRegression] subject=P24  acc=0.619  f1=0.618
+[03:31:46]   [LogisticRegression] subject=P25  acc=0.952  f1=0.488
+[03:31:46]   [LogisticRegression] subject=P26  acc=0.333  f1=0.319
+[03:31:46]   [LogisticRegression] subject=P27  acc=0.545  f1=0.427
+[03:31:46]   [LogisticRegression] subject=P28  acc=0.333  f1=0.332
+[03:31:46]   [LogisticRegression] subject=P29  SKIP (single-class test)
+[03:31:47]   [LogisticRegression] subject=P30  acc=0.476  f1=0.387
+[03:31:47]   [LogisticRegression] subject=P31  acc=0.478  f1=0.469
+[03:31:47] --- LOSO [XGBoost] ---
+[03:31:47]   [XGBoost] subject=P01  acc=0.571  f1=0.364
+[03:31:48]   [XGBoost] subject=P02  acc=0.714  f1=0.417
+[03:31:49]   [XGBoost] subject=P03  acc=0.389  f1=0.371
+[03:31:49]   [XGBoost] subject=P04  acc=0.632  f1=0.552
+[03:31:50]   [XGBoost] subject=P05  acc=0.556  f1=0.550
+[03:31:51]   [XGBoost] subject=P06  acc=0.300  f1=0.271
+[03:31:52]   [XGBoost] subject=P07  acc=0.143  f1=0.141
+[03:31:52]   [XGBoost] subject=P08  acc=0.500  f1=0.451
+[03:31:53]   [XGBoost] subject=P09  acc=0.450  f1=0.449
+[03:31:54]   [XGBoost] subject=P10  acc=0.579  f1=0.568
+[03:31:54]   [XGBoost] subject=P11  acc=0.150  f1=0.130
+[03:31:55]   [XGBoost] subject=P12  acc=0.368  f1=0.321
+[03:31:56]   [XGBoost] subject=P13  acc=0.357  f1=0.263
+[03:31:57]   [XGBoost] subject=P14  acc=0.474  f1=0.472
+[03:31:57]   [XGBoost] subject=P15  acc=0.800  f1=0.762
+[03:31:58]   [XGBoost] subject=P16  acc=0.550  f1=0.436
+[03:31:59]   [XGBoost] subject=P17  acc=0.381  f1=0.326
+[03:31:59]   [XGBoost] subject=P18  acc=0.450  f1=0.449
+[03:32:00]   [XGBoost] subject=P19  acc=0.400  f1=0.375
+[03:32:01]   [XGBoost] subject=P20  acc=0.667  f1=0.505
+[03:32:02]   [XGBoost] subject=P21  acc=0.350  f1=0.348
+[03:32:02]   [XGBoost] subject=P22  SKIP (single-class test)
+[03:32:02]   [XGBoost] subject=P23  acc=0.476  f1=0.323
+[03:32:03]   [XGBoost] subject=P24  acc=0.524  f1=0.344
+[03:32:04]   [XGBoost] subject=P25  acc=0.857  f1=0.462
+[03:32:05]   [XGBoost] subject=P26  acc=0.476  f1=0.387
+[03:32:05]   [XGBoost] subject=P27  acc=0.727  f1=0.656
+[03:32:06]   [XGBoost] subject=P28  acc=0.143  f1=0.125
+[03:32:06]   [XGBoost] subject=P29  SKIP (single-class test)
+[03:32:07]   [XGBoost] subject=P30  acc=0.381  f1=0.276
+[03:32:08]   [XGBoost] subject=P31  acc=0.696  f1=0.693
+[03:32:08] --- LOSO [conformer] ---
+[03:32:14]   [conformer_fusion] subject=P01  acc=0.714  f1=0.606
+[03:32:21]   [conformer_fusion] subject=P02  acc=0.238  f1=0.236
+[03:32:27]   [conformer_fusion] subject=P03  acc=0.444  f1=0.438
+[03:32:32]   [conformer_fusion] subject=P04  acc=0.421  f1=0.394
+[03:32:38]   [conformer_fusion] subject=P05  acc=0.389  f1=0.371
+[03:32:44]   [conformer_fusion] subject=P06  acc=0.100  f1=0.100
+[03:32:50]   [conformer_fusion] subject=P07  acc=0.333  f1=0.250
+[03:32:56]   [conformer_fusion] subject=P08  acc=0.850  f1=0.459
+[03:33:02]   [conformer_fusion] subject=P09  acc=0.650  f1=0.498
+[03:33:08]   [conformer_fusion] subject=P10  acc=0.579  f1=0.578
+[03:33:14]   [conformer_fusion] subject=P11  acc=0.150  f1=0.130
+[03:33:20]   [conformer_fusion] subject=P12  acc=0.684  f1=0.593
+[03:33:26]   [conformer_fusion] subject=P13  acc=0.571  f1=0.533
+[03:33:31]   [conformer_fusion] subject=P14  acc=0.579  f1=0.367
+[03:33:37]   [conformer_fusion] subject=P15  acc=0.550  f1=0.520
+[03:33:43]   [conformer_fusion] subject=P16  acc=0.700  f1=0.688
+[03:33:49]   [conformer_fusion] subject=P17  acc=0.619  f1=0.475
+[03:33:55]   [conformer_fusion] subject=P18  acc=0.600  f1=0.524
+[03:33:59]   [conformer_fusion] subject=P19  acc=0.550  f1=0.549
+[03:34:05]   [conformer_fusion] subject=P20  acc=0.476  f1=0.430
+[03:34:12]   [conformer_fusion] subject=P21  acc=0.500  f1=0.479
+[03:34:12]   [conformer] subject=P22  SKIP (single-class test)
+[03:34:17]   [conformer_fusion] subject=P23  acc=0.667  f1=0.400
+[03:34:22]   [conformer_fusion] subject=P24  acc=0.571  f1=0.555
+[03:34:27]   [conformer_fusion] subject=P25  acc=0.857  f1=0.462
+[03:34:32]   [conformer_fusion] subject=P26  acc=0.381  f1=0.326
+[03:34:37]   [conformer_fusion] subject=P27  acc=0.818  f1=0.614
+[03:34:43]   [conformer_fusion] subject=P28  acc=0.190  f1=0.160
+[03:34:43]   [conformer] subject=P29  SKIP (single-class test)
+[03:34:49]   [conformer_fusion] subject=P30  acc=0.476  f1=0.323
+[03:34:55]   [conformer_fusion] subject=P31  acc=0.826  f1=0.826
+[03:34:55] --- LOSO [tiny_tcn] ---
+[03:34:57]   [tiny_tcn_fusion] subject=P01  acc=0.524  f1=0.344
+[03:35:00]   [tiny_tcn_fusion] subject=P02  acc=0.095  f1=0.087
+[03:35:03]   [tiny_tcn_fusion] subject=P03  acc=0.500  f1=0.458
+[03:35:05]   [tiny_tcn_fusion] subject=P04  acc=0.211  f1=0.211
+[03:35:08]   [tiny_tcn_fusion] subject=P05  acc=0.333  f1=0.299
+[03:35:09]   [tiny_tcn_fusion] subject=P06  acc=0.000  f1=0.000
+[03:35:12]   [tiny_tcn_fusion] subject=P07  acc=0.286  f1=0.222
+[03:35:13]   [tiny_tcn_fusion] subject=P08  acc=0.750  f1=0.567
+[03:35:16]   [tiny_tcn_fusion] subject=P09  acc=0.800  f1=0.780
+[03:35:18]   [tiny_tcn_fusion] subject=P10  acc=0.263  f1=0.208
+[03:35:20]   [tiny_tcn_fusion] subject=P11  acc=0.200  f1=0.192
+[03:35:22]   [tiny_tcn_fusion] subject=P12  acc=0.579  f1=0.457
+[03:35:25]   [tiny_tcn_fusion] subject=P13  acc=0.429  f1=0.417
+[03:35:27]   [tiny_tcn_fusion] subject=P14  acc=0.579  f1=0.367
+[03:35:30]   [tiny_tcn_fusion] subject=P15  acc=0.700  f1=0.670
+[03:35:32]   [tiny_tcn_fusion] subject=P16  acc=0.950  f1=0.947
+[03:35:33]   [tiny_tcn_fusion] subject=P17  acc=0.476  f1=0.430
+[03:35:35]   [tiny_tcn_fusion] subject=P18  acc=0.400  f1=0.341
+[03:35:37]   [tiny_tcn_fusion] subject=P19  acc=0.450  f1=0.449
+[03:35:40]   [tiny_tcn_fusion] subject=P20  acc=0.762  f1=0.432
+[03:35:42]   [tiny_tcn_fusion] subject=P21  acc=0.500  f1=0.479
+[03:35:42]   [tiny_tcn] subject=P22  SKIP (single-class test)
+[03:35:44]   [tiny_tcn_fusion] subject=P23  acc=0.714  f1=0.417
+[03:35:47]   [tiny_tcn_fusion] subject=P24  acc=0.619  f1=0.382
+[03:35:49]   [tiny_tcn_fusion] subject=P25  acc=0.857  f1=0.462
+[03:35:52]   [tiny_tcn_fusion] subject=P26  acc=0.476  f1=0.430
+[03:35:54]   [tiny_tcn_fusion] subject=P27  acc=0.727  f1=0.421
+[03:35:56]   [tiny_tcn_fusion] subject=P28  acc=0.190  f1=0.160
+[03:35:56]   [tiny_tcn] subject=P29  SKIP (single-class test)
+[03:35:59]   [tiny_tcn_fusion] subject=P30  acc=0.333  f1=0.250
+[03:36:01]   [tiny_tcn_fusion] subject=P31  acc=0.522  f1=0.518
+[03:36:01] --- LOSO [bilstm] ---
+[03:36:03]   [bilstm_fusion] subject=P01  acc=0.476  f1=0.430
+[03:36:06]   [bilstm_fusion] subject=P02  acc=0.143  f1=0.141
+[03:36:08]   [bilstm_fusion] subject=P03  acc=0.333  f1=0.325
+[03:36:10]   [bilstm_fusion] subject=P04  acc=0.211  f1=0.211
+[03:36:13]   [bilstm_fusion] subject=P05  acc=0.778  f1=0.766
+[03:36:15]   [bilstm_fusion] subject=P06  acc=0.050  f1=0.048
+[03:36:17]   [bilstm_fusion] subject=P07  acc=0.524  f1=0.417
+[03:36:20]   [bilstm_fusion] subject=P08  acc=0.500  f1=0.333
+[03:36:22]   [bilstm_fusion] subject=P09  acc=0.700  f1=0.600
+[03:36:25]   [bilstm_fusion] subject=P10  acc=0.789  f1=0.756
+[03:36:27]   [bilstm_fusion] subject=P11  acc=0.200  f1=0.192
+[03:36:30]   [bilstm_fusion] subject=P12  acc=0.579  f1=0.457
+[03:36:32]   [bilstm_fusion] subject=P13  acc=0.429  f1=0.300
+[03:36:35]   [bilstm_fusion] subject=P14  acc=0.579  f1=0.367
+[03:36:37]   [bilstm_fusion] subject=P15  acc=0.700  f1=0.670
+[03:36:40]   [bilstm_fusion] subject=P16  acc=0.800  f1=0.733
+[03:36:42]   [bilstm_fusion] subject=P17  acc=0.571  f1=0.446
+[03:36:44]   [bilstm_fusion] subject=P18  acc=0.350  f1=0.348
+[03:36:46]   [bilstm_fusion] subject=P19  acc=0.500  f1=0.495
+[03:36:49]   [bilstm_fusion] subject=P20  acc=0.810  f1=0.447
+[03:36:51]   [bilstm_fusion] subject=P21  acc=0.400  f1=0.400
+[03:36:51]   [bilstm] subject=P22  SKIP (single-class test)
+[03:36:53]   [bilstm_fusion] subject=P23  acc=0.619  f1=0.382
+[03:36:55]   [bilstm_fusion] subject=P24  acc=0.667  f1=0.654
+[03:36:57]   [bilstm_fusion] subject=P25  acc=0.619  f1=0.382
+[03:37:00]   [bilstm_fusion] subject=P26  acc=0.476  f1=0.323
+[03:37:01]   [bilstm_fusion] subject=P27  acc=0.727  f1=0.421
+[03:37:03]   [bilstm_fusion] subject=P28  acc=0.190  f1=0.160
+[03:37:03]   [bilstm] subject=P29  SKIP (single-class test)
+[03:37:06]   [bilstm_fusion] subject=P30  acc=0.429  f1=0.300
+[03:37:07]   [bilstm_fusion] subject=P31  acc=0.652  f1=0.617
+[03:37:07] --- LOSO [cnn1d] ---
+[03:37:10]   [cnn1d_fusion] subject=P01  acc=0.286  f1=0.279
+[03:37:12]   [cnn1d_fusion] subject=P02  acc=0.286  f1=0.279
+[03:37:14]   [cnn1d_fusion] subject=P03  acc=0.667  f1=0.585
+[03:37:16]   [cnn1d_fusion] subject=P04  acc=0.158  f1=0.156
+[03:37:19]   [cnn1d_fusion] subject=P05  acc=0.444  f1=0.438
+[03:37:21]   [cnn1d_fusion] subject=P06  acc=0.100  f1=0.091
+[03:37:23]   [cnn1d_fusion] subject=P07  acc=0.095  f1=0.087
+[03:37:25]   [cnn1d_fusion] subject=P08  acc=0.900  f1=0.722
+[03:37:28]   [cnn1d_fusion] subject=P09  acc=0.750  f1=0.715
+[03:37:31]   [cnn1d_fusion] subject=P10  acc=0.368  f1=0.367
+[03:37:33]   [cnn1d_fusion] subject=P11  acc=0.150  f1=0.130
+[03:37:36]   [cnn1d_fusion] subject=P12  acc=0.474  f1=0.391
+[03:37:38]   [cnn1d_fusion] subject=P13  acc=0.214  f1=0.210
+[03:37:40]   [cnn1d_fusion] subject=P14  acc=0.579  f1=0.367
+[03:37:42]   [cnn1d_fusion] subject=P15  acc=0.700  f1=0.643
+[03:37:44]   [cnn1d_fusion] subject=P16  acc=0.550  f1=0.549
+[03:37:47]   [cnn1d_fusion] subject=P17  acc=0.143  f1=0.125
+[03:37:48]   [cnn1d_fusion] subject=P18  acc=0.400  f1=0.375
+[03:37:51]   [cnn1d_fusion] subject=P19  acc=0.300  f1=0.293
+[03:37:54]   [cnn1d_fusion] subject=P20  acc=0.190  f1=0.183
+[03:37:56]   [cnn1d_fusion] subject=P21  acc=0.400  f1=0.375
+[03:37:56]   [cnn1d] subject=P22  SKIP (single-class test)
+[03:37:59]   [cnn1d_fusion] subject=P23  acc=0.714  f1=0.417
+[03:38:02]   [cnn1d_fusion] subject=P24  acc=0.619  f1=0.475
+[03:38:04]   [cnn1d_fusion] subject=P25  acc=0.714  f1=0.417
+[03:38:06]   [cnn1d_fusion] subject=P26  acc=0.476  f1=0.323
+[03:38:08]   [cnn1d_fusion] subject=P27  acc=0.500  f1=0.491
+[03:38:09]   [cnn1d_fusion] subject=P28  acc=0.143  f1=0.125
+[03:38:09]   [cnn1d] subject=P29  SKIP (single-class test)
+[03:38:12]   [cnn1d_fusion] subject=P30  acc=0.762  f1=0.571
+[03:38:13]   [cnn1d_fusion] subject=P31  acc=0.739  f1=0.735
+[03:38:14] --- LOSO [multistream] ---
+[03:38:17]   [multistream_fusion] subject=P01  acc=0.524  f1=0.344
+[03:38:23]   [multistream_fusion] subject=P02  acc=0.905  f1=0.724
+[03:38:28]   [multistream_fusion] subject=P03  acc=0.389  f1=0.280
+[03:38:31]   [multistream_fusion] subject=P04  acc=0.421  f1=0.394
+[03:38:36]   [multistream_fusion] subject=P05  acc=0.500  f1=0.411
+[03:38:42]   [multistream_fusion] subject=P06  acc=0.650  f1=0.498
+[03:38:46]   [multistream_fusion] subject=P07  acc=0.524  f1=0.344
+[03:38:52]   [multistream_fusion] subject=P08  acc=0.400  f1=0.286
+[03:38:57]   [multistream_fusion] subject=P09  acc=0.400  f1=0.341
+[03:39:00]   [multistream_fusion] subject=P10  acc=0.474  f1=0.391
+[03:39:05]   [multistream_fusion] subject=P11  acc=0.200  f1=0.167
+[03:39:12]   [multistream_fusion] subject=P12  acc=0.421  f1=0.415
+[03:39:17]   [multistream_fusion] subject=P13  acc=0.714  f1=0.714
+[03:39:24]   [multistream_fusion] subject=P14  acc=0.316  f1=0.284
+[03:39:28]   [multistream_fusion] subject=P15  acc=0.650  f1=0.601
+[03:39:33]   [multistream_fusion] subject=P16  acc=0.350  f1=0.307
+[03:39:36]   [multistream_fusion] subject=P17  acc=0.429  f1=0.417
+[03:39:41]   [multistream_fusion] subject=P18  acc=0.650  f1=0.561
+[03:39:46]   [multistream_fusion] subject=P19  acc=0.350  f1=0.335
+[03:39:49]   [multistream_fusion] subject=P20  acc=0.619  f1=0.533
+[03:39:53]   [multistream_fusion] subject=P21  acc=0.800  f1=0.780
+[03:39:53]   [multistream] subject=P22  SKIP (single-class test)
+[03:39:57]   [multistream_fusion] subject=P23  acc=0.714  f1=0.417
+[03:40:02]   [multistream_fusion] subject=P24  acc=0.762  f1=0.741
+[03:40:08]   [multistream_fusion] subject=P25  acc=0.952  f1=0.488
+[03:40:14]   [multistream_fusion] subject=P26  acc=0.143  f1=0.125
+[03:40:19]   [multistream_fusion] subject=P27  acc=0.545  f1=0.509
+[03:40:23]   [multistream_fusion] subject=P28  acc=0.524  f1=0.514
+[03:40:23]   [multistream] subject=P29  SKIP (single-class test)
+[03:40:29]   [multistream_fusion] subject=P30  acc=0.810  f1=0.447
+[03:40:31]   [multistream_fusion] subject=P31  acc=0.609  f1=0.606
+[03:40:31] --- LOSO [dann] ---
+[03:40:36]   [dann] subject=P01  acc=0.476  f1=0.430
+[03:40:42]   [dann] subject=P02  acc=0.095  f1=0.087
+[03:40:48]   [dann] subject=P03  acc=0.222  f1=0.212
+[03:40:54]   [dann] subject=P04  acc=0.263  f1=0.261
+[03:41:00]   [dann] subject=P05  acc=0.333  f1=0.299
+[03:41:05]   [dann] subject=P06  acc=0.100  f1=0.091
+[03:41:11]   [dann] subject=P07  acc=0.095  f1=0.095
+[03:41:18]   [dann] subject=P08  acc=0.850  f1=0.459
+[03:41:23]   [dann] subject=P09  acc=0.650  f1=0.498
+[03:41:29]   [dann] subject=P10  acc=0.684  f1=0.406
+[03:41:35]   [dann] subject=P11  acc=0.250  f1=0.233
+[03:41:42]   [dann] subject=P12  acc=0.579  f1=0.367
+[03:41:48]   [dann] subject=P13  acc=0.500  f1=0.427
+[03:41:54]   [dann] subject=P14  acc=0.526  f1=0.345
+[03:41:58]   [dann] subject=P15  acc=0.600  f1=0.596
+[03:42:05]   [dann] subject=P16  acc=0.500  f1=0.479
+[03:42:08]   [dann] subject=P17  acc=0.667  f1=0.610
+[03:42:14]   [dann] subject=P18  acc=0.550  f1=0.540
+[03:42:21]   [dann] subject=P19  acc=0.450  f1=0.437
+[03:42:26]   [dann] subject=P20  acc=0.238  f1=0.222
+[03:42:33]   [dann] subject=P21  acc=0.300  f1=0.231
+[03:42:33]   [dann] subject=P22  SKIP (single-class test)
+[03:42:39]   [dann] subject=P23  acc=0.714  f1=0.417
+[03:42:45]   [dann] subject=P24  acc=0.810  f1=0.786
+[03:42:51]   [dann] subject=P25  acc=0.476  f1=0.323
+[03:42:57]   [dann] subject=P26  acc=0.381  f1=0.358
+[03:43:03]   [dann] subject=P27  acc=0.682  f1=0.405
+[03:43:10]   [dann] subject=P28  acc=0.190  f1=0.160
+[03:43:10]   [dann] subject=P29  SKIP (single-class test)
+[03:43:16]   [dann] subject=P30  acc=0.524  f1=0.417
+[03:43:22]   [dann] subject=P31  acc=0.739  f1=0.735
+[03:43:22] --- LOSO [tstcc] ---
+[03:43:25]   [tstcc-pretrain] epoch 10/40  loss=8.1367
+[03:43:27]   [tstcc-pretrain] epoch 20/40  loss=7.9595
+[03:43:29]   [tstcc-pretrain] epoch 30/40  loss=7.8980
+[03:43:32]   [tstcc-pretrain] epoch 40/40  loss=7.8946
+[03:43:32]   [tstcc] subject=P01  acc=0.333  f1=0.293
+[03:43:35]   [tstcc-pretrain] epoch 10/40  loss=8.1470
+[03:43:37]   [tstcc-pretrain] epoch 20/40  loss=7.9773
+[03:43:39]   [tstcc-pretrain] epoch 30/40  loss=7.9311
+[03:43:42]   [tstcc-pretrain] epoch 40/40  loss=7.9134
+[03:43:42]   [tstcc] subject=P02  acc=0.571  f1=0.364
+[03:43:45]   [tstcc-pretrain] epoch 10/40  loss=8.1251
+[03:43:47]   [tstcc-pretrain] epoch 20/40  loss=7.9909
+[03:43:49]   [tstcc-pretrain] epoch 30/40  loss=7.9129
+[03:43:51]   [tstcc-pretrain] epoch 40/40  loss=7.9055
+[03:43:52]   [tstcc] subject=P03  acc=0.222  f1=0.212
+[03:43:54]   [tstcc-pretrain] epoch 10/40  loss=8.1320
+[03:43:57]   [tstcc-pretrain] epoch 20/40  loss=7.9844
+[03:43:59]   [tstcc-pretrain] epoch 30/40  loss=7.9048
+[03:44:01]   [tstcc-pretrain] epoch 40/40  loss=7.8970
+[03:44:02]   [tstcc] subject=P04  acc=0.737  f1=0.562
+[03:44:04]   [tstcc-pretrain] epoch 10/40  loss=8.1186
+[03:44:07]   [tstcc-pretrain] epoch 20/40  loss=7.9661
+[03:44:09]   [tstcc-pretrain] epoch 30/40  loss=7.9068
+[03:44:11]   [tstcc-pretrain] epoch 40/40  loss=7.8857
+[03:44:12]   [tstcc] subject=P05  acc=0.500  f1=0.333
+[03:44:14]   [tstcc-pretrain] epoch 10/40  loss=8.1620
+[03:44:16]   [tstcc-pretrain] epoch 20/40  loss=7.9594
+[03:44:19]   [tstcc-pretrain] epoch 30/40  loss=7.9206
+[03:44:21]   [tstcc-pretrain] epoch 40/40  loss=7.8807
+[03:44:22]   [tstcc] subject=P06  acc=0.200  f1=0.192
+[03:44:24]   [tstcc-pretrain] epoch 10/40  loss=8.1280
+[03:44:26]   [tstcc-pretrain] epoch 20/40  loss=7.9648
+[03:44:29]   [tstcc-pretrain] epoch 30/40  loss=7.9090
+[03:44:31]   [tstcc-pretrain] epoch 40/40  loss=7.9000
+[03:44:31]   [tstcc] subject=P07  acc=0.143  f1=0.125
+[03:44:34]   [tstcc-pretrain] epoch 10/40  loss=8.1632
+[03:44:36]   [tstcc-pretrain] epoch 20/40  loss=7.9586
+[03:44:38]   [tstcc-pretrain] epoch 30/40  loss=7.9260
+[03:44:41]   [tstcc-pretrain] epoch 40/40  loss=7.8900
+[03:44:41]   [tstcc] subject=P08  acc=0.850  f1=0.459
+[03:44:44]   [tstcc-pretrain] epoch 10/40  loss=8.1566
+[03:44:46]   [tstcc-pretrain] epoch 20/40  loss=7.9929
+[03:44:48]   [tstcc-pretrain] epoch 30/40  loss=7.9111
+[03:44:51]   [tstcc-pretrain] epoch 40/40  loss=7.8921
+[03:44:51]   [tstcc] subject=P09  acc=0.600  f1=0.467
+[03:44:54]   [tstcc-pretrain] epoch 10/40  loss=8.1367
+[03:44:56]   [tstcc-pretrain] epoch 20/40  loss=7.9614
+[03:44:58]   [tstcc-pretrain] epoch 30/40  loss=7.8953
+[03:45:00]   [tstcc-pretrain] epoch 40/40  loss=7.8719
+[03:45:01]   [tstcc] subject=P10  acc=0.684  f1=0.676
+[03:45:03]   [tstcc-pretrain] epoch 10/40  loss=8.1446
+[03:45:06]   [tstcc-pretrain] epoch 20/40  loss=7.9807
+[03:45:08]   [tstcc-pretrain] epoch 30/40  loss=7.9313
+[03:45:10]   [tstcc-pretrain] epoch 40/40  loss=7.8752
+[03:45:11]   [tstcc] subject=P11  acc=0.200  f1=0.192
+[03:45:13]   [tstcc-pretrain] epoch 10/40  loss=8.1447
+[03:45:16]   [tstcc-pretrain] epoch 20/40  loss=7.9682
+[03:45:18]   [tstcc-pretrain] epoch 30/40  loss=7.9398
+[03:45:20]   [tstcc-pretrain] epoch 40/40  loss=7.9065
+[03:45:21]   [tstcc] subject=P12  acc=0.526  f1=0.474
+[03:45:23]   [tstcc-pretrain] epoch 10/40  loss=8.1334
+[03:45:26]   [tstcc-pretrain] epoch 20/40  loss=7.9460
+[03:45:28]   [tstcc-pretrain] epoch 30/40  loss=7.9042
+[03:45:30]   [tstcc-pretrain] epoch 40/40  loss=7.9013
+[03:45:31]   [tstcc] subject=P13  acc=0.500  f1=0.427
+[03:45:34]   [tstcc-pretrain] epoch 10/40  loss=8.1347
+[03:45:36]   [tstcc-pretrain] epoch 20/40  loss=7.9641
+[03:45:38]   [tstcc-pretrain] epoch 30/40  loss=7.8884
+[03:45:40]   [tstcc-pretrain] epoch 40/40  loss=7.8766
+[03:45:41]   [tstcc] subject=P14  acc=0.579  f1=0.578
+[03:45:43]   [tstcc-pretrain] epoch 10/40  loss=8.1320
+[03:45:46]   [tstcc-pretrain] epoch 20/40  loss=7.9628
+[03:45:48]   [tstcc-pretrain] epoch 30/40  loss=7.8923
+[03:45:50]   [tstcc-pretrain] epoch 40/40  loss=7.8959
+[03:45:51]   [tstcc] subject=P15  acc=0.650  f1=0.498
+[03:45:54]   [tstcc-pretrain] epoch 10/40  loss=8.1570
+[03:45:56]   [tstcc-pretrain] epoch 20/40  loss=7.9766
+[03:45:59]   [tstcc-pretrain] epoch 30/40  loss=7.9066
+[03:46:01]   [tstcc-pretrain] epoch 40/40  loss=7.8947
+[03:46:02]   [tstcc] subject=P16  acc=0.850  f1=0.829
+[03:46:04]   [tstcc-pretrain] epoch 10/40  loss=8.1736
+[03:46:07]   [tstcc-pretrain] epoch 20/40  loss=7.9734
+[03:46:09]   [tstcc-pretrain] epoch 30/40  loss=7.9228
+[03:46:12]   [tstcc-pretrain] epoch 40/40  loss=7.9071
+[03:46:12]   [tstcc] subject=P17  acc=0.571  f1=0.533
+[03:46:15]   [tstcc-pretrain] epoch 10/40  loss=8.1510
+[03:46:17]   [tstcc-pretrain] epoch 20/40  loss=7.9579
+[03:46:19]   [tstcc-pretrain] epoch 30/40  loss=7.8940
+[03:46:21]   [tstcc-pretrain] epoch 40/40  loss=7.8959
+[03:46:22]   [tstcc] subject=P18  acc=0.400  f1=0.375
+[03:46:25]   [tstcc-pretrain] epoch 10/40  loss=8.1487
+[03:46:27]   [tstcc-pretrain] epoch 20/40  loss=7.9679
+[03:46:29]   [tstcc-pretrain] epoch 30/40  loss=7.9268
+[03:46:31]   [tstcc-pretrain] epoch 40/40  loss=7.9108
+[03:46:32]   [tstcc] subject=P19  acc=0.450  f1=0.413
+[03:46:34]   [tstcc-pretrain] epoch 10/40  loss=8.1454
+[03:46:37]   [tstcc-pretrain] epoch 20/40  loss=7.9705
+[03:46:39]   [tstcc-pretrain] epoch 30/40  loss=7.8903
+[03:46:41]   [tstcc-pretrain] epoch 40/40  loss=7.8888
+[03:46:42]   [tstcc] subject=P20  acc=0.667  f1=0.569
+[03:46:44]   [tstcc-pretrain] epoch 10/40  loss=8.1457
+[03:46:46]   [tstcc-pretrain] epoch 20/40  loss=7.9710
+[03:46:49]   [tstcc-pretrain] epoch 30/40  loss=7.9061
+[03:46:51]   [tstcc-pretrain] epoch 40/40  loss=7.8893
+[03:46:52]   [tstcc] subject=P21  acc=0.450  f1=0.413
+[03:46:52]   [tstcc] subject=P22  SKIP (single-class test)
+[03:46:54]   [tstcc-pretrain] epoch 10/40  loss=8.1453
+[03:46:56]   [tstcc-pretrain] epoch 20/40  loss=7.9626
+[03:46:59]   [tstcc-pretrain] epoch 30/40  loss=7.9217
+[03:47:01]   [tstcc-pretrain] epoch 40/40  loss=7.8848
+[03:47:02]   [tstcc] subject=P23  acc=0.238  f1=0.236
+[03:47:04]   [tstcc-pretrain] epoch 10/40  loss=8.1318
+[03:47:06]   [tstcc-pretrain] epoch 20/40  loss=7.9626
+[03:47:09]   [tstcc-pretrain] epoch 30/40  loss=7.8788
+[03:47:11]   [tstcc-pretrain] epoch 40/40  loss=7.8968
+[03:47:12]   [tstcc] subject=P24  acc=1.000  f1=1.000
+[03:47:14]   [tstcc-pretrain] epoch 10/40  loss=8.1391
+[03:47:16]   [tstcc-pretrain] epoch 20/40  loss=7.9521
+[03:47:18]   [tstcc-pretrain] epoch 30/40  loss=7.9156
+[03:47:21]   [tstcc-pretrain] epoch 40/40  loss=7.8871
+[03:47:21]   [tstcc] subject=P25  acc=0.667  f1=0.400
+[03:47:24]   [tstcc-pretrain] epoch 10/40  loss=8.1425
+[03:47:26]   [tstcc-pretrain] epoch 20/40  loss=7.9605
+[03:47:28]   [tstcc-pretrain] epoch 30/40  loss=7.8888
+[03:47:31]   [tstcc-pretrain] epoch 40/40  loss=7.8819
+[03:47:31]   [tstcc] subject=P26  acc=0.333  f1=0.250
+[03:47:34]   [tstcc-pretrain] epoch 10/40  loss=8.1400
+[03:47:36]   [tstcc-pretrain] epoch 20/40  loss=7.9716
+[03:47:38]   [tstcc-pretrain] epoch 30/40  loss=7.9226
+[03:47:41]   [tstcc-pretrain] epoch 40/40  loss=7.9210
+[03:47:41]   [tstcc] subject=P27  acc=0.409  f1=0.377
+[03:47:44]   [tstcc-pretrain] epoch 10/40  loss=8.1247
+[03:47:46]   [tstcc-pretrain] epoch 20/40  loss=7.9583
+[03:47:48]   [tstcc-pretrain] epoch 30/40  loss=7.9144
+[03:47:51]   [tstcc-pretrain] epoch 40/40  loss=7.9033
+[03:47:51]   [tstcc] subject=P28  acc=0.143  f1=0.125
+[03:47:51]   [tstcc] subject=P29  SKIP (single-class test)
+[03:47:53]   [tstcc-pretrain] epoch 10/40  loss=8.1307
+[03:47:56]   [tstcc-pretrain] epoch 20/40  loss=7.9529
+[03:47:58]   [tstcc-pretrain] epoch 30/40  loss=7.9034
+[03:48:00]   [tstcc-pretrain] epoch 40/40  loss=7.8932
+[03:48:01]   [tstcc] subject=P30  acc=0.238  f1=0.222
+[03:48:03]   [tstcc-pretrain] epoch 10/40  loss=8.1340
+[03:48:06]   [tstcc-pretrain] epoch 20/40  loss=7.9829
+[03:48:08]   [tstcc-pretrain] epoch 30/40  loss=7.9046
+[03:48:10]   [tstcc-pretrain] epoch 40/40  loss=7.8873
+[03:48:11]   [tstcc] subject=P31  acc=0.913  f1=0.913
+[03:48:11] [ensemble] 'RandomForest' calibrated T=4.00 (NLL=0.694)
+[03:48:11] [ensemble] 'LogisticRegression' calibrated T=4.00 (NLL=0.726)
+[03:48:11] [ensemble] 'XGBoost' calibrated T=4.00 (NLL=0.730)
+[03:48:11] [ensemble] 'conformer_fusion' calibrated T=4.00 (NLL=0.708)
+[03:48:11] [ensemble] 'tiny_tcn_fusion' calibrated T=4.00 (NLL=0.731)
+[03:48:11] [ensemble] 'multistream_fusion' calibrated T=4.00 (NLL=0.683)
+[03:48:11] [ensemble] 'DANN_Conformer' calibrated T=4.00 (NLL=0.722)
+[03:48:11] [ensemble] 'TSTCC' calibrated T=4.00 (NLL=0.699)
+[03:48:11] [ensemble] built 'Ensemble_RandomForest+LogisticRegression+XGBoost+conformer_fusion+tiny_tcn_fusion+multistream_fusion+DANN_Conformer+TSTCC' over 8 members  acc=0.543  f1=0.516
+[03:48:15] Saved results to results\emotion\emowork\calibrated\emowork\arousal
+
+######################################################################
+# CALIBRATED TARGET = valence
+######################################################################
+[03:48:15] === EMOWORK / target=valence ===
+[03:48:15]   samples=625  subjects=31  labels=['LV', 'HV']
+[03:48:15]   feature_cols=149  seq_shape=(625, 240, 12)
+[03:48:15]   [label-variance] target=valence labels=['LV', 'HV']
+[03:48:15]   [label-variance] multi-class subjects: 20/31 -> usable for LOSO evaluation
+[03:48:15]   [label-variance] single-class subjects (11): ['P02', 'P03', 'P04', 'P07', 'P09', 'P10', 'P11', 'P14', 'P28', 'P29', 'P30'] -> excluded from per-fold metrics
+[03:48:15] --- LOSO [Baseline] ---
+[03:48:15]   [Baseline] subject=P01  acc=0.095  f1=0.087
+[03:48:15]   [Baseline] subject=P02  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P03  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P04  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P05  acc=0.944  f1=0.486
+[03:48:15]   [Baseline] subject=P06  acc=0.900  f1=0.474
+[03:48:15]   [Baseline] subject=P07  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P08  acc=0.950  f1=0.487
+[03:48:15]   [Baseline] subject=P09  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P10  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P11  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P12  acc=0.737  f1=0.424
+[03:48:15]   [Baseline] subject=P13  acc=0.429  f1=0.300
+[03:48:15]   [Baseline] subject=P14  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P15  acc=0.800  f1=0.444
+[03:48:15]   [Baseline] subject=P16  acc=0.650  f1=0.394
+[03:48:15]   [Baseline] subject=P17  acc=0.952  f1=0.488
+[03:48:15]   [Baseline] subject=P18  acc=0.900  f1=0.474
+[03:48:15]   [Baseline] subject=P19  acc=0.800  f1=0.444
+[03:48:15]   [Baseline] subject=P20  acc=0.762  f1=0.432
+[03:48:15]   [Baseline] subject=P21  acc=0.950  f1=0.487
+[03:48:15]   [Baseline] subject=P22  acc=0.952  f1=0.488
+[03:48:15]   [Baseline] subject=P23  acc=0.619  f1=0.382
+[03:48:15]   [Baseline] subject=P24  acc=0.762  f1=0.432
+[03:48:15]   [Baseline] subject=P25  acc=0.952  f1=0.488
+[03:48:15]   [Baseline] subject=P26  acc=0.762  f1=0.432
+[03:48:15]   [Baseline] subject=P27  acc=0.955  f1=0.488
+[03:48:15]   [Baseline] subject=P28  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P29  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P30  SKIP (single-class test)
+[03:48:15]   [Baseline] subject=P31  acc=0.913  f1=0.477
+[03:48:15] --- LOSO [RandomForest] ---
+[03:48:16]   [RandomForest] subject=P01  acc=0.095  f1=0.087
+[03:48:16]   [RandomForest] subject=P02  SKIP (single-class test)
+[03:48:16]   [RandomForest] subject=P03  SKIP (single-class test)
+[03:48:16]   [RandomForest] subject=P04  SKIP (single-class test)
+[03:48:16]   [RandomForest] subject=P05  acc=0.944  f1=0.486
+[03:48:17]   [RandomForest] subject=P06  acc=0.900  f1=0.474
+[03:48:17]   [RandomForest] subject=P07  SKIP (single-class test)
+[03:48:17]   [RandomForest] subject=P08  acc=0.950  f1=0.487
+[03:48:17]   [RandomForest] subject=P09  SKIP (single-class test)
+[03:48:17]   [RandomForest] subject=P10  SKIP (single-class test)
+[03:48:17]   [RandomForest] subject=P11  SKIP (single-class test)
+[03:48:18]   [RandomForest] subject=P12  acc=0.737  f1=0.424
+[03:48:18]   [RandomForest] subject=P13  acc=0.429  f1=0.300
+[03:48:18]   [RandomForest] subject=P14  SKIP (single-class test)
+[03:48:19]   [RandomForest] subject=P15  acc=0.800  f1=0.444
+[03:48:19]   [RandomForest] subject=P16  acc=0.650  f1=0.394
+[03:48:20]   [RandomForest] subject=P17  acc=0.952  f1=0.488
+[03:48:20]   [RandomForest] subject=P18  acc=0.900  f1=0.474
+[03:48:21]   [RandomForest] subject=P19  acc=0.800  f1=0.444
+[03:48:21]   [RandomForest] subject=P20  acc=0.762  f1=0.432
+[03:48:21]   [RandomForest] subject=P21  acc=0.950  f1=0.487
+[03:48:22]   [RandomForest] subject=P22  acc=0.952  f1=0.488
+[03:48:22]   [RandomForest] subject=P23  acc=0.619  f1=0.382
+[03:48:23]   [RandomForest] subject=P24  acc=0.762  f1=0.432
+[03:48:23]   [RandomForest] subject=P25  acc=0.952  f1=0.488
+[03:48:24]   [RandomForest] subject=P26  acc=0.762  f1=0.432
+[03:48:24]   [RandomForest] subject=P27  acc=0.955  f1=0.488
+[03:48:24]   [RandomForest] subject=P28  SKIP (single-class test)
+[03:48:24]   [RandomForest] subject=P29  SKIP (single-class test)
+[03:48:24]   [RandomForest] subject=P30  SKIP (single-class test)
+[03:48:25]   [RandomForest] subject=P31  acc=0.913  f1=0.477
+[03:48:25] --- LOSO [LogisticRegression] ---
+[03:48:25]   [LogisticRegression] subject=P01  acc=0.095  f1=0.087
+[03:48:25]   [LogisticRegression] subject=P02  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P03  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P04  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P05  acc=0.778  f1=0.438
+[03:48:25]   [LogisticRegression] subject=P06  acc=0.900  f1=0.474
+[03:48:25]   [LogisticRegression] subject=P07  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P08  acc=0.750  f1=0.429
+[03:48:25]   [LogisticRegression] subject=P09  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P10  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P11  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P12  acc=0.632  f1=0.387
+[03:48:25]   [LogisticRegression] subject=P13  acc=0.429  f1=0.300
+[03:48:25]   [LogisticRegression] subject=P14  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P15  acc=0.800  f1=0.444
+[03:48:25]   [LogisticRegression] subject=P16  acc=0.700  f1=0.531
+[03:48:25]   [LogisticRegression] subject=P17  acc=0.619  f1=0.475
+[03:48:25]   [LogisticRegression] subject=P18  acc=0.800  f1=0.688
+[03:48:25]   [LogisticRegression] subject=P19  acc=0.550  f1=0.487
+[03:48:25]   [LogisticRegression] subject=P20  acc=0.857  f1=0.788
+[03:48:25]   [LogisticRegression] subject=P21  acc=0.750  f1=0.429
+[03:48:25]   [LogisticRegression] subject=P22  acc=0.952  f1=0.488
+[03:48:25]   [LogisticRegression] subject=P23  acc=0.619  f1=0.382
+[03:48:25]   [LogisticRegression] subject=P24  acc=0.571  f1=0.533
+[03:48:25]   [LogisticRegression] subject=P25  acc=0.429  f1=0.357
+[03:48:25]   [LogisticRegression] subject=P26  acc=0.762  f1=0.571
+[03:48:25]   [LogisticRegression] subject=P27  acc=0.727  f1=0.421
+[03:48:25]   [LogisticRegression] subject=P28  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P29  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P30  SKIP (single-class test)
+[03:48:25]   [LogisticRegression] subject=P31  acc=0.913  f1=0.477
+[03:48:25] --- LOSO [XGBoost] ---
+[03:48:26]   [XGBoost] subject=P01  acc=0.095  f1=0.087
+[03:48:26]   [XGBoost] subject=P02  SKIP (single-class test)
+[03:48:26]   [XGBoost] subject=P03  SKIP (single-class test)
+[03:48:26]   [XGBoost] subject=P04  SKIP (single-class test)
+[03:48:27]   [XGBoost] subject=P05  acc=0.944  f1=0.486
+[03:48:27]   [XGBoost] subject=P06  acc=0.900  f1=0.474
+[03:48:27]   [XGBoost] subject=P07  SKIP (single-class test)
+[03:48:28]   [XGBoost] subject=P08  acc=0.850  f1=0.459
+[03:48:28]   [XGBoost] subject=P09  SKIP (single-class test)
+[03:48:28]   [XGBoost] subject=P10  SKIP (single-class test)
+[03:48:28]   [XGBoost] subject=P11  SKIP (single-class test)
+[03:48:29]   [XGBoost] subject=P12  acc=0.737  f1=0.424
+[03:48:29]   [XGBoost] subject=P13  acc=0.429  f1=0.300
+[03:48:29]   [XGBoost] subject=P14  SKIP (single-class test)
+[03:48:30]   [XGBoost] subject=P15  acc=0.800  f1=0.444
+[03:48:30]   [XGBoost] subject=P16  acc=0.650  f1=0.394
+[03:48:31]   [XGBoost] subject=P17  acc=0.905  f1=0.475
+[03:48:32]   [XGBoost] subject=P18  acc=0.900  f1=0.474
+[03:48:32]   [XGBoost] subject=P19  acc=0.900  f1=0.804
+[03:48:33]   [XGBoost] subject=P20  acc=0.762  f1=0.432
+[03:48:33]   [XGBoost] subject=P21  acc=0.950  f1=0.487
+[03:48:34]   [XGBoost] subject=P22  acc=0.952  f1=0.488
+[03:48:35]   [XGBoost] subject=P23  acc=0.619  f1=0.382
+[03:48:35]   [XGBoost] subject=P24  acc=0.762  f1=0.432
+[03:48:36]   [XGBoost] subject=P25  acc=0.952  f1=0.488
+[03:48:36]   [XGBoost] subject=P26  acc=0.762  f1=0.432
+[03:48:37]   [XGBoost] subject=P27  acc=0.727  f1=0.421
+[03:48:37]   [XGBoost] subject=P28  SKIP (single-class test)
+[03:48:37]   [XGBoost] subject=P29  SKIP (single-class test)
+[03:48:37]   [XGBoost] subject=P30  SKIP (single-class test)
+[03:48:38]   [XGBoost] subject=P31  acc=0.913  f1=0.477
+[03:48:38] --- LOSO [conformer] ---
+[03:48:44]   [conformer_fusion] subject=P01  acc=0.095  f1=0.087
+[03:48:44]   [conformer] subject=P02  SKIP (single-class test)
+[03:48:44]   [conformer] subject=P03  SKIP (single-class test)
+[03:48:44]   [conformer] subject=P04  SKIP (single-class test)
+[03:48:53]   [conformer_fusion] subject=P05  acc=0.833  f1=0.455
+[03:49:00]   [conformer_fusion] subject=P06  acc=0.900  f1=0.474
+[03:49:00]   [conformer] subject=P07  SKIP (single-class test)
+[03:49:09]   [conformer_fusion] subject=P08  acc=0.850  f1=0.459
+[03:49:09]   [conformer] subject=P09  SKIP (single-class test)
+[03:49:09]   [conformer] subject=P10  SKIP (single-class test)
+[03:49:09]   [conformer] subject=P11  SKIP (single-class test)
+[03:49:14]   [conformer_fusion] subject=P12  acc=0.632  f1=0.387
+[03:49:22]   [conformer_fusion] subject=P13  acc=0.429  f1=0.300
+[03:49:22]   [conformer] subject=P14  SKIP (single-class test)
+[03:49:29]   [conformer_fusion] subject=P15  acc=0.800  f1=0.444
+[03:49:38]   [conformer_fusion] subject=P16  acc=0.750  f1=0.687
+[03:49:45]   [conformer_fusion] subject=P17  acc=0.905  f1=0.475
+[03:49:53]   [conformer_fusion] subject=P18  acc=0.650  f1=0.561
+[03:50:02]   [conformer_fusion] subject=P19  acc=0.900  f1=0.844
+[03:50:09]   [conformer_fusion] subject=P20  acc=0.762  f1=0.646
+[03:50:17]   [conformer_fusion] subject=P21  acc=0.950  f1=0.487
+[03:50:22]   [conformer_fusion] subject=P22  acc=0.810  f1=0.447
+[03:50:30]   [conformer_fusion] subject=P23  acc=0.619  f1=0.382
+[03:50:39]   [conformer_fusion] subject=P24  acc=0.667  f1=0.400
+[03:50:45]   [conformer_fusion] subject=P25  acc=0.905  f1=0.475
+[03:50:53]   [conformer_fusion] subject=P26  acc=0.762  f1=0.432
+[03:51:01]   [conformer_fusion] subject=P27  acc=0.409  f1=0.343
+[03:51:01]   [conformer] subject=P28  SKIP (single-class test)
+[03:51:01]   [conformer] subject=P29  SKIP (single-class test)
+[03:51:01]   [conformer] subject=P30  SKIP (single-class test)
+[03:51:07]   [conformer_fusion] subject=P31  acc=0.783  f1=0.439
+[03:51:07] --- LOSO [tiny_tcn] ---
+[03:51:09]   [tiny_tcn_fusion] subject=P01  acc=0.095  f1=0.087
+[03:51:09]   [tiny_tcn] subject=P02  SKIP (single-class test)
+[03:51:09]   [tiny_tcn] subject=P03  SKIP (single-class test)
+[03:51:09]   [tiny_tcn] subject=P04  SKIP (single-class test)
+[03:51:12]   [tiny_tcn_fusion] subject=P05  acc=0.778  f1=0.438
+[03:51:14]   [tiny_tcn_fusion] subject=P06  acc=0.900  f1=0.474
+[03:51:14]   [tiny_tcn] subject=P07  SKIP (single-class test)
+[03:51:17]   [tiny_tcn_fusion] subject=P08  acc=0.750  f1=0.567
+[03:51:17]   [tiny_tcn] subject=P09  SKIP (single-class test)
+[03:51:17]   [tiny_tcn] subject=P10  SKIP (single-class test)
+[03:51:17]   [tiny_tcn] subject=P11  SKIP (single-class test)
+[03:51:21]   [tiny_tcn_fusion] subject=P12  acc=0.737  f1=0.424
+[03:51:23]   [tiny_tcn_fusion] subject=P13  acc=0.429  f1=0.300
+[03:51:23]   [tiny_tcn] subject=P14  SKIP (single-class test)
+[03:51:25]   [tiny_tcn_fusion] subject=P15  acc=0.700  f1=0.412
+[03:51:29]   [tiny_tcn_fusion] subject=P16  acc=0.650  f1=0.394
+[03:51:31]   [tiny_tcn_fusion] subject=P17  acc=0.905  f1=0.475
+[03:51:35]   [tiny_tcn_fusion] subject=P18  acc=0.500  f1=0.451
+[03:51:38]   [tiny_tcn_fusion] subject=P19  acc=0.950  f1=0.928
+[03:51:42]   [tiny_tcn_fusion] subject=P20  acc=0.762  f1=0.432
+[03:51:45]   [tiny_tcn_fusion] subject=P21  acc=0.850  f1=0.459
+[03:51:48]   [tiny_tcn_fusion] subject=P22  acc=0.571  f1=0.364
+[03:51:51]   [tiny_tcn_fusion] subject=P23  acc=0.619  f1=0.533
+[03:51:54]   [tiny_tcn_fusion] subject=P24  acc=0.524  f1=0.344
+[03:51:56]   [tiny_tcn_fusion] subject=P25  acc=0.952  f1=0.488
+[03:52:00]   [tiny_tcn_fusion] subject=P26  acc=0.762  f1=0.432
+[03:52:03]   [tiny_tcn_fusion] subject=P27  acc=0.455  f1=0.312
+[03:52:03]   [tiny_tcn] subject=P28  SKIP (single-class test)
+[03:52:03]   [tiny_tcn] subject=P29  SKIP (single-class test)
+[03:52:03]   [tiny_tcn] subject=P30  SKIP (single-class test)
+[03:52:06]   [tiny_tcn_fusion] subject=P31  acc=0.696  f1=0.582
+[03:52:06] --- LOSO [bilstm] ---
+[03:52:09]   [bilstm_fusion] subject=P01  acc=0.095  f1=0.087
+[03:52:09]   [bilstm] subject=P02  SKIP (single-class test)
+[03:52:09]   [bilstm] subject=P03  SKIP (single-class test)
+[03:52:09]   [bilstm] subject=P04  SKIP (single-class test)
+[03:52:11]   [bilstm_fusion] subject=P05  acc=0.778  f1=0.438
+[03:52:15]   [bilstm_fusion] subject=P06  acc=0.900  f1=0.474
+[03:52:15]   [bilstm] subject=P07  SKIP (single-class test)
+[03:52:17]   [bilstm_fusion] subject=P08  acc=0.800  f1=0.608
+[03:52:17]   [bilstm] subject=P09  SKIP (single-class test)
+[03:52:17]   [bilstm] subject=P10  SKIP (single-class test)
+[03:52:17]   [bilstm] subject=P11  SKIP (single-class test)
+[03:52:20]   [bilstm_fusion] subject=P12  acc=0.684  f1=0.406
+[03:52:24]   [bilstm_fusion] subject=P13  acc=0.429  f1=0.300
+[03:52:24]   [bilstm] subject=P14  SKIP (single-class test)
+[03:52:27]   [bilstm_fusion] subject=P15  acc=0.800  f1=0.444
+[03:52:30]   [bilstm_fusion] subject=P16  acc=0.700  f1=0.600
+[03:52:33]   [bilstm_fusion] subject=P17  acc=0.857  f1=0.462
+[03:52:36]   [bilstm_fusion] subject=P18  acc=0.400  f1=0.375
+[03:52:40]   [bilstm_fusion] subject=P19  acc=0.500  f1=0.405
+[03:52:43]   [bilstm_fusion] subject=P20  acc=0.714  f1=0.537
+[03:52:46]   [bilstm_fusion] subject=P21  acc=0.800  f1=0.444
+[03:52:49]   [bilstm_fusion] subject=P22  acc=0.810  f1=0.447
+[03:52:53]   [bilstm_fusion] subject=P23  acc=0.619  f1=0.475
+[03:52:56]   [bilstm_fusion] subject=P24  acc=0.667  f1=0.505
+[03:52:59]   [bilstm_fusion] subject=P25  acc=0.952  f1=0.488
+[03:53:02]   [bilstm_fusion] subject=P26  acc=0.714  f1=0.537
+[03:53:05]   [bilstm_fusion] subject=P27  acc=0.455  f1=0.312
+[03:53:05]   [bilstm] subject=P28  SKIP (single-class test)
+[03:53:05]   [bilstm] subject=P29  SKIP (single-class test)
+[03:53:05]   [bilstm] subject=P30  SKIP (single-class test)
+[03:53:08]   [bilstm_fusion] subject=P31  acc=0.913  f1=0.477
+[03:53:08] --- LOSO [cnn1d] ---
+[03:53:11]   [cnn1d_fusion] subject=P01  acc=0.095  f1=0.087
+[03:53:11]   [cnn1d] subject=P02  SKIP (single-class test)
+[03:53:11]   [cnn1d] subject=P03  SKIP (single-class test)
+[03:53:11]   [cnn1d] subject=P04  SKIP (single-class test)
+[03:53:15]   [cnn1d_fusion] subject=P05  acc=0.889  f1=0.471
+[03:53:18]   [cnn1d_fusion] subject=P06  acc=0.900  f1=0.474
+[03:53:18]   [cnn1d] subject=P07  SKIP (single-class test)
+[03:53:21]   [cnn1d_fusion] subject=P08  acc=0.650  f1=0.498
+[03:53:21]   [cnn1d] subject=P09  SKIP (single-class test)
+[03:53:21]   [cnn1d] subject=P10  SKIP (single-class test)
+[03:53:21]   [cnn1d] subject=P11  SKIP (single-class test)
+[03:53:25]   [cnn1d_fusion] subject=P12  acc=0.579  f1=0.367
+[03:53:27]   [cnn1d_fusion] subject=P13  acc=0.429  f1=0.300
+[03:53:27]   [cnn1d] subject=P14  SKIP (single-class test)
+[03:53:30]   [cnn1d_fusion] subject=P15  acc=0.800  f1=0.444
+[03:53:32]   [cnn1d_fusion] subject=P16  acc=0.650  f1=0.394
+[03:53:35]   [cnn1d_fusion] subject=P17  acc=0.905  f1=0.475
+[03:53:37]   [cnn1d_fusion] subject=P18  acc=0.250  f1=0.248
+[03:53:39]   [cnn1d_fusion] subject=P19  acc=0.850  f1=0.812
+[03:53:43]   [cnn1d_fusion] subject=P20  acc=0.762  f1=0.432
+[03:53:46]   [cnn1d_fusion] subject=P21  acc=0.800  f1=0.444
+[03:53:48]   [cnn1d_fusion] subject=P22  acc=0.714  f1=0.417
+[03:53:51]   [cnn1d_fusion] subject=P23  acc=0.619  f1=0.382
+[03:53:55]   [cnn1d_fusion] subject=P24  acc=0.381  f1=0.276
+[03:53:57]   [cnn1d_fusion] subject=P25  acc=0.952  f1=0.488
+[03:53:59]   [cnn1d_fusion] subject=P26  acc=0.762  f1=0.571
+[03:54:03]   [cnn1d_fusion] subject=P27  acc=0.273  f1=0.248
+[03:54:03]   [cnn1d] subject=P28  SKIP (single-class test)
+[03:54:03]   [cnn1d] subject=P29  SKIP (single-class test)
+[03:54:03]   [cnn1d] subject=P30  SKIP (single-class test)
+[03:54:05]   [cnn1d_fusion] subject=P31  acc=0.826  f1=0.697
+[03:54:05] --- LOSO [multistream] ---
+[03:54:08]   [multistream_fusion] subject=P01  acc=0.095  f1=0.087
+[03:54:08]   [multistream] subject=P02  SKIP (single-class test)
+[03:54:08]   [multistream] subject=P03  SKIP (single-class test)
+[03:54:08]   [multistream] subject=P04  SKIP (single-class test)
+[03:54:13]   [multistream_fusion] subject=P05  acc=0.778  f1=0.438
+[03:54:17]   [multistream_fusion] subject=P06  acc=0.900  f1=0.474
+[03:54:17]   [multistream] subject=P07  SKIP (single-class test)
+[03:54:22]   [multistream_fusion] subject=P08  acc=0.750  f1=0.429
+[03:54:22]   [multistream] subject=P09  SKIP (single-class test)
+[03:54:22]   [multistream] subject=P10  SKIP (single-class test)
+[03:54:22]   [multistream] subject=P11  SKIP (single-class test)
+[03:54:28]   [multistream_fusion] subject=P12  acc=0.789  f1=0.756
+[03:54:36]   [multistream_fusion] subject=P13  acc=0.429  f1=0.300
+[03:54:36]   [multistream] subject=P14  SKIP (single-class test)
+[03:54:41]   [multistream_fusion] subject=P15  acc=0.800  f1=0.444
+[03:54:50]   [multistream_fusion] subject=P16  acc=0.650  f1=0.394
+[03:54:57]   [multistream_fusion] subject=P17  acc=0.952  f1=0.488
+[03:55:01]   [multistream_fusion] subject=P18  acc=0.900  f1=0.474
+[03:55:06]   [multistream_fusion] subject=P19  acc=0.850  f1=0.657
+[03:55:12]   [multistream_fusion] subject=P20  acc=0.762  f1=0.432
+[03:55:21]   [multistream_fusion] subject=P21  acc=0.900  f1=0.474
+[03:55:25]   [multistream_fusion] subject=P22  acc=0.571  f1=0.446
+[03:55:31]   [multistream_fusion] subject=P23  acc=0.524  f1=0.344
+[03:55:37]   [multistream_fusion] subject=P24  acc=0.762  f1=0.432
+[03:55:44]   [multistream_fusion] subject=P25  acc=0.905  f1=0.475
+[03:55:49]   [multistream_fusion] subject=P26  acc=0.762  f1=0.571
+[03:55:55]   [multistream_fusion] subject=P27  acc=0.364  f1=0.267
+[03:55:55]   [multistream] subject=P28  SKIP (single-class test)
+[03:55:55]   [multistream] subject=P29  SKIP (single-class test)
+[03:55:55]   [multistream] subject=P30  SKIP (single-class test)
+[03:56:03]   [multistream_fusion] subject=P31  acc=0.913  f1=0.477
+[03:56:03] --- LOSO [dann] ---
+[03:56:09]   [dann] subject=P01  acc=0.095  f1=0.087
+[03:56:09]   [dann] subject=P02  SKIP (single-class test)
+[03:56:09]   [dann] subject=P03  SKIP (single-class test)
+[03:56:09]   [dann] subject=P04  SKIP (single-class test)
+[03:56:17]   [dann] subject=P05  acc=0.833  f1=0.455
+[03:56:23]   [dann] subject=P06  acc=0.900  f1=0.474
+[03:56:23]   [dann] subject=P07  SKIP (single-class test)
+[03:56:31]   [dann] subject=P08  acc=0.800  f1=0.444
+[03:56:31]   [dann] subject=P09  SKIP (single-class test)
+[03:56:31]   [dann] subject=P10  SKIP (single-class test)
+[03:56:31]   [dann] subject=P11  SKIP (single-class test)
+[03:56:40]   [dann] subject=P12  acc=0.632  f1=0.387
+[03:56:49]   [dann] subject=P13  acc=0.429  f1=0.300
+[03:56:49]   [dann] subject=P14  SKIP (single-class test)
+[03:56:59]   [dann] subject=P15  acc=0.800  f1=0.444
+[03:57:07]   [dann] subject=P16  acc=0.650  f1=0.394
+[03:57:14]   [dann] subject=P17  acc=0.952  f1=0.488
+[03:57:21]   [dann] subject=P18  acc=0.600  f1=0.524
+[03:57:30]   [dann] subject=P19  acc=0.800  f1=0.444
+[03:57:39]   [dann] subject=P20  acc=0.714  f1=0.417
+[03:57:48]   [dann] subject=P21  acc=0.900  f1=0.474
+[03:57:54]   [dann] subject=P22  acc=0.905  f1=0.475
+[03:58:03]   [dann] subject=P23  acc=0.619  f1=0.382
+[03:58:10]   [dann] subject=P24  acc=0.619  f1=0.382
+[03:58:19]   [dann] subject=P25  acc=0.952  f1=0.488
+[03:58:25]   [dann] subject=P26  acc=0.762  f1=0.646
+[03:58:32]   [dann] subject=P27  acc=0.045  f1=0.043
+[03:58:32]   [dann] subject=P28  SKIP (single-class test)
+[03:58:32]   [dann] subject=P29  SKIP (single-class test)
+[03:58:32]   [dann] subject=P30  SKIP (single-class test)
+[03:58:39]   [dann] subject=P31  acc=0.870  f1=0.465
+[03:58:39] --- LOSO [tstcc] ---
+[03:58:43]   [tstcc-pretrain] epoch 10/40  loss=8.1047
+[03:58:47]   [tstcc-pretrain] epoch 20/40  loss=7.9592
+[03:58:50]   [tstcc-pretrain] epoch 30/40  loss=7.8921
+[03:58:54]   [tstcc-pretrain] epoch 40/40  loss=7.8875
+[03:58:55]   [tstcc] subject=P01  acc=0.095  f1=0.087
+[03:58:55]   [tstcc] subject=P02  SKIP (single-class test)
+[03:58:55]   [tstcc] subject=P03  SKIP (single-class test)
+[03:58:55]   [tstcc] subject=P04  SKIP (single-class test)
+[03:58:59]   [tstcc-pretrain] epoch 10/40  loss=8.0869
+[03:59:02]   [tstcc-pretrain] epoch 20/40  loss=7.9309
+[03:59:06]   [tstcc-pretrain] epoch 30/40  loss=7.8615
+[03:59:10]   [tstcc-pretrain] epoch 40/40  loss=7.8468
+[03:59:11]   [tstcc] subject=P05  acc=0.722  f1=0.419
+[03:59:14]   [tstcc-pretrain] epoch 10/40  loss=8.1083
+[03:59:18]   [tstcc-pretrain] epoch 20/40  loss=7.9308
+[03:59:22]   [tstcc-pretrain] epoch 30/40  loss=7.8622
+[03:59:26]   [tstcc-pretrain] epoch 40/40  loss=7.8461
+[03:59:27]   [tstcc] subject=P06  acc=0.900  f1=0.474
+[03:59:27]   [tstcc] subject=P07  SKIP (single-class test)
+[03:59:30]   [tstcc-pretrain] epoch 10/40  loss=8.0914
+[03:59:34]   [tstcc-pretrain] epoch 20/40  loss=7.9235
+[03:59:38]   [tstcc-pretrain] epoch 30/40  loss=7.8736
+[03:59:41]   [tstcc-pretrain] epoch 40/40  loss=7.8693
+[03:59:42]   [tstcc] subject=P08  acc=0.150  f1=0.148
+[03:59:42]   [tstcc] subject=P09  SKIP (single-class test)
+[03:59:42]   [tstcc] subject=P10  SKIP (single-class test)
+[03:59:42]   [tstcc] subject=P11  SKIP (single-class test)
+[03:59:46]   [tstcc-pretrain] epoch 10/40  loss=8.0758
+[03:59:50]   [tstcc-pretrain] epoch 20/40  loss=7.9154
+[03:59:54]   [tstcc-pretrain] epoch 30/40  loss=7.8617
+[03:59:57]   [tstcc-pretrain] epoch 40/40  loss=7.8621
+[03:59:58]   [tstcc] subject=P12  acc=0.737  f1=0.424
+[04:00:02]   [tstcc-pretrain] epoch 10/40  loss=8.0700
+[04:00:05]   [tstcc-pretrain] epoch 20/40  loss=7.9267
+[04:00:09]   [tstcc-pretrain] epoch 30/40  loss=7.8778
+[04:00:13]   [tstcc-pretrain] epoch 40/40  loss=7.8565
+[04:00:14]   [tstcc] subject=P13  acc=0.429  f1=0.300
+[04:00:14]   [tstcc] subject=P14  SKIP (single-class test)
+[04:00:17]   [tstcc-pretrain] epoch 10/40  loss=8.0893
+[04:00:21]   [tstcc-pretrain] epoch 20/40  loss=7.9356
+[04:00:25]   [tstcc-pretrain] epoch 30/40  loss=7.8807
+[04:00:29]   [tstcc-pretrain] epoch 40/40  loss=7.8567
+[04:00:29]   [tstcc] subject=P15  acc=0.600  f1=0.375
+[04:00:33]   [tstcc-pretrain] epoch 10/40  loss=8.0937
+[04:00:37]   [tstcc-pretrain] epoch 20/40  loss=7.9380
+[04:00:41]   [tstcc-pretrain] epoch 30/40  loss=7.8804
+[04:00:44]   [tstcc-pretrain] epoch 40/40  loss=7.8557
+[04:00:45]   [tstcc] subject=P16  acc=0.600  f1=0.467
+[04:00:49]   [tstcc-pretrain] epoch 10/40  loss=8.0815
+[04:00:53]   [tstcc-pretrain] epoch 20/40  loss=7.9284
+[04:00:56]   [tstcc-pretrain] epoch 30/40  loss=7.8709
+[04:01:00]   [tstcc-pretrain] epoch 40/40  loss=7.8674
+[04:01:01]   [tstcc] subject=P17  acc=0.810  f1=0.611
+[04:01:05]   [tstcc-pretrain] epoch 10/40  loss=8.1039
+[04:01:08]   [tstcc-pretrain] epoch 20/40  loss=7.9446
+[04:01:12]   [tstcc-pretrain] epoch 30/40  loss=7.8862
+[04:01:16]   [tstcc-pretrain] epoch 40/40  loss=7.8597
+[04:01:17]   [tstcc] subject=P18  acc=0.800  f1=0.444
+[04:01:20]   [tstcc-pretrain] epoch 10/40  loss=8.1164
+[04:01:24]   [tstcc-pretrain] epoch 20/40  loss=7.9297
+[04:01:28]   [tstcc-pretrain] epoch 30/40  loss=7.8874
+[04:01:31]   [tstcc-pretrain] epoch 40/40  loss=7.8579
+[04:01:32]   [tstcc] subject=P19  acc=0.800  f1=0.444
+[04:01:36]   [tstcc-pretrain] epoch 10/40  loss=8.0985
+[04:01:40]   [tstcc-pretrain] epoch 20/40  loss=7.9169
+[04:01:43]   [tstcc-pretrain] epoch 30/40  loss=7.8605
+[04:01:47]   [tstcc-pretrain] epoch 40/40  loss=7.8527
+[04:01:48]   [tstcc] subject=P20  acc=0.524  f1=0.344
+[04:01:51]   [tstcc-pretrain] epoch 10/40  loss=8.0883
+[04:01:55]   [tstcc-pretrain] epoch 20/40  loss=7.9268
+[04:01:59]   [tstcc-pretrain] epoch 30/40  loss=7.8698
+[04:02:03]   [tstcc-pretrain] epoch 40/40  loss=7.8575
+[04:02:04]   [tstcc] subject=P21  acc=0.800  f1=0.444
+[04:02:07]   [tstcc-pretrain] epoch 10/40  loss=8.0823
+[04:02:11]   [tstcc-pretrain] epoch 20/40  loss=7.9487
+[04:02:15]   [tstcc-pretrain] epoch 30/40  loss=7.8618
+[04:02:18]   [tstcc-pretrain] epoch 40/40  loss=7.8591
+[04:02:19]   [tstcc] subject=P22  acc=0.667  f1=0.400
+[04:02:23]   [tstcc-pretrain] epoch 10/40  loss=8.0993
+[04:02:27]   [tstcc-pretrain] epoch 20/40  loss=7.9526
+[04:02:30]   [tstcc-pretrain] epoch 30/40  loss=7.8787
+[04:02:34]   [tstcc-pretrain] epoch 40/40  loss=7.8814
+[04:02:35]   [tstcc] subject=P23  acc=0.619  f1=0.382
+[04:02:39]   [tstcc-pretrain] epoch 10/40  loss=8.0922
+[04:02:42]   [tstcc-pretrain] epoch 20/40  loss=7.9220
+[04:02:46]   [tstcc-pretrain] epoch 30/40  loss=7.8888
+[04:02:50]   [tstcc-pretrain] epoch 40/40  loss=7.8640
+[04:02:51]   [tstcc] subject=P24  acc=0.714  f1=0.537
+[04:02:54]   [tstcc-pretrain] epoch 10/40  loss=8.0876
+[04:02:58]   [tstcc-pretrain] epoch 20/40  loss=7.9352
+[04:03:02]   [tstcc-pretrain] epoch 30/40  loss=7.8898
+[04:03:05]   [tstcc-pretrain] epoch 40/40  loss=7.8757
+[04:03:06]   [tstcc] subject=P25  acc=0.952  f1=0.488
+[04:03:10]   [tstcc-pretrain] epoch 10/40  loss=8.0781
+[04:03:14]   [tstcc-pretrain] epoch 20/40  loss=7.9217
+[04:03:17]   [tstcc-pretrain] epoch 30/40  loss=7.8578
+[04:03:21]   [tstcc-pretrain] epoch 40/40  loss=7.8637
+[04:03:22]   [tstcc] subject=P26  acc=0.762  f1=0.432
+[04:03:26]   [tstcc-pretrain] epoch 10/40  loss=8.1080
+[04:03:29]   [tstcc-pretrain] epoch 20/40  loss=7.9242
+[04:03:33]   [tstcc-pretrain] epoch 30/40  loss=7.8691
+[04:03:37]   [tstcc-pretrain] epoch 40/40  loss=7.8424
+[04:03:37]   [tstcc] subject=P27  acc=0.500  f1=0.333
+[04:03:37]   [tstcc] subject=P28  SKIP (single-class test)
+[04:03:37]   [tstcc] subject=P29  SKIP (single-class test)
+[04:03:37]   [tstcc] subject=P30  SKIP (single-class test)
+[04:03:41]   [tstcc-pretrain] epoch 10/40  loss=8.0863
+[04:03:45]   [tstcc-pretrain] epoch 20/40  loss=7.9268
+[04:03:48]   [tstcc-pretrain] epoch 30/40  loss=7.8478
+[04:03:52]   [tstcc-pretrain] epoch 40/40  loss=7.8716
+[04:03:53]   [tstcc] subject=P31  acc=0.826  f1=0.697
+[04:03:53] [ensemble] 'RandomForest' calibrated T=1.25 (NLL=0.531)
+[04:03:53] [ensemble] 'LogisticRegression' calibrated T=4.00 (NLL=0.638)
+[04:03:53] [ensemble] 'XGBoost' calibrated T=4.00 (NLL=0.546)
+[04:03:53] [ensemble] 'conformer_fusion' calibrated T=3.00 (NLL=0.590)
+[04:03:53] [ensemble] 'tiny_tcn_fusion' calibrated T=4.00 (NLL=0.614)
+[04:03:53] [ensemble] 'multistream_fusion' calibrated T=3.00 (NLL=0.597)
+[04:03:53] [ensemble] 'DANN_Conformer' calibrated T=3.00 (NLL=0.615)
+[04:03:53] [ensemble] 'TSTCC' calibrated T=4.00 (NLL=0.663)
+[04:03:53] [ensemble] built 'Ensemble_RandomForest+LogisticRegression+XGBoost+conformer_fusion+tiny_tcn_fusion+multistream_fusion+DANN_Conformer+TSTCC' over 8 members  acc=0.765  f1=0.463
+[04:03:57] Saved results to results\emotion\emowork\calibrated\emowork\valence
+
+######################################################################
+# CALIBRATED TARGET = quadrant
+######################################################################
+[04:03:57] === EMOWORK / target=quadrant ===
+[04:03:57]   samples=625  subjects=31  labels=['HVHA', 'HVLA', 'LVHA', 'LVLA']
+[04:03:57]   feature_cols=149  seq_shape=(625, 240, 12)
+[04:03:57]   [label-variance] target=quadrant labels=['HVHA', 'HVLA', 'LVHA', 'LVLA']
+[04:03:57]   [label-variance] multi-class subjects: 30/31 -> usable for LOSO evaluation
+[04:03:57]   [label-variance] single-class subjects (1): ['P29'] -> excluded from per-fold metrics
+[04:03:57] --- LOSO [Baseline] ---
+[04:03:57]   [Baseline] subject=P01  acc=0.524  f1=0.229
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P02  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P03  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P04  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P05  acc=0.000  f1=0.000
+[04:03:57]   [Baseline] subject=P06  acc=0.100  f1=0.061
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P07  acc=0.000  f1=0.000
+[04:03:57]   [Baseline] subject=P08  acc=0.050  f1=0.032
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P09  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P10  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P11  acc=0.000  f1=0.000
+[04:03:57]   [Baseline] subject=P12  acc=0.158  f1=0.068
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P13  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P14  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P15  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P16  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P17  acc=0.000  f1=0.000
+[04:03:57]   [Baseline] subject=P18  acc=0.100  f1=0.061
+[04:03:57]   [Baseline] subject=P19  acc=0.100  f1=0.045
+[04:03:57]   [Baseline] subject=P20  acc=0.143  f1=0.062
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P21  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P22  acc=0.000  f1=0.000
+[04:03:57]   [Baseline] subject=P23  acc=0.333  f1=0.125
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P24  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P25  acc=0.000  f1=0.000
+[04:03:57]   [Baseline] subject=P26  acc=0.048  f1=0.023
+[04:03:57]   [Baseline] subject=P27  acc=0.045  f1=0.029
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P28  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P29  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P30  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:03:57]   [Baseline] subject=P31  acc=0.000  f1=0.000
+[04:03:57] --- LOSO [RandomForest] ---
+[04:03:58]   [RandomForest] subject=P01  acc=0.095  f1=0.058
+[04:03:58]   [RandomForest] subject=P02  acc=0.905  f1=0.475
+[04:03:59]   [RandomForest] subject=P03  acc=0.556  f1=0.550
+[04:03:59]   [RandomForest] subject=P04  acc=0.895  f1=0.472
+[04:04:00]   [RandomForest] subject=P05  acc=0.333  f1=0.167
+[04:04:00]   [RandomForest] subject=P06  acc=0.500  f1=0.286
+[04:04:01]   [RandomForest] subject=P07  acc=0.095  f1=0.087
+[04:04:01]   [RandomForest] subject=P08  acc=0.900  f1=0.537
+[04:04:02]   [RandomForest] subject=P09  acc=0.400  f1=0.286
+[04:04:02]   [RandomForest] subject=P10  acc=0.263  f1=0.244
+[04:04:03]   [RandomForest] subject=P11  acc=0.600  f1=0.524
+[04:04:03]   [RandomForest] subject=P12  acc=0.211  f1=0.087
+[04:04:04]   [RandomForest] subject=P13  acc=0.429  f1=0.300
+[04:04:04]   [RandomForest] subject=P14  acc=0.579  f1=0.367
+[04:04:05]   [RandomForest] subject=P15  acc=0.550  f1=0.325
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:05]   [RandomForest] subject=P16  acc=0.650  f1=0.271
+[04:04:06]   [RandomForest] subject=P17  acc=0.381  f1=0.257
+[04:04:06]   [RandomForest] subject=P18  acc=0.450  f1=0.307
+[04:04:07]   [RandomForest] subject=P19  acc=0.250  f1=0.114
+[04:04:07]   [RandomForest] subject=P20  acc=0.571  f1=0.188
+[04:04:08]   [RandomForest] subject=P21  acc=0.650  f1=0.341
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:08]   [RandomForest] subject=P22  acc=0.000  f1=0.000
+[04:04:09]   [RandomForest] subject=P23  acc=0.190  f1=0.110
+[04:04:09]   [RandomForest] subject=P24  acc=0.667  f1=0.283
+[04:04:10]   [RandomForest] subject=P25  acc=0.952  f1=0.488
+[04:04:11]   [RandomForest] subject=P26  acc=0.429  f1=0.150
+[04:04:11]   [RandomForest] subject=P27  acc=0.818  f1=0.523
+[04:04:12]   [RandomForest] subject=P28  acc=0.190  f1=0.160
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:12]   [RandomForest] subject=P29  acc=0.409  f1=0.290
+[04:04:13]   [RandomForest] subject=P30  acc=0.714  f1=0.417
+[04:04:13]   [RandomForest] subject=P31  acc=0.435  f1=0.292
+[04:04:13] --- LOSO [LogisticRegression] ---
+[04:04:13]   [LogisticRegression] subject=P01  acc=0.095  f1=0.058
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:13]   [LogisticRegression] subject=P02  acc=0.048  f1=0.025
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:13]   [LogisticRegression] subject=P03  acc=0.056  f1=0.042
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P04  acc=0.737  f1=0.292
+[04:04:14]   [LogisticRegression] subject=P05  acc=0.722  f1=0.510
+[04:04:14]   [LogisticRegression] subject=P06  acc=0.100  f1=0.070
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P07  acc=0.524  f1=0.172
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P08  acc=0.600  f1=0.200
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P09  acc=0.650  f1=0.341
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P10  acc=0.421  f1=0.288
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P11  acc=0.500  f1=0.278
+[04:04:14]   [LogisticRegression] subject=P12  acc=0.474  f1=0.188
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P13  acc=0.071  f1=0.074
+[04:04:14]   [LogisticRegression] subject=P14  acc=0.579  f1=0.568
+[04:04:14]   [LogisticRegression] subject=P15  acc=0.600  f1=0.453
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P16  acc=0.250  f1=0.152
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P17  acc=0.333  f1=0.191
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:14]   [LogisticRegression] subject=P18  acc=0.550  f1=0.367
+[04:04:14]   [LogisticRegression] subject=P19  acc=0.450  f1=0.373
+[04:04:14]   [LogisticRegression] subject=P20  acc=0.190  f1=0.114
+[04:04:15]   [LogisticRegression] subject=P21  acc=0.500  f1=0.247
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:15]   [LogisticRegression] subject=P22  acc=0.286  f1=0.154
+[04:04:15]   [LogisticRegression] subject=P23  acc=0.095  f1=0.081
+[04:04:15]   [LogisticRegression] subject=P24  acc=0.381  f1=0.293
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:15]   [LogisticRegression] subject=P25  acc=0.857  f1=0.308
+[04:04:15]   [LogisticRegression] subject=P26  acc=0.095  f1=0.056
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:15]   [LogisticRegression] subject=P27  acc=0.409  f1=0.167
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:15]   [LogisticRegression] subject=P28  acc=0.238  f1=0.153
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:15]   [LogisticRegression] subject=P29  acc=0.273  f1=0.214
+[04:04:15]   [LogisticRegression] subject=P30  acc=0.667  f1=0.505
+[04:04:15]   [LogisticRegression] subject=P31  acc=0.478  f1=0.296
+[04:04:15] --- LOSO [XGBoost] ---
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:17]   [XGBoost] subject=P01  acc=0.048  f1=0.024
+[04:04:20]   [XGBoost] subject=P02  acc=0.810  f1=0.447
+[04:04:22]   [XGBoost] subject=P03  acc=0.444  f1=0.444
+[04:04:25]   [XGBoost] subject=P04  acc=0.789  f1=0.604
+[04:04:27]   [XGBoost] subject=P05  acc=0.333  f1=0.167
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:29]   [XGBoost] subject=P06  acc=0.400  f1=0.160
+[04:04:32]   [XGBoost] subject=P07  acc=0.095  f1=0.087
+[04:04:34]   [XGBoost] subject=P08  acc=0.550  f1=0.237
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:37]   [XGBoost] subject=P09  acc=0.400  f1=0.231
+[04:04:39]   [XGBoost] subject=P10  acc=0.526  f1=0.474
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:41]   [XGBoost] subject=P11  acc=0.450  f1=0.353
+[04:04:44]   [XGBoost] subject=P12  acc=0.368  f1=0.217
+[04:04:46]   [XGBoost] subject=P13  acc=0.429  f1=0.300
+[04:04:48]   [XGBoost] subject=P14  acc=0.474  f1=0.321
+[04:04:51]   [XGBoost] subject=P15  acc=0.550  f1=0.253
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:04:53]   [XGBoost] subject=P16  acc=0.500  f1=0.238
+[04:04:56]   [XGBoost] subject=P17  acc=0.381  f1=0.220
+[04:04:58]   [XGBoost] subject=P18  acc=0.450  f1=0.316
+[04:05:01]   [XGBoost] subject=P19  acc=0.400  f1=0.316
+[04:05:03]   [XGBoost] subject=P20  acc=0.286  f1=0.143
+[04:05:05]   [XGBoost] subject=P21  acc=0.500  f1=0.308
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:05:08]   [XGBoost] subject=P22  acc=0.048  f1=0.032
+[04:05:10]   [XGBoost] subject=P23  acc=0.286  f1=0.158
+[04:05:13]   [XGBoost] subject=P24  acc=0.619  f1=0.263
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:05:15]   [XGBoost] subject=P25  acc=0.810  f1=0.298
+[04:05:18]   [XGBoost] subject=P26  acc=0.333  f1=0.161
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:05:20]   [XGBoost] subject=P27  acc=0.091  f1=0.057
+[04:05:23]   [XGBoost] subject=P28  acc=0.190  f1=0.160
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:05:26]   [XGBoost] subject=P29  acc=0.591  f1=0.371
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:05:28]   [XGBoost] subject=P30  acc=0.667  f1=0.267
+[04:05:31]   [XGBoost] subject=P31  acc=0.478  f1=0.316
+[04:05:31] --- LOSO [conformer] ---
+[04:05:42]   [conformer_fusion] subject=P01  acc=0.143  f1=0.135
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:05:49]   [conformer_fusion] subject=P02  acc=0.286  f1=0.148
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:06:01]   [conformer_fusion] subject=P03  acc=0.333  f1=0.262
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:06:10]   [conformer_fusion] subject=P04  acc=0.105  f1=0.078
+[04:06:22]   [conformer_fusion] subject=P05  acc=0.444  f1=0.300
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:06:28]   [conformer_fusion] subject=P06  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:06:36]   [conformer_fusion] subject=P07  acc=0.238  f1=0.169
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:06:43]   [conformer_fusion] subject=P08  acc=0.750  f1=0.214
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:06:51]   [conformer_fusion] subject=P09  acc=0.300  f1=0.167
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:07:03]   [conformer_fusion] subject=P10  acc=0.421  f1=0.243
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:07:07]   [conformer_fusion] subject=P11  acc=0.300  f1=0.171
+[04:07:17]   [conformer_fusion] subject=P12  acc=0.421  f1=0.167
+[04:07:28]   [conformer_fusion] subject=P13  acc=0.429  f1=0.300
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:07:38]   [conformer_fusion] subject=P14  acc=0.316  f1=0.233
+[04:07:49]   [conformer_fusion] subject=P15  acc=0.650  f1=0.378
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:07:58]   [conformer_fusion] subject=P16  acc=0.400  f1=0.222
+[04:08:07]   [conformer_fusion] subject=P17  acc=0.381  f1=0.285
+[04:08:17]   [conformer_fusion] subject=P18  acc=0.600  f1=0.561
+[04:08:28]   [conformer_fusion] subject=P19  acc=0.400  f1=0.331
+[04:08:36]   [conformer_fusion] subject=P20  acc=0.286  f1=0.164
+[04:08:40]   [conformer_fusion] subject=P21  acc=0.550  f1=0.356
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:08:51]   [conformer_fusion] subject=P22  acc=0.095  f1=0.061
+[04:09:02]   [conformer_fusion] subject=P23  acc=0.286  f1=0.115
+[04:09:09]   [conformer_fusion] subject=P24  acc=0.429  f1=0.222
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:09:18]   [conformer_fusion] subject=P25  acc=0.667  f1=0.267
+[04:09:26]   [conformer_fusion] subject=P26  acc=0.429  f1=0.301
+[04:09:34]   [conformer_fusion] subject=P27  acc=0.136  f1=0.106
+[04:09:45]   [conformer_fusion] subject=P28  acc=0.238  f1=0.222
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:09:55]   [conformer_fusion] subject=P29  acc=0.864  f1=0.463
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:05]   [conformer_fusion] subject=P30  acc=0.810  f1=0.430
+[04:10:15]   [conformer_fusion] subject=P31  acc=0.522  f1=0.444
+[04:10:15] --- LOSO [tiny_tcn] ---
+[04:10:20]   [tiny_tcn_fusion] subject=P01  acc=0.095  f1=0.058
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:24]   [tiny_tcn_fusion] subject=P02  acc=0.095  f1=0.063
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:27]   [tiny_tcn_fusion] subject=P03  acc=0.389  f1=0.274
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:31]   [tiny_tcn_fusion] subject=P04  acc=0.105  f1=0.100
+[04:10:36]   [tiny_tcn_fusion] subject=P05  acc=0.611  f1=0.419
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:39]   [tiny_tcn_fusion] subject=P06  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:44]   [tiny_tcn_fusion] subject=P07  acc=0.143  f1=0.083
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:47]   [tiny_tcn_fusion] subject=P08  acc=0.850  f1=0.236
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:50]   [tiny_tcn_fusion] subject=P09  acc=0.100  f1=0.074
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:53]   [tiny_tcn_fusion] subject=P10  acc=0.632  f1=0.460
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:10:57]   [tiny_tcn_fusion] subject=P11  acc=0.150  f1=0.091
+[04:11:02]   [tiny_tcn_fusion] subject=P12  acc=0.526  f1=0.250
+[04:11:04]   [tiny_tcn_fusion] subject=P13  acc=0.429  f1=0.300
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:11:09]   [tiny_tcn_fusion] subject=P14  acc=0.316  f1=0.120
+[04:11:14]   [tiny_tcn_fusion] subject=P15  acc=0.500  f1=0.256
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:11:18]   [tiny_tcn_fusion] subject=P16  acc=0.000  f1=0.000
+[04:11:21]   [tiny_tcn_fusion] subject=P17  acc=0.333  f1=0.167
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:11:25]   [tiny_tcn_fusion] subject=P18  acc=0.350  f1=0.205
+[04:11:28]   [tiny_tcn_fusion] subject=P19  acc=0.250  f1=0.212
+[04:11:31]   [tiny_tcn_fusion] subject=P20  acc=0.238  f1=0.232
+[04:11:36]   [tiny_tcn_fusion] subject=P21  acc=0.350  f1=0.187
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:11:38]   [tiny_tcn_fusion] subject=P22  acc=0.000  f1=0.000
+[04:11:43]   [tiny_tcn_fusion] subject=P23  acc=0.381  f1=0.138
+[04:11:45]   [tiny_tcn_fusion] subject=P24  acc=0.667  f1=0.267
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:11:48]   [tiny_tcn_fusion] subject=P25  acc=0.524  f1=0.229
+[04:11:52]   [tiny_tcn_fusion] subject=P26  acc=0.381  f1=0.138
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:11:55]   [tiny_tcn_fusion] subject=P27  acc=0.318  f1=0.253
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:11:59]   [tiny_tcn_fusion] subject=P28  acc=0.143  f1=0.083
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:04]   [tiny_tcn_fusion] subject=P29  acc=0.818  f1=0.450
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:08]   [tiny_tcn_fusion] subject=P30  acc=0.667  f1=0.267
+[04:12:11]   [tiny_tcn_fusion] subject=P31  acc=0.304  f1=0.293
+[04:12:11] --- LOSO [bilstm] ---
+[04:12:16]   [bilstm_fusion] subject=P01  acc=0.143  f1=0.135
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:19]   [bilstm_fusion] subject=P02  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:23]   [bilstm_fusion] subject=P03  acc=0.056  f1=0.083
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:27]   [bilstm_fusion] subject=P04  acc=0.263  f1=0.175
+[04:12:29]   [bilstm_fusion] subject=P05  acc=0.556  f1=0.394
+[04:12:34]   [bilstm_fusion] subject=P06  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:37]   [bilstm_fusion] subject=P07  acc=0.286  f1=0.154
+[04:12:41]   [bilstm_fusion] subject=P08  acc=0.850  f1=0.480
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:43]   [bilstm_fusion] subject=P09  acc=0.100  f1=0.070
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:46]   [bilstm_fusion] subject=P10  acc=0.789  f1=0.536
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:12:50]   [bilstm_fusion] subject=P11  acc=0.050  f1=0.045
+[04:12:53]   [bilstm_fusion] subject=P12  acc=0.421  f1=0.154
+[04:12:58]   [bilstm_fusion] subject=P13  acc=0.429  f1=0.300
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:02]   [bilstm_fusion] subject=P14  acc=0.211  f1=0.118
+[04:13:06]   [bilstm_fusion] subject=P15  acc=0.500  f1=0.256
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:10]   [bilstm_fusion] subject=P16  acc=0.150  f1=0.111
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:14]   [bilstm_fusion] subject=P17  acc=0.190  f1=0.080
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:18]   [bilstm_fusion] subject=P18  acc=0.300  f1=0.218
+[04:13:22]   [bilstm_fusion] subject=P19  acc=0.300  f1=0.146
+[04:13:25]   [bilstm_fusion] subject=P20  acc=0.429  f1=0.225
+[04:13:29]   [bilstm_fusion] subject=P21  acc=0.400  f1=0.276
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:32]   [bilstm_fusion] subject=P22  acc=0.000  f1=0.000
+[04:13:36]   [bilstm_fusion] subject=P23  acc=0.381  f1=0.271
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:39]   [bilstm_fusion] subject=P24  acc=0.667  f1=0.287
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:43]   [bilstm_fusion] subject=P25  acc=0.619  f1=0.255
+[04:13:45]   [bilstm_fusion] subject=P26  acc=0.238  f1=0.170
+[04:13:48]   [bilstm_fusion] subject=P27  acc=0.091  f1=0.069
+[04:13:51]   [bilstm_fusion] subject=P28  acc=0.190  f1=0.160
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:53]   [bilstm_fusion] subject=P29  acc=0.909  f1=0.476
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:13:56]   [bilstm_fusion] subject=P30  acc=0.333  f1=0.167
+[04:14:00]   [bilstm_fusion] subject=P31  acc=0.391  f1=0.313
+[04:14:00] --- LOSO [cnn1d] ---
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:04]   [cnn1d_fusion] subject=P01  acc=0.143  f1=0.101
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:06]   [cnn1d_fusion] subject=P02  acc=0.381  f1=0.148
+[04:14:10]   [cnn1d_fusion] subject=P03  acc=0.333  f1=0.325
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:13]   [cnn1d_fusion] subject=P04  acc=0.211  f1=0.153
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:18]   [cnn1d_fusion] subject=P05  acc=0.333  f1=0.161
+[04:14:20]   [cnn1d_fusion] subject=P06  acc=0.000  f1=0.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:22]   [cnn1d_fusion] subject=P07  acc=0.143  f1=0.081
+[04:14:26]   [cnn1d_fusion] subject=P08  acc=0.850  f1=0.315
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:31]   [cnn1d_fusion] subject=P09  acc=0.400  f1=0.348
+[04:14:34]   [cnn1d_fusion] subject=P10  acc=0.474  f1=0.472
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:36]   [cnn1d_fusion] subject=P11  acc=0.200  f1=0.116
+[04:14:41]   [cnn1d_fusion] subject=P12  acc=0.368  f1=0.140
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:46]   [cnn1d_fusion] subject=P13  acc=0.429  f1=0.308
+[04:14:49]   [cnn1d_fusion] subject=P14  acc=0.316  f1=0.240
+[04:14:54]   [cnn1d_fusion] subject=P15  acc=0.500  f1=0.247
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:14:58]   [cnn1d_fusion] subject=P16  acc=0.450  f1=0.240
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:15:00]   [cnn1d_fusion] subject=P17  acc=0.429  f1=0.194
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:15:04]   [cnn1d_fusion] subject=P18  acc=0.200  f1=0.153
+[04:15:08]   [cnn1d_fusion] subject=P19  acc=0.250  f1=0.205
+[04:15:10]   [cnn1d_fusion] subject=P20  acc=0.476  f1=0.396
+[04:15:13]   [cnn1d_fusion] subject=P21  acc=0.400  f1=0.231
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:15:17]   [cnn1d_fusion] subject=P22  acc=0.190  f1=0.083
+[04:15:21]   [cnn1d_fusion] subject=P23  acc=0.381  f1=0.143
+[04:15:23]   [cnn1d_fusion] subject=P24  acc=0.714  f1=0.468
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:15:26]   [cnn1d_fusion] subject=P25  acc=0.762  f1=0.288
+[04:15:31]   [cnn1d_fusion] subject=P26  acc=0.381  f1=0.180
+[04:15:36]   [cnn1d_fusion] subject=P27  acc=0.364  f1=0.282
+[04:15:39]   [cnn1d_fusion] subject=P28  acc=0.190  f1=0.160
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:15:43]   [cnn1d_fusion] subject=P29  acc=0.591  f1=0.371
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:15:47]   [cnn1d_fusion] subject=P30  acc=0.667  f1=0.267
+[04:15:51]   [cnn1d_fusion] subject=P31  acc=0.391  f1=0.333
+[04:15:51] --- LOSO [multistream] ---
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:15:58]   [multistream_fusion] subject=P01  acc=0.048  f1=0.026
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:16:08]   [multistream_fusion] subject=P02  acc=0.667  f1=0.358
+[04:16:13]   [multistream_fusion] subject=P03  acc=0.389  f1=0.280
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:16:18]   [multistream_fusion] subject=P04  acc=0.789  f1=0.479
+[04:16:23]   [multistream_fusion] subject=P05  acc=0.111  f1=0.067
+[04:16:28]   [multistream_fusion] subject=P06  acc=0.600  f1=0.258
+[04:16:36]   [multistream_fusion] subject=P07  acc=0.333  f1=0.250
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:16:42]   [multistream_fusion] subject=P08  acc=0.350  f1=0.182
+[04:16:50]   [multistream_fusion] subject=P09  acc=0.600  f1=0.596
+[04:16:56]   [multistream_fusion] subject=P10  acc=0.474  f1=0.435
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:17:06]   [multistream_fusion] subject=P11  acc=0.500  f1=0.222
+[04:17:10]   [multistream_fusion] subject=P12  acc=0.474  f1=0.302
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:17:15]   [multistream_fusion] subject=P13  acc=0.071  f1=0.074
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:17:20]   [multistream_fusion] subject=P14  acc=0.421  f1=0.299
+[04:17:27]   [multistream_fusion] subject=P15  acc=0.550  f1=0.380
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:17:33]   [multistream_fusion] subject=P16  acc=0.200  f1=0.111
+[04:17:39]   [multistream_fusion] subject=P17  acc=0.238  f1=0.128
+[04:17:48]   [multistream_fusion] subject=P18  acc=0.400  f1=0.262
+[04:17:56]   [multistream_fusion] subject=P19  acc=0.400  f1=0.427
+[04:18:02]   [multistream_fusion] subject=P20  acc=0.429  f1=0.198
+[04:18:08]   [multistream_fusion] subject=P21  acc=0.350  f1=0.332
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:18:14]   [multistream_fusion] subject=P22  acc=0.286  f1=0.207
+[04:18:20]   [multistream_fusion] subject=P23  acc=0.381  f1=0.138
+[04:18:25]   [multistream_fusion] subject=P24  acc=0.381  f1=0.242
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:18:30]   [multistream_fusion] subject=P25  acc=0.381  f1=0.138
+[04:18:39]   [multistream_fusion] subject=P26  acc=0.190  f1=0.108
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:18:47]   [multistream_fusion] subject=P27  acc=0.227  f1=0.163
+[04:18:54]   [multistream_fusion] subject=P28  acc=0.333  f1=0.332
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:991: RuntimeWarning: invalid value encountered in scalar divide
+  k = xp.sum(w_mat * confusion) / xp.sum(w_mat * expected)
+[04:19:03]   [multistream_fusion] subject=P29  acc=1.000  f1=1.000
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:19:09]   [multistream_fusion] subject=P30  acc=0.762  f1=0.288
+[04:19:18]   [multistream_fusion] subject=P31  acc=0.435  f1=0.290
+[04:19:18] --- LOSO [dann] ---
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:19:27]   [dann] subject=P01  acc=0.048  f1=0.023
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:19:36]   [dann] subject=P02  acc=0.286  f1=0.115
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:19:47]   [dann] subject=P03  acc=0.222  f1=0.214
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:19:54]   [dann] subject=P04  acc=0.105  f1=0.088
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:20:06]   [dann] subject=P05  acc=0.389  f1=0.209
+[04:20:11]   [dann] subject=P06  acc=0.150  f1=0.104
+[04:20:21]   [dann] subject=P07  acc=0.333  f1=0.250
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:20:31]   [dann] subject=P08  acc=0.800  f1=0.327
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:20:43]   [dann] subject=P09  acc=0.250  f1=0.204
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:20:51]   [dann] subject=P10  acc=0.526  f1=0.357
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:21:01]   [dann] subject=P11  acc=0.200  f1=0.111
+[04:21:10]   [dann] subject=P12  acc=0.421  f1=0.154
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:21:22]   [dann] subject=P13  acc=0.429  f1=0.211
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:21:34]   [dann] subject=P14  acc=0.368  f1=0.179
+[04:21:45]   [dann] subject=P15  acc=0.550  f1=0.253
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:21:56]   [dann] subject=P16  acc=0.350  f1=0.203
+[04:22:06]   [dann] subject=P17  acc=0.714  f1=0.467
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:22:17]   [dann] subject=P18  acc=0.400  f1=0.268
+[04:22:28]   [dann] subject=P19  acc=0.300  f1=0.147
+[04:22:40]   [dann] subject=P20  acc=0.667  f1=0.293
+[04:22:51]   [dann] subject=P21  acc=0.150  f1=0.102
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:23:02]   [dann] subject=P22  acc=0.190  f1=0.111
+[04:23:10]   [dann] subject=P23  acc=0.190  f1=0.122
+[04:23:18]   [dann] subject=P24  acc=0.524  f1=0.313
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:23:29]   [dann] subject=P25  acc=0.429  f1=0.200
+[04:23:38]   [dann] subject=P26  acc=0.381  f1=0.190
+[04:23:46]   [dann] subject=P27  acc=0.136  f1=0.141
+[04:23:57]   [dann] subject=P28  acc=0.190  f1=0.160
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:24:08]   [dann] subject=P29  acc=0.773  f1=0.436
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:24:18]   [dann] subject=P30  acc=0.810  f1=0.430
+[04:24:28]   [dann] subject=P31  acc=0.565  f1=0.389
+[04:24:28] --- LOSO [tstcc] ---
+[04:24:33]   [tstcc-pretrain] epoch 10/40  loss=8.0605
+[04:24:38]   [tstcc-pretrain] epoch 20/40  loss=7.8964
+[04:24:43]   [tstcc-pretrain] epoch 30/40  loss=7.8374
+[04:24:47]   [tstcc-pretrain] epoch 40/40  loss=7.8156
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:24:49]   [tstcc] subject=P01  acc=0.095  f1=0.079
+[04:24:53]   [tstcc-pretrain] epoch 10/40  loss=8.0709
+[04:24:57]   [tstcc-pretrain] epoch 20/40  loss=7.8949
+[04:25:01]   [tstcc-pretrain] epoch 30/40  loss=7.8447
+[04:25:05]   [tstcc-pretrain] epoch 40/40  loss=7.8404
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:25:06]   [tstcc] subject=P02  acc=0.333  f1=0.135
+[04:25:11]   [tstcc-pretrain] epoch 10/40  loss=8.0500
+[04:25:16]   [tstcc-pretrain] epoch 20/40  loss=7.8905
+[04:25:20]   [tstcc-pretrain] epoch 30/40  loss=7.8334
+[04:25:25]   [tstcc-pretrain] epoch 40/40  loss=7.8249
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:25:26]   [tstcc] subject=P03  acc=0.167  f1=0.107
+[04:25:31]   [tstcc-pretrain] epoch 10/40  loss=8.0445
+[04:25:35]   [tstcc-pretrain] epoch 20/40  loss=7.8904
+[04:25:40]   [tstcc-pretrain] epoch 30/40  loss=7.8209
+[04:25:45]   [tstcc-pretrain] epoch 40/40  loss=7.8143
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:25:46]   [tstcc] subject=P04  acc=0.368  f1=0.300
+[04:25:51]   [tstcc-pretrain] epoch 10/40  loss=8.0288
+[04:25:56]   [tstcc-pretrain] epoch 20/40  loss=7.8880
+[04:26:00]   [tstcc-pretrain] epoch 30/40  loss=7.8155
+[04:26:05]   [tstcc-pretrain] epoch 40/40  loss=7.8144
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:26:06]   [tstcc] subject=P05  acc=0.444  f1=0.332
+[04:26:11]   [tstcc-pretrain] epoch 10/40  loss=8.0311
+[04:26:16]   [tstcc-pretrain] epoch 20/40  loss=7.8989
+[04:26:21]   [tstcc-pretrain] epoch 30/40  loss=7.8156
+[04:26:26]   [tstcc-pretrain] epoch 40/40  loss=7.8128
+[04:26:27]   [tstcc] subject=P06  acc=0.600  f1=0.329
+[04:26:31]   [tstcc-pretrain] epoch 10/40  loss=8.0390
+[04:26:36]   [tstcc-pretrain] epoch 20/40  loss=7.8982
+[04:26:41]   [tstcc-pretrain] epoch 30/40  loss=7.8373
+[04:26:45]   [tstcc-pretrain] epoch 40/40  loss=7.8155
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:26:47]   [tstcc] subject=P07  acc=0.143  f1=0.068
+[04:26:51]   [tstcc-pretrain] epoch 10/40  loss=8.0513
+[04:26:56]   [tstcc-pretrain] epoch 20/40  loss=7.8945
+[04:27:01]   [tstcc-pretrain] epoch 30/40  loss=7.8292
+[04:27:06]   [tstcc-pretrain] epoch 40/40  loss=7.8187
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:27:07]   [tstcc] subject=P08  acc=0.450  f1=0.161
+[04:27:12]   [tstcc-pretrain] epoch 10/40  loss=8.0557
+[04:27:16]   [tstcc-pretrain] epoch 20/40  loss=7.8935
+[04:27:21]   [tstcc-pretrain] epoch 30/40  loss=7.8219
+[04:27:26]   [tstcc-pretrain] epoch 40/40  loss=7.8206
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:27:27]   [tstcc] subject=P09  acc=0.600  f1=0.437
+[04:27:31]   [tstcc-pretrain] epoch 10/40  loss=8.0296
+[04:27:36]   [tstcc-pretrain] epoch 20/40  loss=7.8910
+[04:27:41]   [tstcc-pretrain] epoch 30/40  loss=7.8415
+[04:27:45]   [tstcc-pretrain] epoch 40/40  loss=7.8051
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:27:47]   [tstcc] subject=P10  acc=0.211  f1=0.162
+[04:27:51]   [tstcc-pretrain] epoch 10/40  loss=8.0459
+[04:27:56]   [tstcc-pretrain] epoch 20/40  loss=7.8948
+[04:28:01]   [tstcc-pretrain] epoch 30/40  loss=7.8210
+[04:28:05]   [tstcc-pretrain] epoch 40/40  loss=7.8047
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:28:06]   [tstcc] subject=P11  acc=0.050  f1=0.083
+[04:28:11]   [tstcc-pretrain] epoch 10/40  loss=8.0488
+[04:28:16]   [tstcc-pretrain] epoch 20/40  loss=7.8942
+[04:28:20]   [tstcc-pretrain] epoch 30/40  loss=7.8561
+[04:28:25]   [tstcc-pretrain] epoch 40/40  loss=7.8077
+[04:28:26]   [tstcc] subject=P12  acc=0.263  f1=0.136
+[04:28:31]   [tstcc-pretrain] epoch 10/40  loss=8.0599
+[04:28:35]   [tstcc-pretrain] epoch 20/40  loss=7.8686
+[04:28:40]   [tstcc-pretrain] epoch 30/40  loss=7.8348
+[04:28:45]   [tstcc-pretrain] epoch 40/40  loss=7.8113
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:28:46]   [tstcc] subject=P13  acc=0.143  f1=0.103
+[04:28:51]   [tstcc-pretrain] epoch 10/40  loss=8.0513
+[04:28:55]   [tstcc-pretrain] epoch 20/40  loss=7.8859
+[04:29:00]   [tstcc-pretrain] epoch 30/40  loss=7.8551
+[04:29:04]   [tstcc-pretrain] epoch 40/40  loss=7.8306
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:29:06]   [tstcc] subject=P14  acc=0.053  f1=0.056
+[04:29:10]   [tstcc-pretrain] epoch 10/40  loss=8.0646
+[04:29:15]   [tstcc-pretrain] epoch 20/40  loss=7.8802
+[04:29:19]   [tstcc-pretrain] epoch 30/40  loss=7.8307
+[04:29:24]   [tstcc-pretrain] epoch 40/40  loss=7.8145
+[04:29:25]   [tstcc] subject=P15  acc=0.550  f1=0.253
+[04:29:30]   [tstcc-pretrain] epoch 10/40  loss=8.0610
+[04:29:34]   [tstcc-pretrain] epoch 20/40  loss=7.9048
+[04:29:39]   [tstcc-pretrain] epoch 30/40  loss=7.8624
+[04:29:44]   [tstcc-pretrain] epoch 40/40  loss=7.8244
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:29:45]   [tstcc] subject=P16  acc=0.200  f1=0.159
+[04:29:49]   [tstcc-pretrain] epoch 10/40  loss=8.0490
+[04:29:54]   [tstcc-pretrain] epoch 20/40  loss=7.8975
+[04:29:58]   [tstcc-pretrain] epoch 30/40  loss=7.8474
+[04:30:03]   [tstcc-pretrain] epoch 40/40  loss=7.8293
+[04:30:04]   [tstcc] subject=P17  acc=0.429  f1=0.315
+[04:30:09]   [tstcc-pretrain] epoch 10/40  loss=8.0419
+[04:30:14]   [tstcc-pretrain] epoch 20/40  loss=7.9071
+[04:30:18]   [tstcc-pretrain] epoch 30/40  loss=7.8271
+[04:30:23]   [tstcc-pretrain] epoch 40/40  loss=7.8201
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:30:24]   [tstcc] subject=P18  acc=0.450  f1=0.188
+[04:30:29]   [tstcc-pretrain] epoch 10/40  loss=8.0633
+[04:30:33]   [tstcc-pretrain] epoch 20/40  loss=7.9048
+[04:30:38]   [tstcc-pretrain] epoch 30/40  loss=7.8364
+[04:30:42]   [tstcc-pretrain] epoch 40/40  loss=7.8200
+[04:30:44]   [tstcc] subject=P19  acc=0.200  f1=0.083
+[04:30:48]   [tstcc-pretrain] epoch 10/40  loss=8.0616
+[04:30:53]   [tstcc-pretrain] epoch 20/40  loss=7.9035
+[04:30:58]   [tstcc-pretrain] epoch 30/40  loss=7.8544
+[04:31:02]   [tstcc-pretrain] epoch 40/40  loss=7.8291
+[04:31:03]   [tstcc] subject=P20  acc=0.381  f1=0.154
+[04:31:08]   [tstcc-pretrain] epoch 10/40  loss=8.0425
+[04:31:13]   [tstcc-pretrain] epoch 20/40  loss=7.8768
+[04:31:17]   [tstcc-pretrain] epoch 30/40  loss=7.8321
+[04:31:22]   [tstcc-pretrain] epoch 40/40  loss=7.8104
+[04:31:23]   [tstcc] subject=P21  acc=0.300  f1=0.219
+[04:31:28]   [tstcc-pretrain] epoch 10/40  loss=8.0546
+[04:31:32]   [tstcc-pretrain] epoch 20/40  loss=7.8951
+[04:31:37]   [tstcc-pretrain] epoch 30/40  loss=7.8317
+[04:31:42]   [tstcc-pretrain] epoch 40/40  loss=7.8243
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:31:43]   [tstcc] subject=P22  acc=0.333  f1=0.173
+[04:31:48]   [tstcc-pretrain] epoch 10/40  loss=8.0777
+[04:31:52]   [tstcc-pretrain] epoch 20/40  loss=7.9035
+[04:31:57]   [tstcc-pretrain] epoch 30/40  loss=7.8555
+[04:32:01]   [tstcc-pretrain] epoch 40/40  loss=7.8574
+[04:32:03]   [tstcc] subject=P23  acc=0.381  f1=0.138
+[04:32:07]   [tstcc-pretrain] epoch 10/40  loss=8.0450
+[04:32:12]   [tstcc-pretrain] epoch 20/40  loss=7.8746
+[04:32:16]   [tstcc-pretrain] epoch 30/40  loss=7.8169
+[04:32:21]   [tstcc-pretrain] epoch 40/40  loss=7.8177
+[04:32:22]   [tstcc] subject=P24  acc=0.714  f1=0.552
+[04:32:26]   [tstcc-pretrain] epoch 10/40  loss=8.0802
+[04:32:31]   [tstcc-pretrain] epoch 20/40  loss=7.9202
+[04:32:35]   [tstcc-pretrain] epoch 30/40  loss=7.8570
+[04:32:39]   [tstcc-pretrain] epoch 40/40  loss=7.8424
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:32:40]   [tstcc] subject=P25  acc=0.429  f1=0.200
+[04:32:45]   [tstcc-pretrain] epoch 10/40  loss=8.0363
+[04:32:49]   [tstcc-pretrain] epoch 20/40  loss=7.8671
+[04:32:54]   [tstcc-pretrain] epoch 30/40  loss=7.8317
+[04:32:58]   [tstcc-pretrain] epoch 40/40  loss=7.8137
+[04:33:00]   [tstcc] subject=P26  acc=0.429  f1=0.150
+[04:33:04]   [tstcc-pretrain] epoch 10/40  loss=8.0341
+[04:33:09]   [tstcc-pretrain] epoch 20/40  loss=7.8791
+[04:33:14]   [tstcc-pretrain] epoch 30/40  loss=7.8174
+[04:33:18]   [tstcc-pretrain] epoch 40/40  loss=7.8316
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:33:19]   [tstcc] subject=P27  acc=0.182  f1=0.146
+[04:33:24]   [tstcc-pretrain] epoch 10/40  loss=8.0506
+[04:33:29]   [tstcc-pretrain] epoch 20/40  loss=7.8938
+[04:33:33]   [tstcc-pretrain] epoch 30/40  loss=7.8357
+[04:33:38]   [tstcc-pretrain] epoch 40/40  loss=7.8228
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:33:39]   [tstcc] subject=P28  acc=0.143  f1=0.087
+[04:33:43]   [tstcc-pretrain] epoch 10/40  loss=8.0676
+[04:33:47]   [tstcc-pretrain] epoch 20/40  loss=7.9164
+[04:33:52]   [tstcc-pretrain] epoch 30/40  loss=7.8643
+[04:33:56]   [tstcc-pretrain] epoch 40/40  loss=7.8587
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:33:57]   [tstcc] subject=P29  acc=0.909  f1=0.476
+[04:34:01]   [tstcc-pretrain] epoch 10/40  loss=8.0802
+[04:34:06]   [tstcc-pretrain] epoch 20/40  loss=7.9204
+[04:34:10]   [tstcc-pretrain] epoch 30/40  loss=7.8563
+[04:34:14]   [tstcc-pretrain] epoch 40/40  loss=7.8169
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:34:15]   [tstcc] subject=P30  acc=0.476  f1=0.262
+[04:34:20]   [tstcc-pretrain] epoch 10/40  loss=8.0350
+[04:34:24]   [tstcc-pretrain] epoch 20/40  loss=7.8988
+[04:34:29]   [tstcc-pretrain] epoch 30/40  loss=7.8397
+[04:34:34]   [tstcc-pretrain] epoch 40/40  loss=7.8335
+[04:34:35]   [tstcc] subject=P31  acc=0.826  f1=0.763
+[04:34:35] [ensemble] 'RandomForest' calibrated T=1.00 (NLL=1.137)
+[04:34:35] [ensemble] 'LogisticRegression' calibrated T=4.00 (NLL=1.301)
+[04:34:35] [ensemble] 'XGBoost' calibrated T=3.00 (NLL=1.196)
+[04:34:35] [ensemble] 'conformer_fusion' calibrated T=3.00 (NLL=1.288)
+[04:34:35] [ensemble] 'tiny_tcn_fusion' calibrated T=4.00 (NLL=1.311)
+[04:34:35] [ensemble] 'multistream_fusion' calibrated T=2.50 (NLL=1.255)
+[04:34:35] [ensemble] 'DANN_Conformer' calibrated T=3.00 (NLL=1.286)
+[04:34:35] [ensemble] 'TSTCC' calibrated T=4.00 (NLL=1.302)
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+x:\dev\Empathic\.venv\Lib\site-packages\sklearn\metrics\_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+[04:34:35] [ensemble] built 'Ensemble_RandomForest+LogisticRegression+XGBoost+conformer_fusion+tiny_tcn_fusion+multistream_fusion+DANN_Conformer+TSTCC' over 8 members  acc=0.448  f1=0.242
+[04:34:39] Saved results to results\emotion\emowork\calibrated\emowork\quadrant

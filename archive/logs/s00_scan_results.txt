@@ -1,0 +1,47 @@
+======================================================================
+PART 1: Detailed channel inspection (PP1 c1)
+======================================================================
+
+Channel 0: '(Lo) E' [mV]
+  @60s: mean=-0.059 std=0.111 range=[-0.308, 0.163] unique=10239 zero_cross=41
+  @300s: mean=-0.053 std=0.041 range=[-0.139, 0.003] unique=10237 zero_cross=8
+  @600s: mean=-0.077 std=0.092 range=[-0.239, 0.052] unique=10238 zero_cross=13
+
+Channel 1: '(Lo) E' [mV]
+  @60s: mean=-0.049 std=0.091 range=[-0.222, 0.085] unique=10240 zero_cross=3
+  @300s: mean=-0.052 std=0.041 range=[-0.126, -0.003] unique=10230 zero_cross=2
+  @600s: mean=-0.078 std=0.090 range=[-0.223, 0.038] unique=10238 zero_cross=2
+
+Channel 2: '(Lo) A' [-]
+  @60s: mean=67.631 std=0.841 range=[66.881, 70.248] unique=9860 zero_cross=1
+  @300s: mean=62.124 std=0.415 range=[61.158, 62.589] unique=10174 zero_cross=2
+  @600s: mean=80.750 std=1.079 range=[79.602, 83.199] unique=10180 zero_cross=1
+
+Channel 3: '(Lo) A' [-]
+  @60s: mean=70.558 std=9.954 range=[58.072, 86.535] unique=7 zero_cross=1
+    unique values: [58.07183456 63.3728714  65.60597992 70.49913788 76.94426727 81.70212555
+ 86.53520966]
+  @300s: mean=61.080 std=2.838 range=[57.021, 64.708] unique=6 zero_cross=1
+    unique values: [57.02088165 58.04440308 61.71773148 62.15478134 62.95082092 64.70774078]
+  @600s: mean=86.808 std=2.054 range=[81.377, 88.530] unique=8 zero_cross=4
+    unique values: [81.37748718 85.57102966 86.47431183 87.21078491 87.27272797 87.95991516
+ 88.27586365 88.53025818]
+
+Channel 4: '(Lo) A' [-]
+  @60s: mean=0.109 std=0.311 range=[0.000, 1.000] unique=2 zero_cross=12
+    unique values: [0. 1.]
+  @300s: mean=0.093 std=0.291 range=[0.000, 1.000] unique=2 zero_cross=10
+    unique values: [0. 1.]
+  @600s: mean=0.131 std=0.337 range=[0.000, 1.000] unique=2 zero_cross=14
+    unique values: [0. 1.]
+Traceback (most recent call last):
+  File "x:\dev\Empathic\inspect_s00_signals.py", line 333, in <module>
+    main()
+    ~~~~^^
+  File "x:\dev\Empathic\inspect_s00_signals.py", line 159, in main
+    print(f"\nChannel {ch_idx}: '{desc['name']}' [{desc['unit']}]")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mao Zeth Abel\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\ufffd' in position 23: character maps to <undefined>

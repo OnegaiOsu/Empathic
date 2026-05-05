@@ -1,0 +1,42 @@
+{
+  "accuracy": 0.6690391459074733,
+  "balanced_accuracy": 0.667425645775445,
+  "macro_f1": 0.6659551078842417,
+  "macro_recall": 0.667425645775445,
+  "weighted_f1": 0.6699529349513937,
+  "cohen_kappa": 0.3324563196076429,
+  "per_class_f1": {
+    "low_stress": 0.6338582677165354,
+    "high_stress": 0.698051948051948
+  },
+  "per_class_support": {
+    "low_stress": 246,
+    "high_stress": 316
+  },
+  "confusion": [
+    [
+      161,
+      85
+    ],
+    [
+      101,
+      215
+    ]
+  ],
+  "labels": [
+    "low_stress",
+    "high_stress"
+  ],
+  "extra": {
+    "model_type": "ensemble",
+    "members": [
+      "RandomForest",
+      "LogisticRegression",
+      "XGBoost",
+      "conformer_fusion",
+      "tiny_tcn_fusion",
+      "multistream_fusion",
+      "TSTCC"
+    ]
+  }
+}

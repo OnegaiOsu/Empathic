@@ -1,0 +1,160 @@
+======================================================================
+LOADING DATA
+======================================================================
+Master dataset: 3139 rows x 172 columns
+Extracted physiology: 3042 rows
+
+Physiology recovery:
+  HR:    1490 -> 2719 valid (47.5% -> 86.6%)
+  RMSSD: 1490 -> 2645 valid (47.5% -> 84.3%)
+  SCL:   2578 -> 2710 valid (82.1% -> 86.3%)
+
+Features selected: 21
+  Computer: 18
+  Physiology: 3
+
+Per-participant data quality:
+  PP      Rows    HR%   SCL%  Comp%  Stress
+  PP1      129 100.0% 100.0% 100.0%  53.5%
+  PP2      121 100.0% 100.0% 100.0%  48.8%
+  PP3      127  96.1%  96.1% 100.0%  55.1%
+  PP4      128  80.5%  80.5% 100.0%  53.9%
+  PP5      125  94.4%  94.4% 100.0%  53.6%
+  PP6      126 100.0% 100.0% 100.0%  52.4%
+  PP7      130  85.4%  85.4% 100.0%  53.8%
+  PP8      116  50.9%  68.1% 100.0%  50.9%
+  PP9      122  98.4%  98.4% 100.0%  54.1%
+  PP10     128  94.5%  94.5% 100.0%  52.3%
+  PP11     127  41.7%  41.7%  83.5%  53.5%
+  PP12     129 100.0% 100.0% 100.0%  53.5%
+  PP13     126  96.0%  96.0% 100.0%  52.4%
+  PP14     129 100.0% 100.0% 100.0%  53.5%
+  PP15     121  95.9%  95.9% 100.0%  51.2%
+  PP16     129 100.0% 100.0%  92.2%  53.5%
+  PP17     129 100.0% 100.0% 100.0%  53.5%
+  PP18     119 100.0% 100.0% 100.0%  58.0%
+  PP19     130  87.7%  98.5% 100.0%  53.1%
+  PP20     129  62.0%  75.2% 100.0%  53.5%
+  PP21     106 100.0% 100.0% 100.0%  43.4%
+  PP22     126  72.2%  72.2% 100.0%  53.2%
+  PP23     129  51.9%   5.4% 100.0%  53.5%
+  PP24     130  83.1%  83.1% 100.0%  53.1%
+  PP25     128  76.6%  76.6% 100.0%  53.1%
+
+Total features after derivation: 25
+
+======================================================================
+EXPERIMENT A_baseline: Raw features, global impute+scale
+  Features: 21
+======================================================================
+
+  RandomForest... acc=0.679+-0.096  f1=0.707+-0.130  auc=0.748+-0.116
+
+  GradientBoosting... acc=0.627+-0.109  f1=0.620+-0.196  auc=0.702+-0.126
+
+  SVM... acc=0.685+-0.067  f1=0.715+-0.090  auc=0.742+-0.088
+
+  LogisticRegression... acc=0.655+-0.084  f1=0.661+-0.138  auc=0.732+-0.091
+
+  MLP... acc=0.667+-0.062  f1=0.690+-0.084  auc=0.735+-0.063
+
+======================================================================
+EXPERIMENT B_perscore_zscore: Per-person z-scored physiology
+  Features: 21
+======================================================================
+
+  RandomForest... acc=0.718+-0.113  f1=0.741+-0.109  auc=0.799+-0.120
+
+  GradientBoosting... acc=0.707+-0.103  f1=0.723+-0.102  auc=0.786+-0.121
+
+  SVM... acc=0.734+-0.096  f1=0.753+-0.097  auc=0.796+-0.117
+
+  LogisticRegression... acc=0.698+-0.096  f1=0.706+-0.111  auc=0.764+-0.120
+
+  MLP... acc=0.727+-0.098  f1=0.744+-0.099  auc=0.805+-0.111
+
+======================================================================
+EXPERIMENT C_derived: All features + derived + per-person z
+  Features: 25
+======================================================================
+
+  RandomForest... acc=0.719+-0.106  f1=0.743+-0.100  auc=0.794+-0.120
+
+  GradientBoosting... acc=0.701+-0.117  f1=0.718+-0.119  auc=0.779+-0.129
+
+  SVM... acc=0.720+-0.098  f1=0.741+-0.099  auc=0.789+-0.121
+
+  LogisticRegression... acc=0.710+-0.100  f1=0.723+-0.108  auc=0.773+-0.120
+
+  MLP... acc=0.713+-0.102  f1=0.738+-0.097  auc=0.792+-0.115
+
+======================================================================
+EXPERIMENT D_physio_only: Only physiology features (per-person z)
+  Features: 3
+======================================================================
+
+  RandomForest... acc=0.576+-0.134  f1=0.594+-0.137  auc=0.590+-0.168
+
+  GradientBoosting... acc=0.563+-0.133  f1=0.586+-0.131  auc=0.578+-0.152
+
+  SVM... acc=0.613+-0.137  f1=0.644+-0.128  auc=0.639+-0.168
+
+  LogisticRegression... acc=0.567+-0.162  f1=0.550+-0.204  auc=0.539+-0.202
+
+  MLP... acc=0.606+-0.157  f1=0.658+-0.140  auc=0.645+-0.171
+
+======================================================================
+EXPERIMENT E_computer_only: Only computer interaction features
+  Features: 18
+======================================================================
+
+  RandomForest... acc=0.678+-0.064  f1=0.722+-0.067  auc=0.744+-0.068
+
+  GradientBoosting... acc=0.666+-0.061  f1=0.703+-0.067  auc=0.740+-0.062
+
+  SVM... acc=0.686+-0.052  f1=0.731+-0.055  auc=0.726+-0.074
+
+  LogisticRegression... acc=0.663+-0.084  f1=0.671+-0.130  auc=0.730+-0.090
+
+  MLP... acc=0.678+-0.077  f1=0.722+-0.091  auc=0.741+-0.083
+
+======================================================================
+FINAL COMPARISON
+======================================================================
+
+Model                                        Acc      F1     AUC Feats
+------------------------------------------------------------------------
+B_perscore_zscore_MLP                     0.727   0.744   0.805     21
+B_perscore_zscore_RandomForest            0.718   0.741   0.799     21
+B_perscore_zscore_SVM                     0.734   0.753   0.796     21
+C_derived_RandomForest                    0.719   0.743   0.794     25
+C_derived_MLP                             0.713   0.738   0.792     25
+C_derived_SVM                             0.720   0.741   0.789     25
+B_perscore_zscore_GradientBoosting        0.707   0.723   0.786     21
+C_derived_GradientBoosting                0.701   0.718   0.779     25
+C_derived_LogisticRegression              0.710   0.723   0.773     25
+B_perscore_zscore_LogisticRegression      0.698   0.706   0.764     21
+A_baseline_RandomForest                   0.679   0.707   0.748     21
+E_computer_only_RandomForest              0.678   0.722   0.744     18
+A_baseline_SVM                            0.685   0.715   0.742     21
+E_computer_only_MLP                       0.678   0.722   0.741     18
+E_computer_only_GradientBoosting          0.666   0.703   0.740     18
+A_baseline_MLP                            0.667   0.690   0.735     21
+A_baseline_LogisticRegression             0.655   0.661   0.732     21
+E_computer_only_LogisticRegression        0.663   0.671   0.730     18
+E_computer_only_SVM                       0.686   0.731   0.726     18
+A_baseline_GradientBoosting               0.627   0.620   0.702     21
+D_physio_only_MLP                         0.606   0.658   0.645      3
+D_physio_only_SVM                         0.613   0.644   0.639      3
+D_physio_only_RandomForest                0.576   0.594   0.590      3
+D_physio_only_GradientBoosting            0.563   0.586   0.578      3
+D_physio_only_LogisticRegression          0.567   0.550   0.539      3
+
+======================================================================
+COMPARISON WITH OLD BASELINES (47.5% HR coverage)
+======================================================================
+
+Old best (RandomForest):  acc=0.684  f1=0.670  auc=0.747  (21 features)
+New best (B_perscore_zscore_MLP):  acc=0.727  f1=0.744  auc=0.805  (21 features)
+
+Results saved to results/final_recovered/

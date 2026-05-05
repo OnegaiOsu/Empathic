@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-04-11T06:19:54.670302",
+  "dataset": "emosurv",
+  "task": "discrete",
+  "n_models": 6,
+  "best_model": "TorchBiLSTMAttention",
+  "metadata": {
+    "n_samples": 1396,
+    "n_subjects": 83,
+    "n_features": 62,
+    "label_map": {
+      "A": 0,
+      "C": 1,
+      "H": 2,
+      "N": 3,
+      "S": 4
+    },
+    "window_size": 35,
+    "normalization": "robust",
+    "clip_z": null,
+    "min_subject_samples": 0,
+    "min_subject_classes": 0
+  }
+}

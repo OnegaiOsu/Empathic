@@ -1,0 +1,26 @@
+fold_participant,rf_best,xgb_best,lr_best
+PP1,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP10,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP11,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP12,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP13,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP14,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP15,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP16,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP17,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP18,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP19,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP2,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP20,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP21,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP22,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP23,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP24,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP25,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP3,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP4,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP5,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP6,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_split': 5}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP7,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP8,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}
+PP9,"{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}","{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.1, 'subsample': 0.8}",{'C': 1.0}

@@ -1,0 +1,2 @@
+,accuracy_mean,accuracy_std,balanced_accuracy_mean,macro_f1_mean,macro_f1_std,macro_recall_mean,weighted_f1_mean,cohen_kappa_mean,session_accuracy,session_balanced_accuracy,session_macro_f1,session_cohen_kappa,n_sessions
+multistream_fusion,0.6513505987190197,0.20866193576362102,0.6513505987190197,0.38423343475321164,0.08100665331608264,0.32567529935950984,0.7684668695064233,0.0,0.5555555555555556,0.5555555555555556,0.35714285714285715,0.0,9.0

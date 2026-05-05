@@ -1,0 +1,107 @@
+[transformer] Using device: cpu
+[data_loader] Merged dataset: 3132 rows, 24 columns
+[data_loader] Label distribution:
+label
+1    1657
+0    1475
+[data_loader] Participants: 25
+[data_loader] Missing values per feature:
+HR                 1648
+RMSSD              1648
+SCL                 560
+SnMouseDistance       2
+[transformer] Total features: 32
+[transformer] Total sequences: 150, participants: 25
+[transformer] Sequence lengths: min=5, max=44, mean=20.9
+
+  === Fold PP1 ===
+  Fold   PP1  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP10 ===
+  Fold  PP10  acc=0.833  f1=0.778  (sequences: 6)
+
+  === Fold PP11 ===
+  Fold  PP11  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP12 ===
+  Fold  PP12  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP13 ===
+  Fold  PP13  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP14 ===
+  Fold  PP14  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP15 ===
+  Fold  PP15  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP16 ===
+  Fold  PP16  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP17 ===
+  Fold  PP17  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP18 ===
+  Fold  PP18  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP19 ===
+  Fold  PP19  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP2 ===
+  Fold   PP2  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP20 ===
+  Fold  PP20  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP21 ===
+  Fold  PP21  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP22 ===
+  Fold  PP22  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP23 ===
+  Fold  PP23  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP24 ===
+  Fold  PP24  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP25 ===
+  Fold  PP25  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP3 ===
+  Fold   PP3  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP4 ===
+  Fold   PP4  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP5 ===
+  Fold   PP5  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP6 ===
+  Fold   PP6  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP7 ===
+  Fold   PP7  acc=1.000  f1=1.000  (sequences: 6)
+
+  === Fold PP8 ===
+  Fold   PP8  acc=0.833  f1=0.829  (sequences: 6)
+
+  === Fold PP9 ===
+  Fold   PP9  acc=0.833  f1=0.829  (sequences: 6)
+
+============================================================
+  transformer — LOSO Cross-Validation Results (25 folds)
+============================================================
+  accuracy              0.9267  ± 0.0844
+  f1_stressed           0.9067  ± 0.1106
+  f1_not_stressed       0.9384  ± 0.0712
+  f1_macro              0.9225  ± 0.0897
+  precision             0.8667  ± 0.1667
+  recall                0.9800  ± 0.1000
+  auc_roc               0.9500  ± 0.0807
+============================================================
+
+[evaluation] Metrics saved to x:\dev\Empathic\results\transformer\metrics.csv
+[evaluation] Confusion matrix saved to x:\dev\Empathic\results\transformer\confusion_matrix.png
+[evaluation] ROC curve saved to x:\dev\Empathic\results\transformer\roc_curve.png
+[transformer] Done. Results saved to results/transformer/

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-03-10T22:28:10.852793",
+  "data_source": "Behavioral-features xlsx + raw .S00 physiology",
+  "hr_coverage_before": "47.5%",
+  "hr_coverage_after": "95.7%",
+  "total_rows": 3139,
+  "fixes_applied": [
+    "Per-person z-scoring (all features)",
+    "Constant-0 imputation (not median)",
+    "Missingness indicators for physiology",
+    "Derived interaction features",
+    "Recovered physiology from raw .S00 files"
+  ],
+  "experiments": {
+    "A_baseline": "Raw features, global impute+scale (no z-scoring)",
+    "B_zscore": "Per-person z-scored (all features)",
+    "C_all_fixes": "Z-scored + derived + missingness indicators",
+    "D_physio_only": "Physiology-only (per-person z-scored)",
+    "E_computer_only": "Computer-only (per-person z-scored)"
+  },
+  "best_model": "B_zscore_Transformer",
+  "best_auc": 0.8981759016799995,
+  "best_accuracy": 0.8617628930614398,
+  "best_f1": 0.8655048283045623
+}

@@ -1,0 +1,26 @@
+[14:16:44] Config: dataset=wesad task=dimensional quick=True include_deep=False
+[14:16:44] [Run] WESAD dimensional task started
+[14:16:44] [WESAD] Preparing dataset from 6 subjects (window=60s stride=60s)
+[14:16:47] [WESAD] S10: windows=51 interval_aligned=46 intervals=8 dim_rows=5
+[14:16:49] [WESAD] S11: windows=51 interval_aligned=47 intervals=8 dim_rows=5
+[14:16:51] [WESAD] S13: windows=51 interval_aligned=46 intervals=7 dim_rows=5
+[14:16:53] [WESAD] S14: windows=50 interval_aligned=26 intervals=8 dim_rows=5
+[14:16:55] [WESAD] S15: windows=49 interval_aligned=29 intervals=6 dim_rows=5
+[14:16:58] [WESAD] S16: windows=48 interval_aligned=25 intervals=8 dim_rows=5
+[14:16:58] [WESAD] Final datasets: discrete_rows=300 dimensional_rows=289 subjects=6 features=57
+[14:16:58] [Regression] Starting LOSO with 1 models over 6 subjects
+[14:16:58] [Regression] Model: TorchMLPRegressor
+[14:16:59]   [Regression:TorchMLPRegressor] subject=S10 n_test=51 mae=2.171 r2=-1.647
+[14:16:59]   [Regression:TorchMLPRegressor] subject=S11 n_test=51 mae=2.281 r2=-3.634
+[14:16:59]   [Regression:TorchMLPRegressor] subject=S13 n_test=51 mae=2.676 r2=-1.424
+[14:16:59]   [Regression:TorchMLPRegressor] subject=S14 n_test=50 mae=2.022 r2=-1.725
+[14:16:59]   [Regression:TorchMLPRegressor] subject=S15 n_test=38 mae=3.632 r2=-10.452
+[14:16:59]   [Regression:TorchMLPRegressor] subject=S16 n_test=48 mae=3.038 r2=-2.551
+[14:16:59] [Regression] Finished TorchMLPRegressor: mae=2.637 rmse=3.125 r2=-3.572
+[14:16:59] [Artifacts] Saved results to x:\dev\Empathic\results\emotion\wesad\dimensional
+
+[WESAD dimensional] Completed
+            model  mae_mean  rmse_mean   r2_mean
+TorchMLPRegressor  2.636861   3.125419 -3.572084
+
+All requested runs finished.

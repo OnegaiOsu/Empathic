@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.6120996441281139,
+  "balanced_accuracy": 0.6253473294226612,
+  "macro_f1": 0.6117849854874076,
+  "macro_recall": 0.6253473294226612,
+  "weighted_f1": 0.6104083539343178,
+  "cohen_kappa": 0.2413494166893717,
+  "per_class_f1": {
+    "low_stress": 0.6228373702422145,
+    "high_stress": 0.6007326007326007
+  },
+  "per_class_support": {
+    "low_stress": 246,
+    "high_stress": 316
+  },
+  "confusion": [
+    [
+      180,
+      66
+    ],
+    [
+      152,
+      164
+    ]
+  ],
+  "labels": [
+    "low_stress",
+    "high_stress"
+  ],
+  "extra": {
+    "model_type": "classical"
+  }
+}

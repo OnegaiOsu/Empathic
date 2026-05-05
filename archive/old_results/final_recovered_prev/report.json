@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-03-10T21:58:47.743717",
+  "data_source": "Behavioral-features xlsx + raw .S00 physiology",
+  "hr_coverage_before": "47.5%",
+  "hr_coverage_after": "95.7%",
+  "total_rows": 3139,
+  "experiments": {
+    "A_baseline": "Raw features, global impute+scale",
+    "B_perscore_zscore": "Per-person z-scored physiology",
+    "C_derived": "All features + derived + per-person z",
+    "D_physio_only": "Only physiology features (per-person z)",
+    "E_computer_only": "Only computer interaction features"
+  },
+  "best_model": "B_perscore_zscore_MLP",
+  "best_auc": 0.8046247144918026,
+  "best_accuracy": 0.7267819783456081,
+  "best_f1": 0.7440580596031677
+}

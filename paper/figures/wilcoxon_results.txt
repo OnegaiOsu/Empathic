@@ -1,0 +1,21 @@
+Wilcoxon paired tests on per-subject LOSO kappa
+============================================================
+
+[quadrant] RF vs LR per-subject kappa  W=54.00  p=0.762
+  RF: mean=0.748  std=0.137  min=0.513
+  LR: mean=0.755  std=0.213  min=0.244
+
+[valence] RF vs LR per-subject kappa  W=15.00  p=0.110
+  RF: mean=0.915  std=0.098  min=0.675
+  LR: mean=0.858  std=0.181  min=0.507
+
+[arousal] RF vs LR per-subject kappa  W=55.00  p=0.804
+  RF: mean=0.782  std=0.168  min=0.545
+  LR: mean=0.766  std=0.240  min=0.058
+
+
+LOSO vs Window-10-fold (paired by model, RF & LR)
+------------------------------------------------------------
+[quadrant] mean Δκ = 0.179  (W10F − LOSO)
+[valence] mean Δκ = 0.076  (W10F − LOSO)
+[arousal] mean Δκ = 0.163  (W10F − LOSO)

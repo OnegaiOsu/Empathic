@@ -1,0 +1,37 @@
+{
+  "accuracy": 0.5729537366548043,
+  "balanced_accuracy": 0.5716270453843779,
+  "macro_f1": 0.5700734394124847,
+  "macro_recall": 0.5716270453843779,
+  "weighted_f1": 0.5744565004334058,
+  "cohen_kappa": 0.14172266340867434,
+  "per_class_f1": {
+    "low_stress": 0.5348837209302325,
+    "high_stress": 0.6052631578947368
+  },
+  "per_class_support": {
+    "low_stress": 246,
+    "high_stress": 316
+  },
+  "confusion": [
+    [
+      138,
+      108
+    ],
+    [
+      132,
+      184
+    ]
+  ],
+  "labels": [
+    "low_stress",
+    "high_stress"
+  ],
+  "extra": {
+    "model_type": "deep",
+    "arch": "multistream_fusion",
+    "parameters": 660716,
+    "device": "cuda",
+    "mixup_alpha": 0.2
+  }
+}

@@ -1,0 +1,38 @@
+[ablation] loading bundle ...
+[ablation] 149 features  31 subjects
+
+=== TARGET: stress  n=625  classes=[309 316]  ===
+  ECG                 feats= 17  f1=0.696  bal_acc=0.697  kappa=0.392
+  BVP                 feats= 17  f1=0.564  bal_acc=0.566  kappa=0.131
+  HR                  feats=  7  f1=0.609  bal_acc=0.611  kappa=0.220
+  EDA                 feats= 14  f1=0.599  bal_acc=0.600  kappa=0.199
+  TEMP                feats=  9  f1=0.604  bal_acc=0.606  kappa=0.210
+  ACC                 feats= 25  f1=0.529  bal_acc=0.530  kappa=0.060
+  EEG                 feats= 60  f1=0.598  bal_acc=0.601  kappa=0.199
+  physio              feats= 89  f1=0.684  bal_acc=0.686  kappa=0.369
+  physio+EEG (all)    feats=149  f1=0.686  bal_acc=0.689  kappa=0.374
+
+=== TARGET: arousal  n=625  classes=[255 370]  ===
+  ECG                 feats= 17  f1=0.521  bal_acc=0.533  kappa=0.072
+  BVP                 feats= 17  f1=0.470  bal_acc=0.482  kappa=-0.037
+  HR                  feats=  7  f1=0.488  bal_acc=0.491  kappa=-0.018
+  EDA                 feats= 14  f1=0.552  bal_acc=0.554  kappa=0.111
+  TEMP                feats=  9  f1=0.535  bal_acc=0.535  kappa=0.071
+  ACC                 feats= 25  f1=0.458  bal_acc=0.478  kappa=-0.048
+  EEG                 feats= 60  f1=0.481  bal_acc=0.506  kappa=0.012
+  physio              feats= 89  f1=0.525  bal_acc=0.535  kappa=0.076
+  physio+EEG (all)    feats=149  f1=0.494  bal_acc=0.510  kappa=0.023
+
+=== TARGET: valence  n=625  classes=[542  83]  ===
+  ECG                 feats= 17  f1=0.462  bal_acc=0.504  kappa=0.013
+  BVP                 feats= 17  f1=0.442  bal_acc=0.498  kappa=-0.005
+  HR                  feats=  7  f1=0.522  bal_acc=0.536  kappa=0.102
+  EDA                 feats= 14  f1=0.497  bal_acc=0.524  kappa=0.071
+  TEMP                feats=  9  f1=0.481  bal_acc=0.512  kappa=0.034
+  ACC                 feats= 25  f1=0.443  bal_acc=0.500  kappa=0.000
+  EEG                 feats= 60  f1=0.443  bal_acc=0.500  kappa=0.000
+  physio              feats= 89  f1=0.443  bal_acc=0.500  kappa=0.000
+  physio+EEG (all)    feats=149  f1=0.443  bal_acc=0.500  kappa=0.000
+
+[ablation] wrote results\emotion\emowork\ablations\modality_ablation.csv
+[ablation] wrote heatmaps

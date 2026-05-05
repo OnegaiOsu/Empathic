@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.7797029702970297,
+  "balanced_accuracy": 0.49958713358105317,
+  "macro_f1": 0.4592676141063238,
+  "macro_recall": 0.49958713358105317,
+  "weighted_f1": 0.7044882403873143,
+  "cohen_kappa": -0.0012252171975939419,
+  "per_class_f1": {
+    "LV": 0.8755244755244755,
+    "HV": 0.043010752688172046
+  },
+  "per_class_support": {
+    "LV": 321,
+    "HV": 83
+  },
+  "confusion": [
+    [
+      313,
+      8
+    ],
+    [
+      81,
+      2
+    ]
+  ],
+  "labels": [
+    "LV",
+    "HV"
+  ],
+  "extra": {
+    "model_type": "classical"
+  }
+}

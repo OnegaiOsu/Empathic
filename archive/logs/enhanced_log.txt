@@ -1,0 +1,180 @@
+[data_loader] Merged dataset: 3132 rows, 24 columns
+[data_loader] Label distribution:
+label
+1    1657
+0    1475
+[data_loader] Participants: 25
+[data_loader] Missing values per feature:
+HR                 1648
+RMSSD              1648
+SCL                 560
+SnMouseDistance       2
+[enhanced] Total features: 38 (19 engineered)
+
+  === Fold PP1 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.1s
+  Fold   PP1  acc=0.597  f1=0.597  thresh=0.51
+
+  === Fold PP10 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.7s
+  Fold  PP10  acc=0.578  f1=0.574  thresh=0.47
+
+  === Fold PP11 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.6s
+  Fold  PP11  acc=0.677  f1=0.642  thresh=0.48
+
+  === Fold PP12 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.1s
+  Fold  PP12  acc=0.672  f1=0.650  thresh=0.53
+
+  === Fold PP13 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.4s
+  Fold  PP13  acc=0.714  f1=0.686  thresh=0.48
+
+  === Fold PP14 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.3s
+  Fold  PP14  acc=0.620  f1=0.588  thresh=0.50
+
+  === Fold PP15 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.5s
+  Fold  PP15  acc=0.702  f1=0.668  thresh=0.45
+
+  === Fold PP16 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.1s
+  Fold  PP16  acc=0.574  f1=0.512  thresh=0.55
+
+  === Fold PP17 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.4s
+  Fold  PP17  acc=0.617  f1=0.617  thresh=0.51
+
+  === Fold PP18 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.3s
+  Fold  PP18  acc=0.647  f1=0.645  thresh=0.51
+
+  === Fold PP19 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.9s
+  Fold  PP19  acc=0.527  f1=0.518  thresh=0.53
+
+  === Fold PP2 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.4s
+  Fold   PP2  acc=0.678  f1=0.677  thresh=0.46
+
+  === Fold PP20 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.4s
+  Fold  PP20  acc=0.605  f1=0.582  thresh=0.48
+
+  === Fold PP21 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.4s
+  Fold  PP21  acc=0.657  f1=0.646  thresh=0.49
+
+  === Fold PP22 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.5s
+  Fold  PP22  acc=0.675  f1=0.670  thresh=0.47
+
+  === Fold PP23 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.5s
+  Fold  PP23  acc=0.578  f1=0.568  thresh=0.50
+
+  === Fold PP24 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.3s
+  Fold  PP24  acc=0.685  f1=0.637  thresh=0.49
+
+  === Fold PP25 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.0s
+  Fold  PP25  acc=0.688  f1=0.686  thresh=0.54
+
+  === Fold PP3 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.4s
+  Fold   PP3  acc=0.496  f1=0.479  thresh=0.47
+
+  === Fold PP4 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.7s
+  Fold   PP4  acc=0.766  f1=0.765  thresh=0.48
+
+  === Fold PP5 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.4s
+  Fold   PP5  acc=0.824  f1=0.819  thresh=0.51
+
+  === Fold PP6 ===
+    norm 0.2s
+    prep 0.5s
+    tune 7.3s
+  Fold   PP6  acc=0.688  f1=0.684  thresh=0.51
+
+  === Fold PP7 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.1s
+  Fold   PP7  acc=0.500  f1=0.491  thresh=0.54
+
+  === Fold PP8 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.4s
+  Fold   PP8  acc=0.716  f1=0.687  thresh=0.46
+
+  === Fold PP9 ===
+    norm 0.2s
+    prep 0.5s
+    tune 6.1s
+  Fold   PP9  acc=0.694  f1=0.643  thresh=0.52
+
+============================================================
+  enhanced_ensemble — LOSO Cross-Validation Results (25 folds)
+============================================================
+  accuracy              0.6469  ± 0.0784
+  f1_stressed           0.6665  ± 0.1205
+  f1_not_stressed       0.5917  ± 0.0986
+  f1_macro              0.6291  ± 0.0800
+  precision             0.6759  ± 0.1224
+  recall                0.7211  ± 0.2261
+  auc_roc               0.7065  ± 0.1196
+============================================================
+
+[evaluation] Metrics saved to x:\dev\Empathic\results\enhanced_ensemble\metrics.csv
+[evaluation] Confusion matrix saved to x:\dev\Empathic\results\enhanced_ensemble\confusion_matrix.png
+[evaluation] ROC curve saved to x:\dev\Empathic\results\enhanced_ensemble\roc_curve.png
+
+[enhanced_ensemble] Done. Results saved to results/enhanced_ensemble/
