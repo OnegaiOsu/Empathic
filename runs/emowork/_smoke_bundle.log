@@ -1,0 +1,17 @@
+[21:08:11] [EmoWork] subjects=4  sessions=('b1', 'b2', 'b3', 'c1', 'c2', 'c3')  window=60s stride=30s grid=32Hz
+[21:08:12] [EmoWork] P01: windows=21 baseline_windows=3
+[21:08:12] [EmoWork] P02: windows=21 baseline_windows=3
+[21:08:13] [EmoWork] P03: windows=18 baseline_windows=9
+[21:08:13] [EmoWork] P04: windows=19 baseline_windows=8
+[21:08:14] [EmoWork] baseline-corrected windows: 79 (using 23 b-session windows)
+[21:08:14] [EmoWork] samples=79  features=149  subjects=4  quadrant_distribution={2: 45, 3: 15, 0: 11, 1: 8}  stress_mean=12.36  norm=zscore
+
+name=emowork
+samples=79  feature_cols=149
+sequences shape=(79, 240, 12)
+native_labels=['HVHA', 'HVLA', 'LVHA', 'LVLA']
+quadrant_labels=['HVHA', 'HVLA', 'LVHA', 'LVLA']
+quadrant_target counts: {0: 11, 1: 8, 2: 45, 3: 15}
+stress shape=(79,); sample=[0, 0, 1, 1, 1]
+session_key sample=['P01|c1', 'P01|c1', 'P01|c1', 'P01|c1', 'P01|c1']
+subjects=['P01', 'P02', 'P03', 'P04']

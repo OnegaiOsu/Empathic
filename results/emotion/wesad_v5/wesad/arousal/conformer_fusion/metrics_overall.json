@@ -1,0 +1,37 @@
+{
+  "accuracy": 0.8805870580386924,
+  "balanced_accuracy": 0.8659432696129944,
+  "macro_f1": 0.8674445476942443,
+  "macro_recall": 0.8659432696129944,
+  "weighted_f1": 0.8803364593244974,
+  "cohen_kappa": 0.7348997035021523,
+  "per_class_f1": {
+    "LA": 0.9091831557584982,
+    "HA": 0.8257059396299903
+  },
+  "per_class_support": {
+    "LA": 981,
+    "HA": 518
+  },
+  "confusion": [
+    [
+      896,
+      85
+    ],
+    [
+      94,
+      424
+    ]
+  ],
+  "labels": [
+    "LA",
+    "HA"
+  ],
+  "extra": {
+    "model_type": "deep",
+    "arch": "conformer_fusion",
+    "parameters": 1593716,
+    "device": "cuda",
+    "mixup_alpha": 0.2
+  }
+}

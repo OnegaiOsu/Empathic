@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-04-11T06:23:17.214403",
+  "dataset": "wesad",
+  "task": "discrete",
+  "n_models": 6,
+  "best_model": "CatBoostClassifier",
+  "metadata": {
+    "n_samples": 1499,
+    "n_subjects": 15,
+    "n_features": 57,
+    "labels_present": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "window_seconds": 60,
+    "stride_seconds": 30,
+    "sample_rate_hz": 700,
+    "normalization": "zscore",
+    "clip_z": null,
+    "min_subject_samples": 0,
+    "min_subject_classes": 0
+  }
+}

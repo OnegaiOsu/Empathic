@@ -1,0 +1,51 @@
+[21:07:49] [EmoWork] subjects=4  sessions=('b1', 'b2', 'b3', 'c1', 'c2', 'c3')  window=60s stride=30s grid=32Hz
+[21:07:50] [EmoWork] P01: windows=21 baseline_windows=3
+[21:07:50] [EmoWork] P02: windows=21 baseline_windows=3
+[21:07:51] [EmoWork] P03: windows=18 baseline_windows=9
+[21:07:51] [EmoWork] P04: windows=19 baseline_windows=8
+[21:07:52] [EmoWork] baseline-corrected windows: 79 (using 23 b-session windows)
+[21:07:52] [EmoWork] samples=79  features=149  subjects=4  quadrant_distribution={2: 45, 3: 15, 0: 11, 1: 8}  stress_mean=12.36  norm=zscore
+
+sequences: shape=(79, 240, 12)  dtype=float32
+non-finite cells in sequences: 0
+feature_cols (149): ['ECG_mean', 'ECG_std', 'ECG_min', 'ECG_max', 'ECG_median', 'ECG_ptp', 'ECG_diff_std', 'BVP_mean', 'BVP_std', 'BVP_min'] ... ['EEG_TP10_beta', 'EEG_TP10_gamma', 'EEG_TP10_total', 'EEG_TP10_alpha_rel', 'EEG_TP10_beta_rel']
+subjects: ['P01', 'P02', 'P03', 'P04']
+sessions per subject:
+subject_id  session
+P01         c1         7
+            c2         7
+            c3         7
+P02         c1         7
+            c2         7
+            c3         7
+P03         c1         7
+            c3         7
+            c2         4
+P04         c2         7
+            c1         6
+            c3         6
+
+quadrant counts:
+quadrant_target
+2    45
+3    15
+0    11
+1     8
+
+stress / suppression class counts (-1 = missing):
+stress
+1    53
+0    26
+suppression
+1    68
+0    11
+
+       arousal_cont  valence_cont  stress_cont  suppression_cont
+count     79.000000     79.000000    79.000000         79.000000
+mean       5.619959      3.345786    12.357949         14.734040
+std        1.309308      1.927084     6.210806          5.265150
+min        2.755211      1.000000     1.000000          1.000000
+25%        4.942133      1.545643     7.926436         14.018070
+50%        5.492604      3.167785    12.930454         16.815859
+75%        6.728280      4.918412    17.823917         17.990667
+max        8.158568      7.000000    20.000000         20.000000

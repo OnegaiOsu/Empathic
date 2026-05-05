@@ -1,0 +1,10 @@
+{
+  "accuracy_mean": 0.8495847530641126,
+  "accuracy_std": 0.14272704239260928,
+  "balanced_accuracy_mean": 0.8451950344045931,
+  "macro_f1_mean": 0.835304615056522,
+  "macro_f1_std": 0.14850376976786472,
+  "macro_recall_mean": 0.8451950344045931,
+  "weighted_f1_mean": 0.8438045205109421,
+  "cohen_kappa_mean": 0.6922880586081646
+}

@@ -1,0 +1,37 @@
+{
+  "accuracy": 0.8588235294117647,
+  "balanced_accuracy": 0.8303030303030303,
+  "macro_f1": 0.8402255639097744,
+  "macro_recall": 0.8303030303030303,
+  "weighted_f1": 0.8562582927908005,
+  "cohen_kappa": 0.68125,
+  "per_class_f1": {
+    "LA": 0.8947368421052632,
+    "HA": 0.7857142857142857
+  },
+  "per_class_support": {
+    "LA": 55,
+    "HA": 30
+  },
+  "confusion": [
+    [
+      51,
+      4
+    ],
+    [
+      8,
+      22
+    ]
+  ],
+  "labels": [
+    "LA",
+    "HA"
+  ],
+  "extra": {
+    "session_accuracy": 0.8588235294117647,
+    "session_balanced_accuracy": 0.8303030303030303,
+    "session_macro_f1": 0.8402255639097744,
+    "session_cohen_kappa": 0.68125,
+    "n_sessions": 85
+  }
+}

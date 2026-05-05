@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-04-11T06:27:11.001344",
+  "dataset": "wesad",
+  "task": "dimensional",
+  "n_models": 7,
+  "best_model": "TorchTransformerRegressor",
+  "metadata": {
+    "n_samples": 1476,
+    "n_subjects": 15,
+    "n_features": 57,
+    "targets": [
+      "valence",
+      "arousal"
+    ],
+    "window_seconds": 60,
+    "stride_seconds": 30,
+    "sample_rate_hz": 700,
+    "normalization": "zscore",
+    "clip_z": null,
+    "min_reg_subject_samples": 0
+  }
+}

@@ -1,0 +1,2 @@
+,accuracy_mean,accuracy_std,balanced_accuracy_mean,macro_f1_mean,macro_f1_std,macro_recall_mean,weighted_f1_mean,cohen_kappa_mean,session_accuracy,session_balanced_accuracy,session_macro_f1,session_cohen_kappa,n_sessions
+tiny_tcn_fusion,0.9093744468678736,0.10325662369714135,0.9419011456195001,0.8951470391389241,0.1125267668169443,0.9419011456195001,0.9160521520146023,0.8008984808379019,0.8823529411764706,0.9259259259259259,0.8488888888888889,0.7030567685589519,34.0

@@ -1,0 +1,119 @@
+
+============================================================
+TARGET: quadrant
+============================================================
+n_windows=625  n_subjects=31  classes=[ 33  50 337 205]
+
+[Protocol] LOSO
+  RandomForest          acc=0.526  f1=0.216  kappa=0.016
+  LogisticRegression    acc=0.346  f1=0.243  kappa=0.004
+  XGBoost               acc=0.181  f1=0.170  kappa=-0.007
+
+[Protocol] Subject GroupKFold k=5
+  RandomForest          acc=0.533  f1=0.209  kappa=0.028
+  LogisticRegression    acc=0.328  f1=0.235  kappa=-0.041
+  XGBoost               acc=0.118  f1=0.092  kappa=0.006
+
+[Protocol] Window StratifiedKFold k=10 (subject leakage)
+  RandomForest          acc=0.640  f1=0.399  kappa=0.284
+  LogisticRegression    acc=0.413  f1=0.335  kappa=0.105
+  XGBoost               acc=0.131  f1=0.131  kappa=-0.004
+
+[Protocol] Window 80/20 (subject leakage)
+  RandomForest          acc=0.592  f1=0.254  kappa=0.152
+  LogisticRegression    acc=0.408  f1=0.330  kappa=0.057
+  XGBoost               acc=0.056  f1=0.027  kappa=0.000
+
+============================================================
+TARGET: valence
+============================================================
+n_windows=625  n_subjects=31  classes=[542  83]
+
+[Protocol] LOSO
+  RandomForest          acc=0.867  f1=0.464  kappa=0.000
+  LogisticRegression    acc=0.667  f1=0.489  kappa=0.010
+  XGBoost               acc=0.867  f1=0.464  kappa=0.000
+
+[Protocol] Subject GroupKFold k=5
+  RandomForest          acc=0.867  f1=0.464  kappa=0.000
+  LogisticRegression    acc=0.654  f1=0.481  kappa=-0.000
+  XGBoost               acc=0.867  f1=0.464  kappa=0.000
+
+[Protocol] Window StratifiedKFold k=10 (subject leakage)
+  RandomForest          acc=0.872  f1=0.501  kappa=0.061
+  LogisticRegression    acc=0.680  f1=0.533  kappa=0.104
+  XGBoost               acc=0.867  f1=0.464  kappa=0.000
+
+[Protocol] Window 80/20 (subject leakage)
+  RandomForest          acc=0.864  f1=0.464  kappa=0.000
+  LogisticRegression    acc=0.720  f1=0.541  kappa=0.099
+  XGBoost               acc=0.864  f1=0.464  kappa=0.000
+
+============================================================
+TARGET: arousal
+============================================================
+n_windows=625  n_subjects=31  classes=[255 370]
+
+[Protocol] LOSO
+  RandomForest          acc=0.555  f1=0.486  kappa=0.010
+  LogisticRegression    acc=0.517  f1=0.509  kappa=0.021
+  XGBoost               acc=0.408  f1=0.290  kappa=0.000
+
+[Protocol] Subject GroupKFold k=5
+  RandomForest          acc=0.578  f1=0.495  kappa=0.045
+  LogisticRegression    acc=0.482  f1=0.470  kappa=-0.059
+  XGBoost               acc=0.408  f1=0.290  kappa=0.000
+
+[Protocol] Window StratifiedKFold k=10 (subject leakage)
+  RandomForest          acc=0.741  f1=0.705  kappa=0.428
+  LogisticRegression    acc=0.542  f1=0.534  kappa=0.070
+  XGBoost               acc=0.408  f1=0.290  kappa=0.000
+
+[Protocol] Window 80/20 (subject leakage)
+  RandomForest          acc=0.720  f1=0.691  kappa=0.393
+  LogisticRegression    acc=0.560  f1=0.551  kappa=0.103
+  XGBoost               acc=0.408  f1=0.290  kappa=0.000
+
+============================================================
+TARGET: stress
+============================================================
+n_windows=625  n_subjects=31  classes=[309 316]
+
+[Protocol] LOSO
+  RandomForest          acc=0.654  f1=0.654  kappa=0.308
+  LogisticRegression    acc=0.637  f1=0.637  kappa=0.273
+  XGBoost               acc=0.494  f1=0.331  kappa=0.000
+
+[Protocol] Subject GroupKFold k=5
+  RandomForest          acc=0.658  f1=0.657  kappa=0.315
+  LogisticRegression    acc=0.606  f1=0.606  kappa=0.213
+  XGBoost               acc=0.494  f1=0.331  kappa=0.000
+
+[Protocol] Window StratifiedKFold k=10 (subject leakage)
+  RandomForest          acc=0.778  f1=0.777  kappa=0.555
+  LogisticRegression    acc=0.686  f1=0.686  kappa=0.373
+  XGBoost               acc=0.494  f1=0.331  kappa=0.000
+
+[Protocol] Window 80/20 (subject leakage)
+  RandomForest          acc=0.832  f1=0.832  kappa=0.664
+  LogisticRegression    acc=0.704  f1=0.703  kappa=0.408
+  XGBoost               acc=0.496  f1=0.332  kappa=0.000
+
+
+================================================================================
+SUMMARY (kappa)
+================================================================================
+target     model                        LOSO    Subject5F    Window10F  Window80_20
+-----------------------------------------------------------------------------------
+quadrant   RandomForest                 0.016        0.028        0.284        0.152
+quadrant   LogisticRegression           0.004       -0.041        0.105        0.057
+quadrant   XGBoost                     -0.007        0.006       -0.004        0.000
+valence    RandomForest                 0.000        0.000        0.061        0.000
+valence    LogisticRegression           0.010       -0.000        0.104        0.099
+valence    XGBoost                      0.000        0.000        0.000        0.000
+arousal    RandomForest                 0.010        0.045        0.428        0.393
+arousal    LogisticRegression           0.021       -0.059        0.070        0.103
+arousal    XGBoost                      0.000        0.000        0.000        0.000
+stress     RandomForest                 0.308        0.315        0.555        0.664
+stress     LogisticRegression           0.273        0.213        0.373        0.408
+stress     XGBoost                      0.000        0.000        0.000        0.000

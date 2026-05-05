@@ -1,0 +1,37 @@
+{
+  "accuracy": 0.9106070713809206,
+  "balanced_accuracy": 0.8639248510752522,
+  "macro_f1": 0.8686800140168097,
+  "macro_recall": 0.8639248510752522,
+  "weighted_f1": 0.9100130634843806,
+  "cohen_kappa": 0.7373847513557895,
+  "per_class_f1": {
+    "LV": 0.7944785276073619,
+    "HV": 0.9428815004262575
+  },
+  "per_class_support": {
+    "LV": 332,
+    "HV": 1167
+  },
+  "confusion": [
+    [
+      259,
+      73
+    ],
+    [
+      61,
+      1106
+    ]
+  ],
+  "labels": [
+    "LV",
+    "HV"
+  ],
+  "extra": {
+    "model_type": "deep",
+    "arch": "cnn1d",
+    "parameters": 215362,
+    "device": "cuda",
+    "mixup_alpha": 0.2
+  }
+}

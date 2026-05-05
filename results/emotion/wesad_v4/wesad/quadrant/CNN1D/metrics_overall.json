@@ -1,0 +1,59 @@
+{
+  "accuracy": 0.800533689126084,
+  "balanced_accuracy": 0.6729892177304793,
+  "macro_f1": 0.6713585499536777,
+  "macro_recall": 0.6729892177304793,
+  "weighted_f1": 0.7981909488299314,
+  "cohen_kappa": 0.6057241130571708,
+  "per_class_f1": {
+    "HVHA": 0.2777777777777778,
+    "HVLA": 0.8757637474541752,
+    "LVHA": 0.8605341246290801,
+    "LVLA": 0.0
+  },
+  "per_class_support": {
+    "HVHA": 186,
+    "HVLA": 981,
+    "LVHA": 332,
+    "LVLA": 0
+  },
+  "confusion": [
+    [
+      50,
+      106,
+      30,
+      0
+    ],
+    [
+      99,
+      860,
+      22,
+      0
+    ],
+    [
+      25,
+      17,
+      290,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "labels": [
+    "HVHA",
+    "HVLA",
+    "LVHA",
+    "LVLA"
+  ],
+  "extra": {
+    "model_type": "deep",
+    "arch": "cnn1d",
+    "parameters": 215492,
+    "device": "cuda",
+    "mixup_alpha": 0.2
+  }
+}

@@ -1,0 +1,22 @@
+shape: (1499, 240, 8) dtype: float32
+global mean=0.000  std=0.987  min=-6.000  max=6.000
+
+channel          mean          std          min          max
+ACC_x          0.0004       0.9830      -6.0000       6.0000
+ACC_y          0.0008       0.9834      -6.0000       6.0000
+ACC_z         -0.0004       0.9962      -6.0000       6.0000
+ECG           -0.0004       0.9920      -6.0000       6.0000
+EDA            0.0000       1.0000      -4.1220       5.4452
+EMG            0.0006       0.9667      -6.0000       6.0000
+Resp          -0.0001       0.9969      -6.0000       6.0000
+Temp           0.0008       0.9776      -6.0000       3.2272
+
+Per-subject channel means (showing range across subjects):
+ACC_x    subj-mean range=[    -0.000,      0.006]  spread=     0.007
+ACC_y    subj-mean range=[    -0.000,      0.006]  spread=     0.006
+ACC_z    subj-mean range=[    -0.005,      0.001]  spread=     0.006
+ECG      subj-mean range=[    -0.006,      0.001]  spread=     0.007
+EDA      subj-mean range=[    -0.000,      0.000]  spread=     0.000
+EMG      subj-mean range=[    -0.000,      0.009]  spread=     0.009
+Resp     subj-mean range=[    -0.001,      0.001]  spread=     0.002
+Temp     subj-mean range=[    -0.003,      0.007]  spread=     0.011

@@ -1,0 +1,61 @@
+{
+  "accuracy": 0.8925950633755837,
+  "balanced_accuracy": 0.7725462040196563,
+  "macro_f1": 0.7909306563799271,
+  "macro_recall": 0.7725462040196563,
+  "weighted_f1": 0.880812882026495,
+  "cohen_kappa": 0.7778363858633616,
+  "per_class_f1": {
+    "HVHA": 0.503448275862069,
+    "HVLA": 0.9338598223099703,
+    "LVHA": 0.9354838709677419,
+    "LVLA": 0.0
+  },
+  "per_class_support": {
+    "HVHA": 186,
+    "HVLA": 981,
+    "LVHA": 332,
+    "LVLA": 0
+  },
+  "confusion": [
+    [
+      73,
+      91,
+      22,
+      0
+    ],
+    [
+      26,
+      946,
+      9,
+      0
+    ],
+    [
+      5,
+      8,
+      319,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "labels": [
+    "HVHA",
+    "HVLA",
+    "LVHA",
+    "LVLA"
+  ],
+  "extra": {
+    "model_type": "ensemble",
+    "members": [
+      "RandomForest",
+      "XGBoost",
+      "LogisticRegression",
+      "conformer_fusion"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "accuracy": 0.9633088725817212,
+  "balanced_accuracy": 0.95165107731698,
+  "macro_f1": 0.9473102302321494,
+  "macro_recall": 0.95165107731698,
+  "weighted_f1": 0.9634831919293556,
+  "cohen_kappa": 0.8946259152891796,
+  "per_class_f1": {
+    "LV": 0.9182763744427934,
+    "HV": 0.9763440860215054
+  },
+  "per_class_support": {
+    "LV": 332,
+    "HV": 1167
+  },
+  "confusion": [
+    [
+      309,
+      23
+    ],
+    [
+      32,
+      1135
+    ]
+  ],
+  "labels": [
+    "LV",
+    "HV"
+  ],
+  "extra": {
+    "model_type": "ensemble",
+    "members": [
+      "RandomForest",
+      "XGBoost",
+      "Conformer",
+      "DANN_Conformer"
+    ]
+  }
+}

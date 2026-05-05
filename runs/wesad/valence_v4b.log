@@ -1,0 +1,171 @@
+[17:20:37] device=cuda (GPU used by deep model: True)
+[17:20:37] [WESAD] subjects=15  window=60s stride=30s @ 700Hz
+X:\dev\Empathic\src\empathic\data\wesad.py:444: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  data = pickle.load(fh, encoding="latin1")
+[17:20:48] [WESAD] S10: windows=103  intervals=8
+[17:20:58] [WESAD] S11: windows=102  intervals=8
+[17:21:08] [WESAD] S13: windows=102  intervals=7
+[17:21:17] [WESAD] S14: windows=102  intervals=8
+[17:21:27] [WESAD] S15: windows=101  intervals=6
+[17:21:38] [WESAD] S16: windows=99  intervals=8
+[17:21:48] [WESAD] S17: windows=100  intervals=8
+[17:21:58] [WESAD] S2: windows=96  intervals=7
+[17:22:09] [WESAD] S3: windows=99  intervals=7
+[17:22:19] [WESAD] S4: windows=99  intervals=7
+[17:22:29] [WESAD] S5: windows=99  intervals=8
+[17:22:39] [WESAD] S6: windows=99  intervals=8
+[17:22:48] [WESAD] S7: windows=99  intervals=7
+[17:22:57] [WESAD] S8: windows=100  intervals=7
+[17:23:05] [WESAD] S9: windows=99  intervals=7
+[17:23:06] [WESAD] samples=1499  features=89  subjects=15  dim_with_va=1476  seq_norm=zscore  baseline_corrected=1499
+[17:23:06] === WESAD / target=valence ===
+[17:23:06]   samples=1499  subjects=15  labels=['LV', 'HV']
+[17:23:06]   feature_cols=89  seq_shape=(1499, 240, 8)
+[17:23:06] --- LOSO [Baseline] ---
+[17:23:06]   [Baseline] subject=S10  acc=0.233  f1=0.189
+[17:23:06]   [Baseline] subject=S11  acc=0.225  f1=0.184
+[17:23:06]   [Baseline] subject=S13  acc=0.216  f1=0.177
+[17:23:06]   [Baseline] subject=S14  acc=0.216  f1=0.177
+[17:23:06]   [Baseline] subject=S15  acc=0.228  f1=0.185
+[17:23:06]   [Baseline] subject=S16  acc=0.222  f1=0.182
+[17:23:06]   [Baseline] subject=S17  acc=0.240  f1=0.194
+[17:23:06]   [Baseline] subject=S2  acc=0.219  f1=0.179
+[17:23:06]   [Baseline] subject=S3  acc=0.222  f1=0.182
+[17:23:06]   [Baseline] subject=S4  acc=0.212  f1=0.175
+[17:23:06]   [Baseline] subject=S5  acc=0.212  f1=0.175
+[17:23:06]   [Baseline] subject=S6  acc=0.222  f1=0.182
+[17:23:06]   [Baseline] subject=S7  acc=0.212  f1=0.175
+[17:23:06]   [Baseline] subject=S8  acc=0.230  f1=0.187
+[17:23:06]   [Baseline] subject=S9  acc=0.212  f1=0.175
+[17:23:06] --- LOSO [RandomForest] ---
+[17:23:07]   [RandomForest] subject=S10  acc=0.990  f1=0.986
+[17:23:07]   [RandomForest] subject=S11  acc=1.000  f1=1.000
+[17:23:08]   [RandomForest] subject=S13  acc=0.971  f1=0.954
+[17:23:08]   [RandomForest] subject=S14  acc=0.951  f1=0.929
+[17:23:09]   [RandomForest] subject=S15  acc=0.960  f1=0.940
+[17:23:10]   [RandomForest] subject=S16  acc=1.000  f1=1.000
+[17:23:10]   [RandomForest] subject=S17  acc=0.990  f1=0.986
+[17:23:11]   [RandomForest] subject=S2  acc=0.927  f1=0.898
+[17:23:11]   [RandomForest] subject=S3  acc=0.939  f1=0.902
+[17:23:12]   [RandomForest] subject=S4  acc=1.000  f1=1.000
+[17:23:12]   [RandomForest] subject=S5  acc=1.000  f1=1.000
+[17:23:13]   [RandomForest] subject=S6  acc=0.990  f1=0.986
+[17:23:13]   [RandomForest] subject=S7  acc=1.000  f1=1.000
+[17:23:14]   [RandomForest] subject=S8  acc=0.960  f1=0.940
+[17:23:15]   [RandomForest] subject=S9  acc=0.899  f1=0.837
+[17:23:15] --- LOSO [LogisticRegression] ---
+[17:23:15]   [LogisticRegression] subject=S10  acc=0.990  f1=0.986
+[17:23:15]   [LogisticRegression] subject=S11  acc=0.990  f1=0.986
+[17:23:15]   [LogisticRegression] subject=S13  acc=0.990  f1=0.985
+[17:23:15]   [LogisticRegression] subject=S14  acc=0.882  f1=0.849
+[17:23:15]   [LogisticRegression] subject=S15  acc=0.980  f1=0.972
+[17:23:15]   [LogisticRegression] subject=S16  acc=1.000  f1=1.000
+[17:23:15]   [LogisticRegression] subject=S17  acc=0.990  f1=0.986
+[17:23:15]   [LogisticRegression] subject=S2  acc=0.812  f1=0.763
+[17:23:15]   [LogisticRegression] subject=S3  acc=0.939  f1=0.909
+[17:23:15]   [LogisticRegression] subject=S4  acc=1.000  f1=1.000
+[17:23:15]   [LogisticRegression] subject=S5  acc=0.990  f1=0.985
+[17:23:15]   [LogisticRegression] subject=S6  acc=0.970  f1=0.958
+[17:23:15]   [LogisticRegression] subject=S7  acc=1.000  f1=1.000
+[17:23:15]   [LogisticRegression] subject=S8  acc=0.880  f1=0.797
+[17:23:15]   [LogisticRegression] subject=S9  acc=0.818  f1=0.752
+[17:23:15] --- LOSO [XGBoost] ---
+X:\dev\Empathic\.venv\Lib\site-packages\xgboost\core.py:751: UserWarning: [17:23:16] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\common\error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+[17:23:16]   [XGBoost] subject=S10  acc=1.000  f1=1.000
+[17:23:17]   [XGBoost] subject=S11  acc=1.000  f1=1.000
+[17:23:17]   [XGBoost] subject=S13  acc=0.990  f1=0.985
+[17:23:18]   [XGBoost] subject=S14  acc=1.000  f1=1.000
+[17:23:18]   [XGBoost] subject=S15  acc=0.980  f1=0.971
+[17:23:19]   [XGBoost] subject=S16  acc=1.000  f1=1.000
+[17:23:19]   [XGBoost] subject=S17  acc=0.990  f1=0.986
+[17:23:20]   [XGBoost] subject=S2  acc=0.938  f1=0.914
+[17:23:20]   [XGBoost] subject=S3  acc=0.939  f1=0.902
+[17:23:21]   [XGBoost] subject=S4  acc=1.000  f1=1.000
+[17:23:21]   [XGBoost] subject=S5  acc=1.000  f1=1.000
+[17:23:21]   [XGBoost] subject=S6  acc=0.970  f1=0.958
+[17:23:22]   [XGBoost] subject=S7  acc=0.990  f1=0.985
+[17:23:22]   [XGBoost] subject=S8  acc=0.990  f1=0.986
+[17:23:23]   [XGBoost] subject=S9  acc=0.798  f1=0.725
+[17:23:23] --- LOSO [conformer] ---
+X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py:1370: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:39.)
+  return t.to(
+Traceback (most recent call last):
+  File "X:\dev\Empathic\train.py", line 114, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "X:\dev\Empathic\train.py", line 93, in main
+    run_experiment(
+    ~~~~~~~~~~~~~~^
+        bundle,
+        ^^^^^^^
+    ...<12 lines>...
+        verbose=True,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "X:\dev\Empathic\src\empathic\training.py", line 904, in run_experiment
+    res = _deep_loso(
+        bundle, target_kind,
+    ...<4 lines>...
+        verbose=verbose,
+    )
+  File "X:\dev\Empathic\src\empathic\training.py", line 791, in _deep_loso
+    preds, probs, param_count, model_name = _train_deep_fold(
+                                            ~~~~~~~~~~~~~~~~^
+        s_train_aug.astype(np.float32),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        verbose=False,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "X:\dev\Empathic\src\empathic\training.py", line 221, in _train_deep_fold
+    logits = model(xb_m)
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\dev\Empathic\src\empathic\models\conformer.py", line 180, in forward
+    return self.head(self.forward_features(x))
+                     ~~~~~~~~~~~~~~~~~~~~~^^^
+  File "X:\dev\Empathic\src\empathic\models\conformer.py", line 176, in forward_features
+    h = blk(h)
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\dev\Empathic\src\empathic\models\conformer.py", line 120, in forward
+    x = x + self.conv(x)
+            ~~~~~~~~~^^^
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\dev\Empathic\src\empathic\models\conformer.py", line 101, in forward
+    h = self.pw2(h)
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 375, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\dev\Empathic\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 370, in _conv_forward
+    return F.conv1d(
+           ~~~~~~~~^
+        input, weight, bias, self.stride, self.padding, self.dilation, self.groups
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 15.92 GiB of which 13.77 GiB is free. Of the allocated memory 832.01 MiB is allocated by PyTorch, and 43.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

@@ -1,0 +1,430 @@
+[within] loading bundle ...
+[within] bundle ready in 21.9s  samples=625  subjects=31
+
+######################################################################
+# WITHIN-SUBJECT TARGET = stress
+######################################################################
+  subject=P01  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P01  RandomForest            acc=0.857  f1=0.788  n_te=7
+  subject=P01  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P01  XGBoost                 acc=0.857  f1=0.788  n_te=7
+  subject=P02  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P02  RandomForest            acc=0.714  f1=0.650  n_te=7
+  subject=P02  LogisticRegression      acc=0.714  f1=0.650  n_te=7
+  subject=P02  XGBoost                 acc=0.857  f1=0.844  n_te=7
+  subject=P03  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P03  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P03  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P03  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P04  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P04  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P04  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P04  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P05  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P05  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P05  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P05  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P06  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P06  RandomForest            acc=0.833  f1=0.829  n_te=6
+  subject=P06  LogisticRegression      acc=0.667  f1=0.667  n_te=6
+  subject=P06  XGBoost                 acc=0.833  f1=0.829  n_te=6
+  subject=P07  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P07  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P07  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P07  XGBoost                 acc=1.000  f1=1.000  n_te=7
+  subject=P08  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P08  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P08  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P08  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P09  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P09  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P09  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P09  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P10  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P10  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P10  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P10  XGBoost                 acc=0.833  f1=0.829  n_te=6
+  subject=P11  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P11  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P11  LogisticRegression      acc=0.833  f1=0.455  n_te=6
+  subject=P11  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P12  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P12  RandomForest            acc=0.667  f1=0.667  n_te=6
+  subject=P12  LogisticRegression      acc=0.667  f1=0.667  n_te=6
+  subject=P12  XGBoost                 acc=0.667  f1=0.667  n_te=6
+  subject=P13  Baseline                acc=0.400  f1=0.286  n_te=5
+  subject=P13  RandomForest            acc=0.800  f1=0.800  n_te=5
+  subject=P13  LogisticRegression      acc=1.000  f1=1.000  n_te=5
+  subject=P13  XGBoost                 acc=0.400  f1=0.286  n_te=5
+  subject=P14  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P14  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P14  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P14  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P15  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P15  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P15  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P15  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P16  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P16  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P16  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P16  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P17  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P17  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P17  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P17  XGBoost                 acc=1.000  f1=1.000  n_te=7
+  subject=P18  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P18  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P18  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P18  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P19  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P19  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P19  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P19  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P20  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P20  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P20  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P20  XGBoost                 acc=0.857  f1=0.857  n_te=7
+  subject=P21  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P21  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P21  LogisticRegression      acc=0.833  f1=0.778  n_te=6
+  subject=P21  XGBoost                 acc=0.500  f1=0.333  n_te=6
+  subject=P22  SKIP (single-class)
+  subject=P23  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P23  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P23  LogisticRegression      acc=0.857  f1=0.788  n_te=7
+  subject=P23  XGBoost                 acc=0.857  f1=0.462  n_te=7
+  subject=P24  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P24  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P24  LogisticRegression      acc=0.714  f1=0.417  n_te=7
+  subject=P24  XGBoost                 acc=0.857  f1=0.462  n_te=7
+  subject=P25  Baseline                acc=0.429  f1=0.300  n_te=7
+  subject=P25  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P25  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P25  XGBoost                 acc=0.714  f1=0.708  n_te=7
+  subject=P26  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P26  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P26  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P26  XGBoost                 acc=1.000  f1=1.000  n_te=7
+  subject=P27  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P27  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P27  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P27  XGBoost                 acc=1.000  f1=1.000  n_te=7
+  subject=P28  SKIP (single-class)
+  subject=P29  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P29  RandomForest            acc=0.857  f1=0.844  n_te=7
+  subject=P29  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P29  XGBoost                 acc=0.571  f1=0.533  n_te=7
+  subject=P30  SKIP (single-class)
+  subject=P31  Baseline                acc=0.429  f1=0.300  n_te=7
+  subject=P31  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P31  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P31  XGBoost                 acc=0.714  f1=0.650  n_te=7
+
+[within] stress summary:
+             model  accuracy_mean  accuracy_std  balanced_accuracy_mean  macro_f1_mean  macro_f1_std  macro_recall_mean  weighted_f1_mean  cohen_kappa_mean  n_subjects
+          Baseline       0.623980      0.137192                0.500000       0.380022      0.051818           0.500000          0.487916          0.000000          28
+LogisticRegression       0.938776      0.114907                0.913690       0.907864      0.176300           0.913690          0.934496          0.822261          28
+      RandomForest       0.926531      0.100802                0.869048       0.863840      0.199758           0.869048          0.913203          0.744083          28
+           XGBoost       0.857823      0.165885                0.788690       0.771811      0.247503           0.788690          0.833494          0.580432          28
+
+######################################################################
+# WITHIN-SUBJECT TARGET = arousal
+######################################################################
+  subject=P01  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P01  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P01  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P01  XGBoost                 acc=0.714  f1=0.650  n_te=7
+  subject=P02  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P02  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P02  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P02  XGBoost                 acc=0.857  f1=0.462  n_te=7
+  subject=P03  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P03  RandomForest            acc=0.667  f1=0.625  n_te=6
+  subject=P03  LogisticRegression      acc=0.500  f1=0.486  n_te=6
+  subject=P03  XGBoost                 acc=0.500  f1=0.486  n_te=6
+  subject=P04  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P04  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P04  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P04  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P05  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P05  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P05  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P05  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P06  SKIP (min class count=1)
+  subject=P07  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P07  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P07  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P07  XGBoost                 acc=0.857  f1=0.462  n_te=7
+  subject=P08  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P08  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P08  LogisticRegression      acc=0.833  f1=0.455  n_te=6
+  subject=P08  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P09  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P09  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P09  LogisticRegression      acc=0.667  f1=0.400  n_te=6
+  subject=P09  XGBoost                 acc=1.000  f1=1.000  n_te=6
+  subject=P10  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P10  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P10  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P10  XGBoost                 acc=0.667  f1=0.400  n_te=6
+  subject=P11  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P11  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P11  LogisticRegression      acc=0.833  f1=0.778  n_te=6
+  subject=P11  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P12  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P12  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P12  LogisticRegression      acc=0.833  f1=0.829  n_te=6
+  subject=P12  XGBoost                 acc=0.833  f1=0.778  n_te=6
+  subject=P13  Baseline                acc=0.600  f1=0.375  n_te=5
+  subject=P13  RandomForest            acc=1.000  f1=1.000  n_te=5
+  subject=P13  LogisticRegression      acc=1.000  f1=1.000  n_te=5
+  subject=P13  XGBoost                 acc=0.600  f1=0.375  n_te=5
+  subject=P14  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P14  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P14  LogisticRegression      acc=0.833  f1=0.829  n_te=6
+  subject=P14  XGBoost                 acc=0.833  f1=0.829  n_te=6
+  subject=P15  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P15  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P15  LogisticRegression      acc=0.333  f1=0.333  n_te=6
+  subject=P15  XGBoost                 acc=0.833  f1=0.778  n_te=6
+  subject=P16  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P16  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P16  LogisticRegression      acc=0.833  f1=0.778  n_te=6
+  subject=P16  XGBoost                 acc=0.667  f1=0.400  n_te=6
+  subject=P17  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P17  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P17  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P17  XGBoost                 acc=1.000  f1=1.000  n_te=7
+  subject=P18  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P18  RandomForest            acc=0.833  f1=0.829  n_te=6
+  subject=P18  LogisticRegression      acc=0.833  f1=0.829  n_te=6
+  subject=P18  XGBoost                 acc=0.833  f1=0.829  n_te=6
+  subject=P19  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P19  RandomForest            acc=0.500  f1=0.333  n_te=6
+  subject=P19  LogisticRegression      acc=0.667  f1=0.625  n_te=6
+  subject=P19  XGBoost                 acc=0.500  f1=0.333  n_te=6
+  subject=P20  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P20  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P20  LogisticRegression      acc=0.714  f1=0.417  n_te=7
+  subject=P20  XGBoost                 acc=0.857  f1=0.462  n_te=7
+  subject=P21  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P21  RandomForest            acc=0.667  f1=0.400  n_te=6
+  subject=P21  LogisticRegression      acc=0.833  f1=0.778  n_te=6
+  subject=P21  XGBoost                 acc=0.667  f1=0.400  n_te=6
+  subject=P22  SKIP (single-class)
+  subject=P23  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P23  RandomForest            acc=0.714  f1=0.417  n_te=7
+  subject=P23  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P23  XGBoost                 acc=1.000  f1=1.000  n_te=7
+  subject=P24  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P24  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P24  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P24  XGBoost                 acc=1.000  f1=1.000  n_te=7
+  subject=P25  SKIP (min class count=1)
+  subject=P26  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P26  RandomForest            acc=0.857  f1=0.844  n_te=7
+  subject=P26  LogisticRegression      acc=0.857  f1=0.844  n_te=7
+  subject=P26  XGBoost                 acc=0.857  f1=0.857  n_te=7
+  subject=P27  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P27  RandomForest            acc=0.714  f1=0.417  n_te=7
+  subject=P27  LogisticRegression      acc=0.857  f1=0.844  n_te=7
+  subject=P27  XGBoost                 acc=0.714  f1=0.417  n_te=7
+  subject=P28  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P28  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P28  LogisticRegression      acc=0.857  f1=0.788  n_te=7
+  subject=P28  XGBoost                 acc=0.857  f1=0.462  n_te=7
+  subject=P29  SKIP (single-class)
+  subject=P30  SKIP (min class count=1)
+  subject=P31  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P31  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P31  LogisticRegression      acc=0.857  f1=0.844  n_te=7
+  subject=P31  XGBoost                 acc=0.857  f1=0.857  n_te=7
+
+[within] arousal summary:
+             model  accuracy_mean  accuracy_std  balanced_accuracy_mean  macro_f1_mean  macro_f1_std  macro_recall_mean  weighted_f1_mean  cohen_kappa_mean  n_subjects
+          Baseline       0.702564      0.102656                0.500000       0.410604      0.035382           0.500000          0.583921          0.000000          26
+LogisticRegression       0.851648      0.167590                0.822436       0.802135      0.217563           0.822436          0.844049          0.625877          26
+      RandomForest       0.859890      0.130987                0.738782       0.720156      0.253219           0.738782          0.824209          0.485089          26
+           XGBoost       0.807875      0.143357                0.673077       0.638365      0.244356           0.673077          0.758598          0.345927          26
+
+######################################################################
+# WITHIN-SUBJECT TARGET = valence
+######################################################################
+  subject=P01  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P01  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P01  LogisticRegression      acc=0.857  f1=0.788  n_te=7
+  subject=P01  XGBoost                 acc=0.857  f1=0.462  n_te=7
+  subject=P02  SKIP (single-class)
+  subject=P03  SKIP (single-class)
+  subject=P04  SKIP (single-class)
+  subject=P05  SKIP (min class count=1)
+  subject=P06  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P06  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P06  LogisticRegression      acc=0.833  f1=0.455  n_te=6
+  subject=P06  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P07  SKIP (single-class)
+  subject=P08  SKIP (min class count=1)
+  subject=P09  SKIP (single-class)
+  subject=P10  SKIP (single-class)
+  subject=P11  SKIP (single-class)
+  subject=P12  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P12  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P12  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P12  XGBoost                 acc=0.667  f1=0.400  n_te=6
+  subject=P13  Baseline                acc=0.600  f1=0.375  n_te=5
+  subject=P13  RandomForest            acc=1.000  f1=1.000  n_te=5
+  subject=P13  LogisticRegression      acc=1.000  f1=1.000  n_te=5
+  subject=P13  XGBoost                 acc=0.600  f1=0.375  n_te=5
+  subject=P14  SKIP (single-class)
+  subject=P15  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P15  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P15  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P15  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P16  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P16  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P16  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P16  XGBoost                 acc=0.833  f1=0.829  n_te=6
+  subject=P17  SKIP (min class count=1)
+  subject=P18  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P18  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P18  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P18  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P19  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P19  RandomForest            acc=1.000  f1=1.000  n_te=6
+  subject=P19  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P19  XGBoost                 acc=0.833  f1=0.455  n_te=6
+  subject=P20  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P20  RandomForest            acc=0.857  f1=0.788  n_te=7
+  subject=P20  LogisticRegression      acc=0.857  f1=0.788  n_te=7
+  subject=P20  XGBoost                 acc=0.714  f1=0.417  n_te=7
+  subject=P21  SKIP (min class count=1)
+  subject=P22  SKIP (min class count=1)
+  subject=P23  Baseline                acc=0.571  f1=0.364  n_te=7
+  subject=P23  RandomForest            acc=0.571  f1=0.533  n_te=7
+  subject=P23  LogisticRegression      acc=0.857  f1=0.857  n_te=7
+  subject=P23  XGBoost                 acc=0.571  f1=0.533  n_te=7
+  subject=P24  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P24  RandomForest            acc=0.857  f1=0.788  n_te=7
+  subject=P24  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P24  XGBoost                 acc=0.714  f1=0.417  n_te=7
+  subject=P25  SKIP (min class count=1)
+  subject=P26  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P26  RandomForest            acc=0.857  f1=0.788  n_te=7
+  subject=P26  LogisticRegression      acc=0.857  f1=0.788  n_te=7
+  subject=P26  XGBoost                 acc=0.714  f1=0.417  n_te=7
+  subject=P27  SKIP (min class count=1)
+  subject=P28  SKIP (single-class)
+  subject=P29  SKIP (single-class)
+  subject=P30  SKIP (single-class)
+  subject=P31  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P31  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P31  LogisticRegression      acc=0.857  f1=0.462  n_te=7
+  subject=P31  XGBoost                 acc=0.857  f1=0.462  n_te=7
+
+[within] valence summary:
+             model  accuracy_mean  accuracy_std  balanced_accuracy_mean  macro_f1_mean  macro_f1_std  macro_recall_mean  weighted_f1_mean  cohen_kappa_mean  n_subjects
+          Baseline       0.745788      0.101081                0.500000       0.425377      0.034015           0.500000          0.640822          0.000000          13
+LogisticRegression       0.932234      0.076442                0.868590       0.856682      0.199130           0.868590          0.920003          0.729593          13
+      RandomForest       0.886447      0.120293                0.753205       0.748395      0.242336           0.753205          0.859187          0.527051          13
+           XGBoost       0.758608      0.100779                0.532051       0.471397      0.114060           0.532051          0.674788          0.057971          13
+
+######################################################################
+# WITHIN-SUBJECT TARGET = quadrant
+######################################################################
+  subject=P01  Baseline                acc=0.429  f1=0.200  n_te=7
+  subject=P01  RandomForest            acc=0.857  f1=0.619  n_te=7
+  subject=P01  LogisticRegression      acc=0.714  f1=0.556  n_te=7
+  subject=P01  XGBoost                 acc=0.857  f1=0.619  n_te=7
+  subject=P02  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P02  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P02  LogisticRegression      acc=0.857  f1=0.462  n_te=7
+  subject=P02 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P03  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P03  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P03  LogisticRegression      acc=1.000  f1=1.000  n_te=6
+  subject=P03 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P04  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P04  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P04  LogisticRegression      acc=0.667  f1=0.400  n_te=6
+  subject=P04 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P05  SKIP (min class count=1)
+  subject=P06  SKIP (min class count=1)
+  subject=P07  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P07  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P07  LogisticRegression      acc=0.857  f1=0.462  n_te=7
+  subject=P07 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P08  SKIP (min class count=1)
+  subject=P09  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P09  RandomForest            acc=0.667  f1=0.625  n_te=6
+  subject=P09  LogisticRegression      acc=0.833  f1=0.829  n_te=6
+  subject=P09 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P10  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P10  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P10  LogisticRegression      acc=0.833  f1=0.778  n_te=6
+  subject=P10 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P11  Baseline                acc=0.833  f1=0.455  n_te=6
+  subject=P11  RandomForest            acc=0.833  f1=0.455  n_te=6
+  subject=P11  LogisticRegression      acc=0.667  f1=0.400  n_te=6
+  subject=P11 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P12  Baseline                acc=0.500  f1=0.167  n_te=6
+  subject=P12  RandomForest            acc=0.667  f1=0.375  n_te=6
+  subject=P12  LogisticRegression      acc=0.833  f1=0.667  n_te=6
+  subject=P12  XGBoost                 acc=0.833  f1=0.714  n_te=6
+  subject=P13  Baseline                acc=0.600  f1=0.375  n_te=5
+  subject=P13  RandomForest            acc=1.000  f1=1.000  n_te=5
+  subject=P13  LogisticRegression      acc=1.000  f1=1.000  n_te=5
+  subject=P13 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [1 2]
+  subject=P14  Baseline                acc=0.500  f1=0.333  n_te=6
+  subject=P14  RandomForest            acc=0.500  f1=0.486  n_te=6
+  subject=P14  LogisticRegression      acc=0.500  f1=0.486  n_te=6
+  subject=P14 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P15  Baseline                acc=0.667  f1=0.267  n_te=6
+  subject=P15  RandomForest            acc=0.667  f1=0.267  n_te=6
+  subject=P15  LogisticRegression      acc=0.667  f1=0.267  n_te=6
+  subject=P15 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got [1 2 3]
+  subject=P16  Baseline                acc=0.667  f1=0.400  n_te=6
+  subject=P16  RandomForest            acc=0.833  f1=0.778  n_te=6
+  subject=P16  LogisticRegression      acc=0.833  f1=0.778  n_te=6
+  subject=P16 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [1 2]
+  subject=P17  SKIP (min class count=1)
+  subject=P18  Baseline                acc=0.500  f1=0.222  n_te=6
+  subject=P18  RandomForest            acc=0.667  f1=0.489  n_te=6
+  subject=P18  LogisticRegression      acc=0.833  f1=0.867  n_te=6
+  subject=P18 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got [0 2 3]
+  subject=P19  Baseline                acc=0.500  f1=0.167  n_te=6
+  subject=P19  RandomForest            acc=0.167  f1=0.071  n_te=6
+  subject=P19  LogisticRegression      acc=0.667  f1=0.667  n_te=6
+  subject=P19  XGBoost                 acc=0.167  f1=0.083  n_te=6
+  subject=P20  Baseline                acc=0.714  f1=0.278  n_te=7
+  subject=P20  RandomForest            acc=0.714  f1=0.303  n_te=7
+  subject=P20  LogisticRegression      acc=0.857  f1=0.636  n_te=7
+  subject=P20  XGBoost                 acc=0.714  f1=0.303  n_te=7
+  subject=P21  SKIP (min class count=1)
+  subject=P22  SKIP (min class count=1)
+  subject=P23  SKIP (min class count=1)
+  subject=P24  Baseline                acc=0.714  f1=0.417  n_te=7
+  subject=P24  RandomForest            acc=1.000  f1=1.000  n_te=7
+  subject=P24  LogisticRegression      acc=1.000  f1=1.000  n_te=7
+  subject=P24 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got [1 2 3]
+  subject=P25  SKIP (min class count=1)
+  subject=P26  SKIP (min class count=1)
+  subject=P27  SKIP (min class count=1)
+  subject=P28  Baseline                acc=0.857  f1=0.462  n_te=7
+  subject=P28  RandomForest            acc=0.857  f1=0.462  n_te=7
+  subject=P28  LogisticRegression      acc=0.571  f1=0.533  n_te=7
+  subject=P28 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1], got [2 3]
+  subject=P29  SKIP (single-class)
+  subject=P30  SKIP (min class count=1)
+  subject=P31  Baseline                acc=0.429  f1=0.200  n_te=7
+  subject=P31  RandomForest            acc=0.714  f1=0.508  n_te=7
+  subject=P31  LogisticRegression      acc=0.714  f1=0.508  n_te=7
+  subject=P31 XGBoost  ERROR Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got [1 2 3]
+
+[within] quadrant summary:
+             model  accuracy_mean  accuracy_std  balanced_accuracy_mean  macro_f1_mean  macro_f1_std  macro_recall_mean  weighted_f1_mean  cohen_kappa_mean  n_subjects
+          Baseline       0.655639      0.148241                0.429825       0.343090      0.109121           0.429825          0.528607          0.000000          19
+LogisticRegression       0.784461      0.141188                0.675877       0.646988      0.222641           0.675877          0.761496          0.435017          19
+      RandomForest       0.755639      0.188288                0.573830       0.545776      0.238393           0.573830          0.707550          0.315865          19
+           XGBoost       0.642857      0.323553                0.458333       0.429924      0.290320           0.458333          0.593460          0.362374           4
+
+[within] done.
