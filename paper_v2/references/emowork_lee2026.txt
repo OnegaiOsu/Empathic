@@ -1,0 +1,1199 @@
+https://doi.org/10.1038/s41597-025-06531-2
+Received: 4 June 2025
+Accepted: 24 December 2025
+Cite this article as: Lee, D., Park, E.,
+Kim, G. et al. A Multimodal Dataset
+for Assessing Emotion, Stress, and
+Emotional Workload in Interpersonal
+Work Scenario. Sci Data (2025).
+https://doi.org/10.1038/
+s41597-025-06531-2
+Duri Lee, Eunji Park, Gyuna Kim, Yunjo Han & Uichin Lee
+We are providing an unedited version of this manuscript to give early access to its
+findings.  Before final  publication, the manuscript will undergo further editing. Please
+note there may be errors present which affect  the content, and all legal disclaimers
+apply.
+If this paper is publishing under a Transparent Peer Review model then Peer
+Review reports will publish with the final  article.
+© The Author(s) 2026. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit
+to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified  the licensed material. You do not
+have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this
+article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the
+article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+Scientific  Data
+Article in Press
+A Multimodal Dataset for Assessing Emotion, Stress,
+and Emotional Workload in Interpersonal Work
+Scenario
+ARTICLE IN PRESS
+
+
+CONFIDENTIAL
+COPY OF SUBMISSION FOR PEER REVIEW ONLY 
+Tracking no: SDATA-25-02636B
+A multimodal dataset for assessing emotion, stress, and emotional workload in interpersonal work scenario
+Authors:Uichin Lee (Korea Advanced Institute of Science and Technology), Duri Lee (KAIST), Eunji Park (Chung-Ang University), Gyuna
+Kim (KAIST), and Yunjo Han (Samsung Research)
+Abstract:
+We present EmoWork, a multimodal, multi-label dataset designed to support emotion and stress detection in realistic interpersonal work
+settings. Interpersonal work—common in occupations such as customer service—often requires workers to regulate their emotional
+expressions in response to strong affective stimuli. These demands, shaped by organizational display rules, present a unique challenge
+for affective computing systems, particularly in scenarios where internal emotional states diverge from observable behaviors. Despite this,
+no public datasets exist that capture such dynamics of affect in naturalistic settings. To address this gap, we collected physiological,
+behavioral, and self-reported data from call center workers who engaged in role-play scenarios simulating customer service interactions
+with professional actors portraying dissatisfied customers. The dataset includes self-reported affective ratings, which are used as labels
+for classification, synchronized recordings from three wearable devices (i.e., Polar H10, Empatica E4, and Muse S), and features
+extracted from video and audio data. The EmoWork dataset advances affective computing by offering context-rich, multimodal data
+grounded in realistic interpersonal work scenarios.
+Datasets:
+Repository
+Name Dataset Title
+Accession
+Number
+or DOI
+URL to data record Private reviewer access URL/code
+Google
+Drive Emowork
+https://drive.google.com/file/d/18krakG-
+hFHfUqT9M5SOIrxYzizxf_jRq/view?
+usp=share_link
+Please use the following information
+(ID:
+EmoWorker_reviewer@kse.kaist.ac.kr,
+PW: dataset12!@)
+Zenodo
+Emowork: A Multimodal
+Dataset for Assessing
+Emotion, Stress, and
+Emotional Workload in
+Interpersonal Work
+Scenario
+https://doi.org/10.5281/zenodo.15181219
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+A multimodal dataset for assessing emotion, stress,1
+and emotional workload in interpersonal work2
+scenario3
+Duri Lee1, Eunji Park 2, Gyuna Kim 3, Y unjo Han4, and Uichin Lee 1,*
+4
+1KAIST , School of Computing, Daejeon, 34141, South Korea5
+2Chung-Ang University , Department of Computer Science and Engineering, Seoul, 06974, South Korea6
+3KAIST , Graduate School of Data Science, Daejeon, 34141, South Korea7
+4Samsung Research, Samsung Electronics, Seoul, 06765, South Korea8
+*corresponding author(s): Uichin Lee (uclee@kaist.edu)9
+ABSTRACT10
+We present EmoWork, a multimodal, multi-label dataset designed to support emotion and stress detection in realistic
+interpersonal work settings. Interpersonal work—common in occupations such as customer service—often requires workers
+to regulate their emotional expressions in response to strong affective stimuli. These demands, shaped by organizational
+display rules, present a unique challenge for affective computing systems, particularly in scenarios where internal emotional
+states diverge from observable behaviors. Despite this, no public datasets exist that capture such dynamics of affect in
+naturalistic settings. T o address this gap, we collected physiological, behavioral, and self-reported data from call center workers
+who engaged in role-play scenarios simulating customer service interactions with professional actors portraying dissatisfied
+customers. The dataset includes self-reported affective ratings, which are used as labels for classification, synchronized
+recordings from three wearable devices (i.e., Polar H10, Empatica E4, and Muse S), and features extracted from video and
+audio data. The EmoWork dataset advances affective computing by offering context-rich, multimodal data grounded in realistic
+interpersonal work scenarios.
+11
+Background & Summary12
+Affective computing focuses on creating systems that can recognize, interpret, and understand human affect (i.e., emotion and13
+stress)1. These systems serve as an affect-aware foundation for human interaction-centered disciplines. Examples include14
+human-Computer Interaction (HCI)2, human-Robot Interaction (HRI)3, 4, and human–AI Interaction (HAI)5 across everyday15
+contexts, such as home 6, workplace7, 8, and driving 9. Among these contexts, the workplace has emerged as a particularly16
+prominent application domain, as Industry 4.0 has transformed it into an environment rich in sensing technologies and driven17
+by digital innovation10, 11. Within work environments, researchers have extensively studied automatic monitoring of workers’18
+mental status, such as workload 12, stress13, 14, and mood15, using diverse sensors (e.g., computer logs 16, mobile17, and wearable19
+sensors18) to enhance workers’ well-being and performance.20
+Prior studies relied on automatic affect-detection models, whose performance depends on securing relevant datasets. To21
+acquire reliable datasets in workplace settings, it is important to reflect different contextual information such as the type of22
+work (e.g., construction, service work, knowledge work, and manufacturing) because affective responses are highly context-23
+dependent19, 20. However, most publicly available datasets largely focused on capturing responses to standardized affective24
+stimuli (e.g., watching video 21–27 or Trier Social Stress Test (TSST) 28) (Table 1). Although some studies have attempted to25
+collect affective datasets in more naturalistic scenarios (e.g., knowledge worker scenario 29, interpersonal conversations30, 31),26
+these efforts still fall short in a diversity of scenarios from work types. Especially, data on interpersonal workplace interactions27
+(e.g., conversations between customers and agents) remain scarce in existing datasets for affective computing. Y et, such28
+scenarios are not marginal as interpersonal work is central to the modern labor force.29
+Despite this gap, interpersonal work—occupations that involve direct interaction with clients or coworkers—constitutes over30
+half of all global employment 32 and includes large job families such as the 2.9 million U.S. customer-service representatives31
+(CSR), underscoring its prevalence in today’s workforce33. These CSR roles, especially in the service sector, are emotionally32
+demanding, as they frequently expose workers to strong affective stimuli while simultaneously requiring emotional suppression33
+in accordance with organizational display rules 34. Such dual demands, intense emotional elicitation, and strict regulation create34
+a unique challenge for affect detection because workers’ internal states often diverge from observable expressions. Therefore,35
+realistic interpersonal work scenarios are essential not only for understanding these affective dynamics but also for training and36
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+evaluating affect-detection models that can operate under socially regulated conditions. One prominent CSR example is call37
+center work35, 36, where agents regularly engage in emotionally charged conversations with dissatisfied customers. However,38
+few publicly available datasets exist that authentically reflect interpersonal emotional workload. To fill this research gap, we39
+built EmoWork, a context-specific multimodal dataset captured in realistic interpersonal work scenarios.40
+EmoWork is a multimodal, multi-label dataset from call agents engaged in real-time voice interactions with dissatisfied41
+customers. It captures four synchronized affective states (i.e., stress, suppression, arousal, and valence), physiological and42
+behavioral responses. For realistic data collection in an interpersonal work setting, we employed scripted role-play scenarios43
+simulating customer service interactions as frequently used in psychology literature on emotional labor 35. We designed a44
+scenario of a credit-card dispute, an issue known to provoke sensitive and challenging reactions from customers. The role-play45
+scenario was designed to explicitly incorporate display rule compliance, a core aspect of emotional labor. To maximize realism,46
+we hired trained actors to portray difficult customers. During the simulated calls, we measured physiological and behavioral47
+responses using three wearable devices (i.e., Polar H10, Muse S, Empatica E4), a headset, and a camera. Following the48
+calls, participants retrospectively reported their momentary levels of arousal, valence, stress, and emotional workload (i.e.,49
+suppression). Our data, collected in a realistic interpersonal work scenario with a high emotional workload, lays the groundwork50
+for future research on affect modeling in such scenarios. In the following section, we describe the experimental protocol, sensor51
+suite, and technical validation in detail.52
+Methods53
+Ethics Statement54
+We obtained IRB approval for open data collection and release from our institution (KAIST IRB) and conducted the study55
+according to the approved protocol (KH2022-108). Recruitment was conducted through the managers of each local call56
+center, who were contacted through institutional training coordinators. Participation was entirely voluntary, and those who57
+expressed willingness to join were enrolled sequentially on a first-come, first-served basis. Before participation, all participants58
+received a written explanation of the study, including the types of data to be collected (audio, video, physiological data, and59
+self-reported responses), the purpose of the research, and how the collected data would be used and shared for academic60
+purposes. Participants provided written informed consent acknowledging their understanding and voluntary agreement to61
+data collection, anonymized data sharing, and the public release of derived datasets under IRB-approved conditions. Also,62
+female participants were asked whether they were pregnant, and pregnant women were excluded from the study. During data63
+collection, participants could withdraw from the study at any time. After data collection, breaks were provided that incorporated64
+meditation materials to relieve any negative effects on participants’ mental well-being. To protect participants’ information, all65
+data were pseudo-anonymized during the data collection process. Call agents were assigned participant numbers as identifiers,66
+and the actors used only fictitious personal details (e.g., names, phone numbers, and jobs) in the simulated call scenarios. All67
+raw data were securely stored on a restricted-access shared drive managed by authorized researchers, and any information that68
+could potentially identify individuals was strictly excluded from publication and public data release.69
+Data Collection70
+Participants71
+Our data collection process includes two roles: customer and call agent. The customers were played by four professional actors72
+from the local theater society (female: 2, male: 2). The call agents were recruited from real call agents (female: 24, male: 7)73
+working in local call centers operated by six different companies. The gender distribution (77.4% female) aligns with prior74
+research showing that call center work in South Korea is heavily female-dominated 37. Their educational backgrounds included75
+19 with a high school diploma and 12 with a college degree or higher (mean age = 36.19 ± 11.38). Because official statistics on76
+call center demographics (e.g., education level and age) are limited and often inconsistent across government and industry77
+reports, these values should be regarded as indicative rather than definitive. 34 were recruited, but three dropped out before the78
+data collection procedure (one was screened due to pregnancy; another due to COVID-19 infection; and the third withdrew79
+voluntarily).80
+Data Collection Setup81
+The data collection process consisted of two phases: 1) sensor data collection during voice calls and 2) self-reported retrospective82
+data collection after voice calls 35. The second phase was carried out only with call agents, because this data set was designed to83
+collect data to evaluate their emotions and stress. Data collection was conducted in three rooms throughout the study, with one84
+researcher assigned to each room, for a total of three researchers to assist with data collection.85
+Sensor data collection Two separate rooms were assigned for the customer and the worker. Each room was divided into86
+a preparation and monitoring space and a data collection space using a partition. In the preparation and monitoring space,87
+2/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+participants completed all pre-session procedures (e.g., providing explanations of the roles and procedures, and obtaining88
+informed consent). During data collection, a researcher remained in the preparation and monitoring space and monitored the89
+incoming data in real-time, checking for equipment malfunctions. The data collection space was set up differently depending90
+on the participants’ roles. Each participant involved in the role of call agents sat in front of a computer screen, wore a headset91
+with a microphone, and answered customer calls using Skype (Figure 1). The headset was physically connected to the desktop,92
+and audio data was captured by the headset’s microphone and stored in a designated folder on the desktop computer. This audio93
+recording includes only the voice of call agents. A Logitech camera was installed on the desktop, connected via a USB cable.94
+The recorded video was saved to a designated folder on the desktop. Participants also wore a headband (i.e., Muse S), a chest95
+band (i.e., Polar H10), and a wristband (i.e., Empatica E4) to collect multi-modal physiological and behavioral data. Muse S96
+collected electroencephalogram (EEG) data, which was recorded on a local computer via Bluetooth. The system was coded97
+using the muse-lsl ( https://pypi.org/project/muselsl/) Python package. Polar H10 collected electrocardiogram (ECG) data that98
+was transferred via Bluetooth to a designated mobile data collection device (Galaxy Note 9). It was operated via Polar Beat99
+(https://support.polar.com/en/beat). Empatica E4 worn on the non-dominant hand collected blood volume pulse (BVP), skin100
+temperature (temp), inter-beat interval (IBI), electrodermal activity (EDA), and accelerometer (ACC), which were transmitted101
+via Bluetooth to a mobile data collection device (Galaxy Note 9). Also, clear expected behaviors for participants– be nice to the102
+customer and strive to satisfy the customer–were explicitly mentioned and posted on the wall in front of the call agent.103
+Each participant involved in the role of customers used a laptop placed inside a soundproof box. They used the same type of104
+headset as the call agents, and their voices during phone calls were recorded in a designated folder on the laptop. For dialogue,105
+customers initiate a call to a call agent using Skype, and the dyadic conversation files from Skype were saved as separate files.106
+In addition, clear guidelines for customers in accordance with the required type of behavior were posted on the wall.107
+Self-reported data collection We prepared a room for the call agent in the second phase, which was divided into a preparation108
+space and a self-report data collection space. In the preparation space, participants completed the post-data collection surveys109
+and were instructed to store their personal belongings that could distract them to ensure participants’ immersion during the110
+retrospective self-reporting process. In the self-reported data collection space, participants sat in front of a laptop to collect the111
+label data measured by Likert-scale (Figure 2). We used E-prime 3.0, which has been widely used in psychology 38, 39 with a112
+customized interface to record participants’ self-reported affective responses during each stimulus event (i.e., while listening to113
+their own calls recorded in the previous session). Participants continuously reported their affective state by moving a mouse114
+cursor on an interactive response screen (i.e., a slider with an anchor or a grid image with an anchor moving as the movements115
+of the user), and the program recorded the cursor position every 100 ms 35. This allowed us to capture continuous, time-varying116
+self-report trajectories rather than discrete, one-time ratings. Both left- and right-handed participants used their right hand to117
+operate the mouse.118
+Procedure119
+The overall procedure is illustrated in Figure 3, and its details are explained in the following sections.120
+Onboarding We instructed call agent-role participants (i.e., call agents) to use a pre-assigned subject number in every process121
+for pseudonymization before arriving at the data collection site. Before data collection, they completed a pre-survey on basic122
+demographic information (i.e., sex, age, work experience, education, and dominant hand) and baseline mental well-being such123
+as the Patient Health Questionnaire (PHQ)-9 40, Perceived Stress Scale (PSS) 41, Positive Psychological Capital (PPC) 42, Big124
+Five Inventory (BFI)43, Rosenberg Self-Esteem Scale (RSE) 44, and Satisfaction with Life Scale (SWLS) 45. All surveys were125
+administered in Korean using validated Korean translations of the original instruments (Table 3). For the BFI, we used the126
+15-item Korean short version46, which was developed and validated as a psychometrically reliable adaptation of the original127
+44-item scale. Participants were asked to avoid drinking alcohol, smoking, engaging in vigorous exercise, or consuming128
+caffeine on the day of data collection, as these behaviors could affect their physical responses. Upon arrival at the site, a129
+researcher checked whether the pre-survey was completed and verified the subject number. The participants then read the study130
+instructions and completed the user consent form.131
+A researcher in the designated space explained the role and provided supplementary documents. The documents included132
+predefined opening and closing scripts for call agents, containing fictional information (i.e., name and call center). While the133
+opening and closing scripts were predetermined, participants responded to the customer’s requirements as they normally would134
+at work, without a set script. Examples were provided to guide responses in predictable conflict situations. As in a real work135
+environment, they did not have any prior information about the customer or the problem. Each participant practiced their role136
+until they were familiar enough to begin data collection, and were allowed to freely ask the researcher questions before data137
+collection began.138
+As the final step of onboarding, participants put on the wearable devices in the following order: Polar H10, Empatica139
+E4, Muse S, and a headset. The researcher helped adjust the webcam angle and the headset and ensured that everything was140
+functioning properly. Customer-role participants were required to demonstrate their professional acting experience (e.g., a141
+3/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+certificate of acting) upon arrival at the site. Then, they read the study instructions and completed the user consent form. A142
+researcher in the designated space explained their role and provided supplementary documents. The documents included143
+fictional character information (e.g., name, age, and phone number) and detailed descriptions of the customer’s problem, which144
+they were instructed to act out. They have been granted sufficient time to acclimate to the role.145
+Baseline measurement Three types of baseline conditions were acquired from call agents that were designed to reflect146
+typical tasks of call agents, such as speaking and typing. Baseline 1 (B1) was a condition with no stimuli, so the participants sat147
+comfortably and were relaxed. Baseline 2 (B2) was a condition in which participants read a neutral script in a natural speaking148
+tone, unrelated to customer service work. B2 (speaking without emotional workload) was designed to compare recorded audio149
+from the main experimental setting, thereby enabling a more in-depth analysis of speech data. Baseline 3 (B3) was a condition150
+in which participants typed a given script. B3 (typing without emotional stress) was designed to isolate the hand movement151
+patterns that arise solely from typing behavior. It has the potential to be used later to normalize or subtract typing-related152
+acceleration signals from the main experimental data, thereby enabling more accurate detection of motion artifact induced153
+by mental status changes, such as stress level or emotion. Each session of these baseline conditions was designed to last154
+approximately two minutes.155
+Main phase We simulated a representative example of an abuse complaint call in a real call center scenario, where a customer156
+complained about a card company’s reward35, 47–49. Credit card customers who had not received cash rewards contacted the call157
+center to raise an issue due to a misunderstanding of the complex rewards rules. Each call agent answered three calls from158
+the same customer. While the problem remained the same across all calls, the way the customer expressed their complaint159
+differed. Call 1 (C1) represented a neutral scenario. Customers simply explained their problems and asked for the reason behind160
+the problem without using emotionally charged language. Call 2 (C2) represented an aggressive scenario involving prosodic161
+stimulation (e.g., talking fast, shouting, and a threatening tone). Note that customers were instructed to avoid using negative162
+words (e.g., swearing) to minimize confusion with C3. Call 3 (C3) represented an aggressive scenario involving expressive163
+stimulation (e.g., demeaning and negative words, including swearing).164
+We placed restrictions on the use of excessively profane expressions and provided a list of permissible expressions to165
+maintain ethical standards. Note that customers were instructed to refrain from prosodic features (e.g., shouting) to minimize166
+confusion with C2. We defined C1 as less emotional stimuli or basic workload condition, C2 as high emotional prosodic stimuli167
+or high workload condition, and C3 as high emotional expressive stimuli or high workload condition. Each session lasted168
+approximately three to four minutes. The order of the conditions was randomized as C1-C2-C3 or C1-C3-C2 to avoid order169
+effects. C1 was performed first in all cases to allow for a natural flow, while the order of the two different types of aggressive170
+calls (C2 and C3) was varied to prevent order effects. In each call, customers initiated and terminated the conversation while171
+call agents were not allowed to control the start and end of a call, just like in natural inbound calls. Between calls, call agents172
+took a break with a one-minute guided breathing video to release emotional stress caused by the previous call. After completing173
+three calls, the call agents removed the wearable devices and engaged in a 10-minute guided meditation.174
+Label acquisition After the meditation session, call agents moved from the sensor data collection room to the self-report data175
+collection room. Following prior work on retrospective continuous self-report during stimulus playback 35, each call was played176
+back in the original order. For each call, participants performed the self-report three times in a row to assess suppression, stress,177
+and emotion (i.e., arousal and valence), as illustrated in Figure 2. We intentionally chose this post-interaction, playback-based178
+procedure rather than soliciting ratings during or immediately after each call to preserve workflow continuity and ecological179
+validity across the three consecutive interactions and avoid dual-task interference that could alter natural conversational180
+dynamics. Before the assessments began, all participants completed a practice session to familiarize themselves with the181
+interface and the data recording process. Then, they were asked to read the instructions containing the meaning and example of182
+each label as defined in Table 2. For example, participants listened to the C1 session a total of three times, rating suppression183
+during the first listening, stress during the second, and emotion during the last.184
+Simulation fidelity The experiment was conducted in a lab environment designed to reproduce realistic call-center scenarios185
+as closely as possible. Because the study took place under controlled laboratory conditions, participants were informed during186
+the consent process about the general purpose of the study, the number of calls to be conducted, and the types of data to be187
+collected. Although this awareness could potentially influence their behavioral or affective responses, we made extensive efforts188
+to ensure that the interactions resembled authentic customer service situations. To enhance realism, participants were asked to189
+perform their genuine professional roles, and professional actors were recruited to portray customers. Importantly, the call190
+agents were not informed that the customers were professional actors or about the specific behavioral strategies the actors191
+would employ. After data collection, a brief post-experiment questionnaire assessed the perceived reality of the scenario.192
+Preprocessing and Feature Extraction193
+We used Python libraries to verify the dataset and then process it to make it suitable for public release.194
+4/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Labels195
+The initial results of E-prime 3.0 were saved in a ‘.txt’ file, recording values with timestamps in milliseconds (ms) starting at 0196
+from the beginning of the call. We checked interval consistency and total duration against the corresponding audio files to197
+ensure temporal integrity, then converted the relative stamps to absolute UTC for multimodal alignment (details in the Technical198
+V alidation section). We added the UTC timestamp of the start of each call to the original E-Prime 3.0 timestamps. Then we199
+saved all transformed data in a dictionary structure and stored it as a pickle file (label.pkl).200
+Sensors_Muse S, Polar H10, Empatica E4201
+We release the raw data collected from each device. All details of the collected data are described in Data Records.202
+Sensor_Audio203
+We prepared three separate audio recordings for ease of data usage: customer-only, worker-only, and dyadic conversation204
+recordings. We used the customer-only and the worker-only records that were stored at 44,100 Hz in ‘.wav’ format. Because of205
+privacy concerns, audio files are not released to the public. Instead, we extracted well-known features that are widely used in206
+previous studies on emotion and stress recognition, including a deep learning-based approach 50. We used Librosa 10.0 and207
+applied a window size of 25 ms with a sliding window of 10 ms 50. Before feature extraction, we applied a pre-emphasis filter208
+provided by Librosa. We then extracted features, including fundamental frequency (F0), zero crossing rate (ZCR), voiced flag,209
+mel-frequency cepstral coefficients (MFCCs), and spectral features (centroid, bandwidth, roll-off, roll-off min, contrast) 51, 52 All210
+transformed data are saved in a dictionary structure and stored as a pickle file (audio.pkl). The dyadic conversation recordings211
+were used for script generation to help other researchers gain a comprehensive understanding of our scenario. Because the212
+participants were Korean, all conversations were recorded in Korean. Thus, we used the Naver Clova Speech-to-Text (STT)213
+service, which is optimized for Korean. A researcher verified the accuracy of each transcript and manually modified the text214
+in Korean. The researcher then automatically translated it into English using ChatGPT-4o, followed by manually verifying215
+the translated script. To balance accessibility with linguistic fidelity, we release the original Korean utterances alongside their216
+English translations. This follows established practice in non-English speech corpora that preserve source-language transcripts217
+to support downstream research (e.g., cross-lingual modeling, and prosody–text analyses) 53, 54. This data was transformed into218
+JavaScript Object Notation Lines (JSONL) files at the utterance level.219
+Sensor_Video220
+We recorded the upper body of the call agents as an ‘.mp4’ file, which was recorded at 30 frames per second (FPS). From221
+the videos, we extracted features relevant to emotion and stress detection (i.e., head movements, lip and eye movements)222
+from face landmarks55, 56 utilizing OpenCV and MediaPipe. We extracted Mediapipe face_detection and face_mesh functions223
+(confidence = 0.7) to extract 468 landmarks on the face. From each frame, the following features were extracted based on facial224
+landmarks. If a frame was not successfully read or facial landmarks could not be detected, feature extraction was not performed.225
+Nevertheless, a timestamp was generated for every attempted frame regardless of detection success. An error_type column was226
+introduced to indicate the outcome of each detection attempt, with values defined as follows: 0 for success, 1 for failure to read227
+the frame, and 2 for failure to detect the face and landmarks. We obtained rotation and translation vectors (3 × 1 matrices)228
+from detected landmark points, as well as the total translation computed from the translation vectors. We determined eye-blink229
+events between frames using the Eye Aspect Ratio (EAR), calculated from six landmarks around each eye. To estimate eye230
+gaze direction, we extracted data from four iris landmarks per eye with reference to the facial center. For lip corner movements,231
+we computed relative positions of a landmark at the left and right corners of the mouth with respect to the facial center (i.e., a232
+point of the nose tip). All extracted data were stored in a dictionary structure and saved as a pickle file (video.pkl).233
+Data Records234
+The dataset is available at EmoWork 57. We collected a multimodal dataset from each session (Table 4). A total of 31 call235
+agents (24 female, 7 male) data were collected, and the information about the participants is summarized in Table 5. EmoWork236
+consists of subfolders: META, SENSORS, LABELS, and CSV .237
+META238
+The META folder includes helpful information to understand the collected dataset and facilitate further analysis, which has the239
+following files:240
+• meta.csv: Pnum (subject number), Order_type (0: C1-C2-C3, 1: C1-C3-C2), Actor (subject number of customer),241
+Actor_sex (M: Male, F: Female).242
+• pre_survey.csv: Pnum (subject number), Sex (0: Male, 1: Female), Age, Education level (0: high school, 1: above243
+bachelors degree), Dominant hand (0: right, 1: left), Career (as a call agent, years), and responds to each questionnaire244
+5/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+for PHQ-9 (nine questions), PSS (ten questions), PPC (18 questions), BFI-15 (15 questions), RSE (ten questions), and245
+SWLS (five questions).246
+• post_survey.csv: Pnum (subject number), Reality of scenario (0: no, 1: yes), Reality of scenario (7-point Likert-scale),247
+B1_relaxed (0: no, 1: yes), B2_relaxed (0: no, 1: yes), B3_relaxed (0: no, 1: yes), Stress in C1 (7-point Likert scale),248
+Stress in C2 (7-point Likert scale), Stress in C3 (7-point Likert scale), Stress from environmental setting (7-point Likert249
+scale), and Stress from wearable device (7-point Likert scale).250
+• B2_script_korean.txt: The Korean script used for baseline 2 measurement.251
+• B2_script_english.txt: The English script translated from the Korean script.252
+• call_script.jsonl: A dyadic script in both Korean and English transcribed from the STT output call audio. Each line follows253
+data schema of ‘participant_id’ (i.e., pnum), ‘scenario’ (i.e., condition), ‘speaker’, ‘turn’, ‘speaker_turn’, ‘script_kor’,254
+‘script_eng’. Only the value of turn and speaker_turn are saved as integers, and others as strings.255
+LABELS256
+The LABELS folder contains labels.pkl, which include momentary stress, arousal, valence, and emotional workload (i.e.,257
+suppression) during each call. The file follows a hierarchical structure where each participant (i.e., pnum) contains conditions258
+(C1, C2, C3), and each condition stores labels (stress, arousal, valence, suppression) as keys, and with self-reported data with a259
+timestamp as values stored as a dataframe. The mean interval between perceived stress records was 101.6 ms (SD = 7.5, Min =260
+100, Max = 381) ; suppression was 101.6 ms (SD = 7.7, Min = 100, Max = 331) ; arousal and valence were 102.3 ms (SD = 6.5,261
+Min = 101, Max = 368)262
+SENSORS263
+The SENSORS folder contains audio.pkl, sensor.pkl, and video.pkl. All files have the same hierarchical dictionary structure,264
+where each participant (pnum) contains different conditions (B1, B2, B3, C1, C2, and C3). Table 6 describes the details of all265
+extracted features.266
+Sensors The sensor.pkl contains data from Muse S, Empatica E4, Polar H10, and Galaxy PPG. Under each condition (e.g.,267
+C1), there are subdictionaries with keys from muse, e4_acc, e4_bvp, e4_ibi, e4_eda, e4_temp, Polar_ecg, Polar_hr, Polar_rr,268
+Galaxy_ppg. Under each sensor as a key, there is data with a timestamp as a dataframe. The codes to check each data included269
+in the supplied code.270
+• Muse S: Muse contained four electroencephalogram (EEG) signals from temporal posterior (TP) 9, anterior frontal (AF)271
+7, AF8, and TP10 in the international EEG 10–10 system placement with a timestamp. The total amount of expected272
+muse data was 8,877,167, and the actual data points are 8,750,751 (1.42% difference). The actual data points include273
+256 duplicate timestamp data points with different values of EEG data. 27 among 186 sessions (six conditions from 31274
+participants) had abnormal intervals (e.g., over 10 milliseconds). Four participants in B1 (P1, P9, P18, P30), six in B2275
+(P1, P10, P15, P17, P22, P25), five in B3 (P9, P17, P19, P22, P29), three in C1 (P1, P16, P17), four in C2 (P12, P21, P26,276
+P30), and five in C3 (P4, P8, P9, P14, P26) Also, EEG was recorded in C1 of P13, with a notably shorter duration (95.57277
+seconds) compared to other sensors, which typically recorded over 200 seconds.278
+• Empatica E4: As each sensor has a different interval, data from the Empatica E4 were saved separately in ‘e4_acc,’279
+‘e4_eda,’ ‘e4_temp,’ ‘e4_bvp,’ and ‘e4_ibi’. e4_acc contained accelerometer (ACC) data from the x, y, and z axes with a280
+timestamp from the ACC sensor, e4_eda contained electrodermal activity (EDA) with a timestamp from the EDA sensor,281
+and e4_temp contained temperature (Temp) with a timestamp from the optical thermometer sensor. e4_bvp contained a282
+blood volume pulse (BVP) with a timestamp, and e4_ibi contained an interbeat interval with a timestamp from a PPG283
+sensor. We had one session which does not have all the data from E4 (B2 of pnum 25). We examined their intervals to284
+confirm the amount of data based on its frequency. The difference between the expected data point and the actual data285
+point was less than 0.1% in ‘e4_acc,’ ‘e4_eda,’ ‘e4_temp,’ and ‘e4_bvp’. However, ‘e4_ibi’, the calculated heartbeat286
+interval (ms) provided by the device from the BVP signal, was not collected well. According to the company’s guidelines,287
+IBI data can be extracted assuming a clean BVP signal. Therefore, we include BVP data and IBI data collected from288
+PPG signals in our public data for future researchers to utilize, but exclude them from technical validation.289
+• Polar H10 Due to the difference in the intervals of records, we saved data from the Polar H10 separately in Polar_ecg,290
+Polar_hr, and Polar_rr. Polar_ecg contains ECG data with a timestamp, Polar_hr contains HR data with a timestamp, and291
+Polar_rr contains RR interval data with a timestamp.292
+6/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Audio The audio.pkl contains the prosodic features extracted from customer-only.wav and worker-only.wav. For portability, a293
+CSV mirror of .pkl is provided and documented in . No raw audio is included in the public release. Baselines were collected294
+from the worker only in ‘b2’. ‘c1,’ ‘c2,’ and ‘c3’ store the data in a dictionary structure with separate key values for workers and295
+customers. The dictionary uses the numeric keys 1 (worker) and 2 (customer), each of which maps to a dataframe consisting of296
+timestamps, F0, energy, ZCR, voiced flag, MFCCs (1–13), and spectral features (i.e., centroid, bandwidth, roll-off, minimum297
+roll-off, and contrast). Since all participants had complete audio recordings, no missing data were found. However, for P1298
+and P2, the baseline was measured for only one minute, resulting in approximately one minute of data, whereas for all other299
+participants, it was measured for two minutes.300
+Video The video.pickle and video folder in CSV folder contains extracted features data from video.mp4 files. The extracted301
+video data were stored in a subject- and condition-specific dictionary structure, consistent with other sensor data. Each key of302
+‘c1,’ ‘c2,’ ‘c3’ has the value of a data frame including timestamp, rotation_x, rotation_y, rotation_z, translation_x, translation_y,303
+translation_z, total translation, blink, gaze_x, gaze_y, left lip corner movements, right lip corner movements, and error type. A304
+total of 395 minutes of video were collected from 31 participants. The expected number of data points was 711,000 (395 x305
+60 s x 30 FPS), and the actual number of data points was 710,738 (difference: 0.0004%) Among the collected data points,306
+1.88% of the data points had a missing value due to error type 2 (failure to detect faces and landmarks). Individuals had an307
+average missing value of 1.75%. Nine participants with a higher than average percentage of missing data exhibited behaviors308
+that interfered with automatic detection. It is inferred that certain behaviors caused the failure to detect faces or landmarks,309
+such as wearing glasses that reflected light (P25, P29, P2, P19); ducking the face (P5, P6, P7), covering the mouth with a hand310
+or holding the microphone (P20, P22), or being so close to the screen that only part of the face was captured in the image (P7).311
+CSV312
+To improve portability and random access, we decomposed each original pickle file into a folder with files of ‘.csv’ layout that313
+preserves the original hierarchy. As described in Figure 4, each key in the original pickle file now corresponds to a folder inside314
+the CSV folder. All final-level dataframes are stored as individual ‘.csv’ files in the original pickle hierarchy. For example,315
+LABEL[1][‘c1’][‘stress’], previously a pandas dataframe, is now stored as LABEL/1/c1/stress.csv.316
+• LABEL_csv (from label.pkl): Multiple nested keys in the original structure (participant → condition → labels) are317
+provided separately as each csv file per participant, condition (i.e., C1, C2, C3), and label type. The results yield a total318
+of 372 files (31 participants ×3scenario ×4labels = 372).319
+• VIDEO_csv (from video.pkl): Each participant has 3 conditions (i.e., C1, C2, C3), resulting in 93 files in total320
+(31participants ×3conditions = 93)321
+• SENSOR_csv (from sensors.pkl): For 19 among 31 participants, each has data from 6 scenarios (i.e., B1, B2, B3,322
+C1, C2, C3) and 10 sensor types. For 12 among 31, data include 9 sensor types per scenario; one is missing from323
+Galaxy PPG. This results in a total of 1,788 CSV files ( (19participants ×6conditions ×10sensors) +(12participants ×324
+6conditions ×9sensors)= 1, 788).325
+• AUDIO_csv (from audio.pkl): Each participant has 3 conditions (i.e., C1, C2, C3) with 2 audio channels (i.e., worker326
+and customer). Additionally, there is one more record per worker in one of the baseline conditions (i.e., B2). In total, this327
+results in 217 files ((31participants ×3conditions ×2channels) +(31participants ×1conditions ×1channels)=217 ).328
+Technical Validation329
+Simulation Fidelity Assessment330
+We check ecological validity with evidence that the laboratory scenario resembles real call-center work using the post survey on331
+simulated scenarios. After each session, agents completed a brief post-experiment questionnaire including (1) a binary realism332
+item and (2) a 7-point similarity item (1 = not at all similar, 7 = very similar) regarding resemblance to real work. On the333
+binary item, 29 of 31 call-center agents (93.5%) indicated that the scenarios were realistic. On the 7-point item, agents rated the334
+scenarios as similar to real work (M = 5.90, SD = 1.40). These results suggest a reasonable level of simulation fidelity.335
+Self-Reported Scale Distribution Analysis336
+We verify that the experimental manipulation (i.e., normal complaint, shouting, swearing) is reflected in self-reported affective337
+measurements, supporting the validity of the condition and any derived labels for modeling. Moreover, as the other data338
+descriptor presented the information of annotated data 58, these analyses provide an intuitive understanding of perceived metrics.339
+Therefore, we summarized condition-wise distributions for stress, emotional workload, valence (1 = negative, 9 = positive), and340
+arousal (1 = calm, 9 = aroused). Figure 5 shows the distributions and episode-level traces. Stress increased across conditions341
+7/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+(normal: M = 4.29, SD = 4.19; swearing: M = 10.86, SD = 6.38; shouting: M = 14.08, SD = 6.05). Emotional workload342
+showed a similar increase (normal: M = 5.29, SD = 5.13; swearing: M = 11.03, SD = 6.43; shouting: M = 13.01, SD = 6.51).343
+V alence decreased (normal: M = 4.63, SD = 1.69; swearing: M = 2.86, SD = 1.60; shouting: M = 2.45, SD = 1.58), while344
+arousal increased (normal: M = 4.39, SD = 1.76; swearing: M = 5.25, SD = 2.07; shouting: M = 5.86, SD = 2.25). The traces345
+demonstrate momentary variation within episodes consistent with the manipulation.346
+Time-synchronization347
+We collected multimodal data from multiple devices; thus, it should be ensured that multimodal streams recorded on different348
+devices are time-aligned for valid cross-modal data analyses 28. Devices were synchronized to Coordinated Universal Time349
+(UTC), but the time to start recording was inconsistent. Therefore, for each participant and condition, we verified that device350
+streams shared a common time range, defined as the intersection of their start and end timestamps. We define the overlap ratio351
+as the duration of the common time interval divided by the minimum device-specific interval within a session. In results, across352
+phone-call intervals, the integrated data duration averaged 225.46 seconds (SD = 21.36; min = 95.57; max = 273.54), indicating353
+consistent session lengths appropriate for multimodal alignment, with verified overlap across devices for overall sessions.354
+Dataset Validation using Machine Learning Models355
+As many recent data descriptors use the machine learning models and deep learning models to validate the utility of the data356
+records27, 31, 59, we trained machine learning models to classify (1) workload intensity based on interaction condition and (2)357
+perceived affect states from multimodal signals. Here, we aim to demonstrate the presence of learnable signals for checking358
+data quality and reusability, not a benchmarking or hypothesis-testing exercise.359
+We formulated two tasks. 1) Condition classification: normal conversations were labeled as low-intensity workload (0)360
+and shouting/swearing as high-intensity (1); 2) Perceived affect classification: we derived binary target labels for perceived361
+stress, emotional workload (i.e., suppression), arousal, and valence from self-reported ratings via participant-specific thresholds362
+(per-variable mean). We used audio-derived features; E4 temperature, EDA, and ACC; Polar H10 ECG; and Muse S EEG.363
+Preprocessing (normalization, filtering, feature extraction) was fitted on training folds only and applied to the held-out fold to364
+avoid leakage; processed multimodal features were then integrated for modeling. Classifiers included Random Forest (RF) 60,365
+eXtreme Gradient Boosting (XGBoost) 61, Decision Tree (DT) 62, Support V ector Machine (SVM)63, and k-Nearest Neighbors366
+(kNN)64, commonly used in affective computing 27, 28, 65. Evaluation used Leave-One-Subject-Out (LOSO; N = 31) to estimate367
+subject-independent generalization.368
+Summary metrics are reported in Table 7 for task 1 and Table 8 for task 2. We report the mean of AUC, accuracy, F1-score,369
+Precision, and Recall with standard deviation across held-out participants. Figure 6 shows per-participant performance by370
+model for task 1. RF achieved a mean AUC of 0.946 across LOSO folds, with lower values concentrated in a small subset371
+of participants (IDs 25–29); a similar pattern was observed for other algorithms (Table 7). In our protocol, each participant372
+interacted with one of four actors (e.g., P25–P27 with Actor 3; P28–P29 with Actor 4). Because a single actor delivered all373
+conditions for a given participant, part of the between-subject variance likely reflects actor-specific delivery as well as personal374
+differences. Users building general models may consider including actor identity or conducting actor-robust validation. For375
+task 2, participants with single-class outcomes due to highly skewed ratings were excluded (stress: P22, P28; suppression: P28,376
+P30; valence: P1).377
+Usage Notes378
+The archive is released under a controlled-access policy, because several data components (i.e., high-resolution physiological379
+signals, obfuscated voice/video features) contain indirect identifiers and other sensitive fields. Researchers wishing to use the380
+data should carefully read the guidelines in Zenodo, then 1) download the EmoWork_DUA.pdf, 2) complete the data-usage381
+agreement that specifies research purpose, storage safeguards, and a commitment to non-re-identification, and 3) submit a request382
+on Zenodo. Requests are typically processed within several working days. (For peer reviewers of this manuscript, we prepared383
+a separate repository in Google Shared Drive and attached a way to access data in EmoWork_How_to_access.pdf.)384
+Handling Incomplete Audio and Video Segments385
+Audio baseline. The baseline assessment before conversation was designed to last 2 min; however, two of the 31 participants386
+recorded only the first 60 s. We suggest three possible handling strategies. First, users may use a standardized 60 s baseline,387
+because all recordings share the same temporal anchor (start at t = 0). Second, users can just use data without a baseline and388
+focus on relative changes between conditions. Lastly, the other possible strategy is excluding these two participants (strict389
+subset). Users should report the selected option and any related sensitivity analyses. Video features. We provide an error_type390
+flag that distinguishes no error, face-detection failure, and feature-extraction failure. By default, we suggest discarding frames391
+flagged as error_type success (0) and dropping windows whose missing-data rate exceeds a defined threshold. For392
+8/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+continuous kinematic features (e.g., gaze or lip-corner movement), interpolation or smoothing (e.g., Kalman filtering 66) can be393
+applied, while imputation of discrete outputs is discouraged. Users should report the selected option and any related sensitivity394
+analyses.395
+Possible Applications396
+This multimodal dataset was collected in a specific work scenario involving call agents under emotional workload, requiring397
+them to suppress negative emotions and express positive emotions during voice-based customer interactions. It includes a398
+package of labels measured by Likert-scale (i.e., emotion, stress, and emotional workload) suited for a specific context, along399
+with multimodal data readily obtainable in everyday environments. Therefore, in the call-center domain, the data can be used400
+in realizing many applications, such as employee training systems with simulated customers to help new employees practice401
+emotional regulation in difficult calls; operational monitoring to identify high-workload episodes during voice-only customer402
+service; and just-in-time interventions that utilize the results of automatic assessments for coaching or enhancing workers’403
+well-being. With appropriate domain adaptation, the dataset can inform real-time psychological state monitoring to adjust404
+task difficulty in mission-critical teams training (e.g., flight or space crews 67 and military training 68) that involve scenario405
+dynamics under high mental workload and voice-based communication. It may also extend to other public-facing professions406
+that routinely manage emotionally demanding interactions (e.g., flight attendants and frontline public-service staff). The407
+dataset can also be used to develop toolkits (e.g., Han et al. 69) for assessing and validating algorithms that classify perceived408
+stress, emotions, and emotional workload. Furthermore, this dataset can be used for privacy-preserving technologies such as409
+encryption on physiological signals, as well as for educational purposes (e.g., signal data preprocessing example).410
+Limitations411
+This dataset is limited to data collected from a single country (i.e., South Korea), which may not reflect cultural diversity in412
+emotional responses (e.g., body language) that are highly correlated with culture 70, 71. The audio data for prosodic features is413
+also language-dependent data 72. Therefore, caution is required when applying this dataset to the groups that have different414
+cultural backgrounds. Beyond the cultural aspect, the sample size is relatively small (N = 31), and the sex distribution is415
+imbalanced (7 males). Although such an imbalance is common in the South Korean call-center industry 37, it may still restrict the416
+generalizability of analyses even within the same cultural context, given the potential influence of sex differences in emotional417
+labor73. Other demographic characteristics (e.g., age, career, and organization type) are also limited in diversity, which further418
+constrains the dataset’s representativeness of the broader call center workforce. Separately, issues of data accessibility and419
+completeness should also be noted. Specifically, the public release contains only extracted features from audio and video data420
+without raw recordings, which may limit the reusability of the data for studies requiring access to the original audio signals.421
+Within the audio modality, two participants’ baseline audio segments were shorter than planned (60 s instead of 2 min). Within422
+the video modality, some features are incomplete due to occasional frame or face detection failures because of challenges423
+inherent to naturalistic recording environments (e.g., reflections from glasses, facial occlusion, or movement). For audio and424
+video features, users should consult the Usage Notes for recommended handling procedures. Finally, in the technical validation,425
+the label encoding used in technical validation focused on balancing label distribution, without considering the meaning of426
+arousal and valence itself. Future studies may incorporate these meanings in accordance with their specific objectives.427
+Data Availability428
+All data supporting this data descriptor are archived on Zenodo at version DOI https://doi.org/10.5281/zenodo.17513978429
+(concept DOI https://doi.org/10.5281/zenodo.15181219), with the current public release v3 under the CC BY -NC-ND 4.0430
+license. The archive provides participant-level metadata; continuous self-report traces sampled at 100 ms (suppression, stress,431
+arousal, valence) as labels for classification; synchronized features derived from Polar H10, Empatica E4, and Muse S; audio-432
+and video-derived features; and bilingual dyadic transcripts (Korean originals with English translations). Tabular components433
+are available in ‘.csv’ for portability, and a consolidated pickle archive is retained for convenience. Transcripts are provided434
+in ‘.jsonl’. For privacy reasons (re-identification risk), raw audio and raw video are not shared. Access is controlled; the435
+application workflow and usage restrictions are described in the Usage Notes. Please cite the dataset as Reference 57; future436
+updates will appear as new versions under the same concept DOI.437
+Code Availability438
+The code for using this dataset is accessible via GitHub (https://github.com/Kaist-ICLab/EmoWork.git). It includes basic439
+code to explore data records and is to be used for technical validation. In requirements.txt, all required libraries (e.g.,440
+cvxEDA74) are included. All details are documented with step-by-step comments in the repository.441
+9/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+References442
+1. Picard, R. W. Affective computing (MIT press, 2000).443
+2. D’mello, S. K. & Kory, J. A review and meta-analysis of multimodal affect detection systems. ACM Comput. Surv. 47,444
+https://doi.org/10.1145/2682899 (2015).445
+3. Leite, I., Castellano, G., Pereira, A., Martinho, C. & Paiva, A. Empathic robots for long-term interaction: evaluating446
+social presence, engagement and perceived support in children. Int. J. Soc. Robotics 6, 329–341, https://doi.org/10.1007/447
+s12369-014-0227-1 (2014).448
+4. Heinisch, J. S. et al. Physiological data for affective computing in hri with anthropomorphic service robots: the affect-hri449
+data set. Sci. Data 11, 333, https://doi.org/10.1038/s41597-024-03128-z (2024).450
+5. Liu, C.-Y . & Yin, B. Affective foundations in ai-human interactions: Insights from evolutionary continuity and interspecies451
+communications. Comput. Hum. Behav. 161, 108406, https://doi.org/10.1016/j.chb.2024.108406 (2024).452
+6. Lim, J., Koh, Y ., Kim, A. & Lee, U. Exploring context-aware mental health self-tracking using multimodal smart speakers453
+in home environments. In Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems, 1–18,454
+https://doi.org/10.1145/3613904.3642846 (2024).455
+7. Schaule, F., Johanssen, J. O., Bruegge, B. & Loftness, V . Employing consumer wearables to detect office workers’456
+cognitive load for interruption management. Proc. ACM on interactive, mobile, wearable ubiquitous technologies 2, 1–20,457
+https://doi.org/10.1145/3191764 (2018).458
+8. Züger, M., Müller, S. C., Meyer, A. N. & Fritz, T. Sensing interruptibility in the office: A field study on the use of biometric459
+and computer interaction sensors. In Proceedings of the 2018 CHI conference on human factors in computing systems,460
+1–14, https://doi.org/10.1145/3173574.3174165 (2018).461
+9. Fridman, L., Reimer, B., Mehler, B. & Freeman, W. T. Cognitive load estimation in the wild. In Proceedings of the 2018462
+chi conference on human factors in computing systems, 1–9, https://doi.org/10.1145/3173574.3174226 (2018).463
+10. Lasi, H., Fettke, P ., Kemper, H.-G., Feld, T. & Hoffmann, M. Industry 4.0. Bus. & information systems engineering 6,464
+239–242, https://doi.org/10.1007/s12599-014-0334-4 (2014).465
+11. Park, E., Jung, Y ., Kim, I. & Lee, U. Charlie and the semi-automated factory: data-driven operator behavior and466
+performance modeling for human-machine collaborative systems. In Proceedings of the 2023 CHI Conference on Human467
+Factors in Computing Systems, 1–16, https://doi.org/10.1145/3544548.3581457 (2023).468
+12. Teoh Yi Zhe, I. & Keikhosrokiani, P . Knowledge workers mental workload prediction using optimised elanfis. Appl. Intell.469
+51, 2406–2430, https://doi.org/10.1007/s10489-020-01928-5 (2021).470
+13. Alberdi, A., Aztiria, A. & Basarab, A. Towards an automatic early stress recognition system for office environments based471
+on multimodal measurements: A review. J. biomedical informatics 59, 49–75, https://doi.org/10.1016/j.jbi.2015.11.007472
+(2016).473
+14. Jebelli, H., Choi, B. & Lee, S. Application of wearable biosensors to construction sites. i: Assessing workers’ stress. J.474
+Constr. Eng. Manag. 145, 04019079, https://doi.org/10.1061/(ASCE)CO.1943-7862.0001729 (2019).475
+15. Umematsu, T., Sano, A., Taylor, S., Tsujikawa, M. & Picard, R. W. Forecasting stress, mood, and health from daytime476
+physiology in office workers and students. In 2020 42nd annual international conference of the IEEE Engineering in477
+Medicine & Biology Society (EMBC), 5953–5957, https://doi.org/10.1109/EMBC44109.2020.9176706 (IEEE, 2020).478
+16. Morshed, M. B. et al. Advancing the understanding and measurement of workplace stress in remote information workers479
+from passive sensors and behavioral data. In 2022 10th International Conference on Affective Computing and Intelligent480
+Interaction (ACII), 1–8, https://doi.org/10.1109/ACII55700.2022.9953824 (IEEE, 2022).481
+17. Tani, Y ., Fukuda, S., Matsuda, Y ., Inoue, S. & Arakawa, Y . Workersense: Mobile sensing platform for collecting482
+physiological, mental, and environmental state of office workers. In 2020 IEEE International Conference on Pervasive483
+Computing and Communications Workshops (PerCom Workshops), 1–6, https://doi.org/10.1109/PerComWorkshops48775.484
+2020.9156085 (IEEE, 2020).485
+18. Y au, J. C.et al. Tiles-2019: A longitudinal physiologic and behavioral data set of medical residents in an intensive care486
+unit. Sci. Data 9, 536, https://doi.org/10.1038/s41597-022-01636-4 (2022).487
+19. Gjoreski, M., Luštrek, M., Gams, M. & Gjoreski, H. Monitoring stress with a wrist device using context. J. biomedical488
+informatics 73, 159–170, https://doi.org/10.1016/j.jbi.2017.08.006 (2017).489
+10/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+20. Smets, E. et al. Large-scale wearable data reveal digital phenotypes for daily-life stress detection. NPJ digital medicine 1,490
+67, https://doi.org/10.1038/s41746-018-0074-9 (2018).491
+21. Koelstra, S. et al. Deap: A database for emotion analysis ;using physiological signals. IEEE Transactions on Affect.492
+Comput. 3, 18–31, https://doi.org/10.1109/T-AFFC.2011.15 (2012).493
+22. Abadi, M. K. et al. Decaf: Meg-based multimodal database for decoding affective physiological responses. IEEE494
+Transactions on Affect. Comput. 6, 209–222, https://doi.org/10.1109/TAFFC.2015.2392932 (2015).495
+23. Subramanian, R. et al. Ascertain: Emotion and personality recognition using commercial sensors. IEEE Transactions on496
+Affect. Comput. 9, 147–160, https://doi.org/10.1109/TAFFC.2016.2625250 (2018).497
+24. Katsigiannis, S. & Ramzan, N. Dreamer: A database for emotion recognition through eeg and ecg signals from wireless498
+low-cost off-the-shelf devices. IEEE J. Biomed. Heal. Informatics 22, 98–107, https://doi.org/10.1109/JBHI.2017.2688239499
+(2018).500
+25. Miranda-Correa, J. A., Abadi, M. K., Sebe, N. & Patras, I. Amigos: A dataset for affect, personality and mood research on501
+individuals and groups. IEEE Transactions on Affect. Comput. 12, 479–493, https://doi.org/10.1109/T AFFC.2018.2884461502
+(2021).503
+26. Saganowski, S. et al. Emognition dataset: emotion recognition with self-reports, facial expressions, and physiology using504
+wearables. Sci. data 9, 158, https://doi.org/10.1038/s41597-022-01262-0 (2022).505
+27. Chen, J. et al. A large finer-grained affective computing eeg dataset. Sci. Data 10, 740, https://doi.org/10.1038/506
+s41597-023-02650-w (2023).507
+28. Schmidt, P ., Reiss, A., Duerichen, R., Marberger, C. & V an Laerhoven, K. Introducing wesad, a multimodal dataset for508
+wearable stress and affect detection. In Proceedings of the 20th ACM international conference on multimodal interaction,509
+400–408, https://doi.org/10.1145/3242969.3242985 (2018).510
+29. Koldijk, S., Sappelli, M., V erberne, S., Neerincx, M. A. & Kraaij, W. The swell knowledge work dataset for stress511
+and user modeling research. In Proceedings of the 16th International Conference on Multimodal Interaction, 291–298,512
+https://doi.org/10.1145/2663204.2663257 (Association for Computing Machinery, New Y ork, NY , USA, 2014).513
+30. Park, C. Y .et al. K-emocon, a multimodal sensor dataset for continuous emotion recognition in naturalistic conversations.514
+Sci. Data 7, 293, https://doi.org/10.1038/s41597-020-00630-y (2020-10-8).515
+31. Lee, M.-H. et al. Eav: Eeg-audio-video dataset for emotion recognition in conversational contexts. Sci. data 11, 1026,516
+https://doi.org/10.1038/s41597-024-03838-4 (2024).517
+32. World Bank. Employment in services (% of total employment) – world development indicators. https://data.worldbank.518
+org/indicator/SL.SRV .EMPL.ZS(2024). Accessed 25 May 2025.519
+33. Bureau of Labor Statistics, U.S. Department of Labor. Occupational outlook handbook: Customer service representatives.520
+https://www.bls.gov/ooh/ (2025). Accessed 25 May 2025.521
+34. Hochschild, A. R. Emotion work, feeling rules, and social structure. Am. journal sociology 85, 551–575, https://doi.org/10.522
+1086/227049 (1979).523
+35. Gabriel, A. S. & Diefendorff, J. M. Emotional labor dynamics: A momentary approach. Acad. management J. 58,524
+1804–1825, https://doi.org/10.5465/amj.2013.1135 (2015).525
+36. Zapf, D., Isic, A., Bechtoldt, M. & Blau, P . What is typical for call centre jobs? job characteristics, and service526
+interactions in different call centres. Eur. journal work organizational psychology 12, 311–340, https://doi.org/10.1080/527
+13594320344000183 (2003).528
+37. Jeong, K.-S., Choi, S.-J., Park, M.-O. & Li, Y . The effects of customer service representatives’ emotional labor by529
+emotional display rules on emotional dissonance, emotional exhaustion and turnover intention in the context of call centers.530
+Korean J Bus Adm 28, 529–51 (2015).531
+38. Gao, J., Leung, H. K., Fan, J., Wu, B. W. Y . & Sik, H. H. The neurophysiology of the intervention strategies of awareness532
+training program on emotion regulation. Front. Psychol. 13, 891656, https://doi.org/10.3389/fpsyg.2022.891656 (2022).533
+39. Schneider, J. et al. The role of face masks in the recognition of emotions by preschool children. JAMA pediatrics 176,534
+96–98, https://doi.org/10.1001/jamapediatrics.2021.4556 (2022).535
+40. Kroenke, K., Spitzer, R. L. & Williams, J. B. The phq-9: validity of a brief depression severity measure. J. general internal536
+medicine 16, 606–613, https://doi.org/10.1046/j.1525-1497.2001.016009606.x (2001).537
+11/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+41. Cohen, S., Kamarck, T. & Mermelstein, R. A global measure of perceived stress. J. health social behavior 385–396,538
+https://doi.org/10.2307/2136404 (1983).539
+42. Luthans, F., Avolio, B. J., Avey, J. B. & Norman, S. M. Positive psychological capital: Measurement and relationship with540
+performance and satisfaction. Pers. psychology 60, 541–572, https://doi.org/10.1111/j.1744-6570.2007.00083.x (2007).541
+43. John, O. P ., Srivastava, S.et al. The big-five trait taxonomy: History, measurement, and theoretical perspectives. (1999).542
+44. Rosenberg, M. et al. Society and the adolescent self-image, vol. 11 (Princeton university press Princeton, NJ, 1965).543
+45. Diener, E., Emmons, R. A., Larsen, R. J. & Griffin, S. The satisfaction with life scale. J. personality assessment 49, 71–75,544
+https://doi.org/10.1207/s15327752jpa4901_13 (1985).545
+46. Kim, J.-H., Kim, B.-H. & Ha, M.-S. V alidation of a korean version of the big five inventory. J. Hum. Underst. Couns. 32,546
+47–65 (2011).547
+47. McColl-Kennedy, J. R., Patterson, P . G., Smith, A. K. & Brady, M. K. Customer rage episodes: emotions, expressions and548
+behaviors. J. Retail. 85, 222–237, https://doi.org/10.1016/j.jretai.2009.04.002 (2009).549
+48. Surachartkumtonkun, J., McColl-Kennedy, J. R. & Patterson, P . G. Unpacking customer rage elicitation: A dynamic model.550
+J. Serv. Res. 18, 177–192, https://doi.org/10.1177/1094670514556275 (2015).551
+49. Harris, L. C. Service employees and customer phone rage: An empirical analysis. Eur. J. Mark. 47, 463–484, https:552
+//doi.org/10.1108/03090561311297418 (2013).553
+50. Schuller, B. & Batliner, A. Computational paralinguistics: emotion, affect and personality in speech and language554
+processing (John Wiley & Sons, 2013).555
+51. Akçay, M. B. & O ˘guz, K. Speech emotion recognition: Emotional models, databases, features, preprocessing methods,556
+supporting modalities, and classifiers. Speech Commun. 116, 56–76, https://doi.org/10.1016/j.specom.2019.12.001 (2020).557
+52. Koduru, A., V aliveti, H. B. & Budati, A. K. Feature extraction algorithms to improve the speech emotion recognition rate.558
+Int. J. Speech Technol. 23, 45–55, https://doi.org/10.1007/s10772-020-09672-4 (2020).559
+53. Ardila, R. et al. Common voice: A massively-multilingual speech corpus. In Proceedings of the Twelfth Language560
+Resources and Evaluation Conference, 4218–4222 (2020).561
+54. Burkhardt, F. et al. A database of german emotional speech. In Interspeech, vol. 5, 1517–1520 (2005).562
+55. Giannakakis, G. et al. Stress and anxiety detection using facial cues from videos. Biomed. Signal Process. Control. 31,563
+89–101, https://doi.org/10.1016/j.bspc.2016.06.020 (2017).564
+56. Giannakakis, G., Manousos, D., Chaniotakis, V . & Tsiknakis, M. Evaluation of head pose features for stress detection565
+and classification. In 2018 IEEE EMBS International Conference on Biomedical Health Informatics (BHI), 406–409,566
+https://doi.org/10.1109/BHI.2018.8333454 (2018).567
+57. Lee, D., Park, E., G., K., Han, Y . & Lee, U. Emowork: A multimodal dataset for assessing emotion, stress, and emotional568
+workload in interpersonal work scenario, https://doi.org/10.5281/zenodo.15181219 (2025).569
+58. Sharma, K., Castellini, C., V an Den Broek, E. L., Albu-Schaeffer, A. & Schwenker, F. A dataset of continuous affect570
+annotations and physiological signals for emotion analysis. Sci. data 6, 196, https://doi.org/10.6084/m9.figshare.9891446571
+(2019).572
+59. Shojaei, N. et al. A publicly available pharyngitis dataset and baseline evaluations for bacterial or nonbacterial classification.573
+Sci. Data 12, 1418, https://doi.org/10.1038/s41597-025-05780-5 (2025).574
+60. Breiman, L. Random forests. Mach. learning 45, 5–32, https://doi.org/10.1023/A:1010933404324 (2001).575
+61. Chen, T. et al. Xgboost: extreme gradient boosting. R package version 0.4-2 1, 1–4 (2015).576
+62. Loh, W.-Y . Classification and regression trees. Wiley interdisciplinary reviews: data mining knowledge discovery 1, 14–23,577
+https://doi.org/10.1002/widm.8 (2011).578
+63. Hearst, M. A., Dumais, S. T., Osuna, E., Platt, J. & Scholkopf, B. Support vector machines. IEEE Intell. Syst. their579
+applications 13, 18–28, https://doi.org/10.1109/5254.708428 (1998).580
+64. Duda, R. O., Hart, P . E. et al. Pattern classification and scene analysis, vol. 3 (Wiley New Y ork, 1973).581
+65. Park, E., Lee, D., Han, Y ., Diefendorff, J. & Lee, U. Hide-and-seek: Detecting workers’ emotional workload in582
+emotional labor contexts using multimodal sensing. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 8, https:583
+//doi.org/10.1145/3678593 (2024).584
+12/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+66. Welch, G., Bishop, G. et al. An introduction to the kalman filter. (1995).585
+67. Wusk, G. C., Abercromby, A. F. & Gabler, H. C. Psychophysiological monitoring of aerospace crew state. In Adjunct586
+Proceedings of the 2019 ACM International Joint Conference on Pervasive and Ubiquitous Computing and Proceedings of587
+the 2019 ACM International Symposium on Wearable Computers, 404–407, https://doi.org/10.1145/3341162.3349309588
+(2019).589
+68. Linssen, L., Landman, A., van Baardewijk, J. U., Bottenheft, C. & Binsch, O. Using accelerometry and heart rate data590
+for real-time monitoring of soldiers’ stress in a dynamic military virtual reality scenario. Multimed. Tools Appl. 81,591
+24739–24756, https://doi.org/10.1007/s11042-022-12705-6 (2022).592
+69. Han, Y ., Toshnazarov, K. E., Kim, B. H., Noh, Y . & Lee, U. Watchppg: An open-source toolkit for ppg-based stress593
+detection using off-the-shelf smartwatches. In Adjunct Proceedings of the 2023 ACM International Joint Conference on594
+Pervasive and Ubiquitous Computing & the 2023 ACM International Symposium on Wearable Computing, UbiComp/ISWC595
+’23 Adjunct, 208–209, https://doi.org/10.1145/3594739.3610800 (Association for Computing Machinery, New Y ork, NY ,596
+USA, 2023).597
+70. Elfenbein, H. A. & Ambady, N. On the universality and cultural specificity of emotion recognition: a meta-analysis.598
+Psychol. bulletin 128, 203, https://doi.org/10.1037/0033-2909.128.2.203 (2002).599
+71. Kim, Z. H. & Lausberg, H. Koreans and germans: Cultural differences in hand movement behaviour and gestural repertoire.600
+J. Intercult. Commun. Res. 47, 439–453, https://doi.org/10.1080/17475759.2018.1475296 (2018).601
+72. Laukka, P . & Elfenbein, H. A. Cross-cultural emotion recognition and in-group advantage in vocal expression: A602
+meta-analysis. Emot. Rev. 13, 3–11, https://doi.org/10.1177/1754073919897295 (2021).603
+73. Etzion, D. & Pines, A. Sex and culture in burnout and coping among human service professionals: A social psychological604
+perspective. J. cross-cultural Psychol. 17, 191–209, https://doi.org/10.1177/0022002186017002004 (1986).605
+74. Greco, A., V alenza, G., Lanata, A., Scilingo, E. P . & Citi, L. cvxeda: A convex optimization approach to electrodermal606
+activity processing. IEEE Transactions on Biomed. Eng. 63, 797–804, https://doi.org/10.1109/TBME.2015.2474131607
+(2016).608
+75. Russell, J. A. A circumplex model of affect. J. personality social psychology 39, 1161, https://doi.org/10.1037/h0077714609
+(1980).610
+76. Park, S.-J., Choi, H.-R., Choi, J.-H., Kim, K.-W. & Hong, J.-P . Reliability and validity of the korean version of the patient611
+health questionnaire-9 (phq-9). Anxiety mood 6, 119–124 (2010).612
+77. Lee, J. et al. The reliability and validity studies of the korean version of the perceived stress scale. Korean J. Psychosom.613
+Medicine 127–134 (2012).614
+78. Lim, T.-H. V alidation of the korean version of positive psychological capital (k-ppc). J. coaching development 16, 157–166615
+(2014).616
+79. Lee, N. S. L. M. K. L. J. H. . L. S. M., J. Rosenberg’self-esteem scale: Analysis of item-level validity. The Korean J.617
+Couns. Psychother. 21, 173–189 (2009).618
+80. Lim, Y . J. Psychometric properties of the satisfaction with life scale among korean police officers, university students, and619
+adolescents. Korean J. Psychol. Gen. 31, 877–896 (2012).620
+Acknowledgments621
+This work was supported by the Institute of Information & communications Technology Planning & Evaluation (IITP) grant622
+funded by the Korean government (MSIT) (No. 2022-0-00064, Development of Human Digital Twin Technologies for623
+Prediction and Management of Emotion Workers’ Mental Health Risks) and the National Research Foundation of Korea (NRF)624
+funded by the MSIT (RS-2022-NR068758)625
+Author Contributions Statement626
+Duri Lee designed, prepared, and conducted the data collection; constructed and pre-processed the dataset; performed the627
+technical validation; and wrote the manuscript and all associated results. Eunji Park co-designed, prepared, and conducted628
+the data collection; contributed to dataset construction and pre-processing; participated in code development; and revised the629
+manuscript. Gyuna Kim contributed to dataset construction and revised both the manuscript and the code. Y unjo Han assisted630
+in data collection, contributed to pre-processing. Uichin Lee supervised the dataset design and data collection, provided overall631
+project guidance, and revised the manuscript.632
+13/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Competing Interests633
+The authors declare no competing interests.634
+Figures & Tables635
+Monitoring Space Data Collection Space
+Polar H10
+Empatica e4
+Muse S
+Webcam
+Headset
+Galaxy Note (B)
+Galaxy Note (A)
+ACC sensor
+EDA sensor
+Optical 
+thermometer
+PPG sensor
+Empatica E4
+Muse S
+Polar H10
+Headset microphone
+ECG sensor
+AF 7 AF 8
+TP 9 TP 10
+Desktop
+Figure 1. Data collection setup.
+14/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+How did you feel at that moment? 
+Valence
+Arousal
+Self-reported data collection
+ To what extent did you try to suppress 
+your emotion at that moment? 
+Step 1. Suppression Step 2. Stress Step 3. Emotion
+How much did you get stressed 
+at that moment? 
+Figure 2. Label acquisition process.
+Main Phase (Customer Interaction)
+B1 B2 B3
+Baseline Measurement Self-Reported Data Collection 
+x 3
+Call 1 Call 2 Call 3 Calls (Restrospective)
+Suppression Stress Emotion
+Call Agent
+ Customer
+Figure 3. Overview of the data collection procedure.
+Figure 4. Relationship between the original pickle (.pkl) files and the CSV folder layout.
+15/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Stress
+Suppression
+Normal Shouting Swearing Normal Shouting Swearing
+0
+5
+10
+15
+20
+0
+5
+10
+15
+20
+Arousal
+Valence
+1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Normal Shouting Swearing
+Figure 5. Distributions of self-reported labels across experimental conditions.
+Figure 6. Area Under the Curve (AUC) scores for each test dataset (i.e., participant) across five machine learning models to
+classify experimental condition (low emotional workload vs. high emotional workload): Random Forest, Support V ector
+Machine (SVM), XGBoost, k-Nearest Neighbors (kNN), and Decision Tree.
+16/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Dataset Condition Collected Data Type Self-reported Labels (frequency) Participants
+DEAP21
+(2012) Stimulus (watching videos) Physiological data (EEG, EDA, BVP , RESP ,
+TEMP , EMG, EOG) SAM and liking (after each stimulus) 32
+SWELL-
+KW29
+(2014)
+Scenario (conducting tasks
+of typical knowledge work) Physiological data (ECG, EDA) NASA-Task Load Index, SAM, stress
+(after task) 25
+DECAF22
+(2015) Stimulus (watching videos) Physiological data (MEG, hEOG, ECG,
+tEMG), Behavioral data (facial video)
+Arousal and valence (after each stimu-
+lus) 30
+ASCERT AIN23
+(2016)
+Stimulus (watching movie
+clips)
+Physiological data (ECG, EDA, EEG), Be-
+havioral data (ACC)
+Arousal, valence, engagement, liking,
+and familiarity (after each stimulus) 58
+DREAMER24
+(2018)
+Stimulus (watching film
+clips) Physiological data (EEG, ECG) SAM (after each stimulus) 23
+WESAD28
+(2018)
+Stimulus (watching videos,
+TSST)
+Physiological data (ECG, EDA, EMG, RESP ,
+TEMP , BVP), Behavioral data (ACC)
+PANAS, STAI, SAM, SSSQ, and four
+affect questions (5 times per session) 15
+K-EmoCon30
+(2020)
+Scenario (naturalistic con-
+versation)
+Physiological data (EEG, ECG, BVP , EDA,
+TEMP), Behavioral data (ACC)
+Arousal, valence, affective categories
+(continuous annotation per 5 seconds) 32
+AMIGOS25
+(2021) Stimulus (watching videos) Physiological data (EEG, ECG, EDA)
+SAM, liking, familiarity, self-
+assessment level, and Ekman’s basic
+emotions (before and after each
+stimulus)
+40
+Emognition26
+(2022) Stimulus (watching films)
+Physiological data (EEG, BVP , HR, EDA,
+skin Temperature), Behavioral data (ACC,
+and GYRO, and the upper-body videos)
+Nine emotions, SAM (after each stim-
+ulus) 43
+FACED27
+(2023) Stimulus (watching videos) Physiological data (EEG) Nine emotions, arousal, valence, famil-
+iarity, liking (after each stimulus) 123
+U AV31
+(2024)
+Scenario (cue-based con-
+versation scenario)
+Physiological data (EEG), Behavioral data
+(audio and video recording)
+Arousal and valence (after each conver-
+sation) 42
+EmoWork Scenario (dyadic conversa-
+tion in call center)
+Physiological data (EEG, ECG, BVP , EDA,
+TEMP), Behavioral data (ACC, features from
+audio, features from video)
+Arousal, valence, stress, and emotional
+workload (continuous annotation per
+100 ms)
+31
+Table 1. Open datasets collected in lab environments for affective computing. This table summarizes publicly available
+datasets for studying affective computing, categorized by experimental conditions (stimulus-based or scenario-based). It
+includes the types of physiological and behavioral data collected, self-reported labels, and the number of participants for each
+dataset.
+Measurement Questions Metric Reference
+Suppression To what extent did you try to suppress your emotion at that moment? 20-point Likert scale Gabriel and Diefendorff 35
+Stress How much did you get stressed at that moment? 20-point Likert scale Gabriel and Diefendorff 35
+Arousal How do you feel at the moment?
+(Arousal means ‘immediate feeling of excitement vs. calmness’) 9-point Likert scale Russell 75
+V alence How did you feel at that moment?
+(V alence means ‘immediate feeling of negative vs positive’) 9-point Likert scale Russell 75
+Table 2. Questions and rating scales for self-reported labels acquisition.
+17/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Survey Measurement # of items reponse Korean Adaptation
+PHQ-9 (Patient Health Questionnaire-9) 40 Depressive symptoms 9 items; 4-point Likert Park et al. 76
+PSS (Perceived Stress Scale) 41 Perceived stress 10 items; 5-point Likert Lee et al. 77
+PPC (Positive Psychological Capital Questionnaire) 42 Self-efficacy, hope, optimism, and
+resilience 18 items; 6-point Likert Lim 78
+BFI (Big Five Inventory)
+Five Personality traits (Openness,
+Conscientiousness, Extraversion,
+Agreeableness, Neuroticism)
+44 items; 5-point Likert Kim et al. 46
+RSE (Rosenberg Self-Esteem Scale) 44 Global self-esteem 10 items; 4-point Likert Lee et al. 79
+SWLS (Satisfaction with Life Scale) 45 Cognitive life satisfaction 5 items; 7-point Likert Lim 80
+Note. All questionnaires used in this study were based on validated Korean translations of the original instruments. In particular, personality traits were
+measured using the 15-item Korean version of the Big Five Inventory (K-BFI-15).
+Table 3. Summary of psychological survey instruments used in the study and their validated Korean adaptations.
+Role Device Sampling
+Rate Data B1 B2 B3 C1 C2 C3
+Customer,
+Worker
+Jabra Biz 2300
+USB MS Mono 44,100 Hz
+Audio derived features with a time-window size of 25 ms
+and a 10 ms sliding window
+(F0, Energy, ZCR, voiced-flag, MFCCs, spectral centroid,
+spectral bandwidth, roll-off, roll-off min, spectral contrast)
+xoxooo
+Worker Logitech C270 30 FPS Video derived features (head movements, lip movement,
+and eye movements) xxxooo
+Worker Muse S 256 Hz EEG (TP9, AF7, AF8, TP10) o o o o o o
+Worker Polar H10 130 Hz ECG, heart rate, RR-intervals o o o o o o
+Worker Empatica E4
+BVP (64 Hz)
+EDA (4 Hz)
+Temp (4 Hz)
+ACC (32 Hz)
+BVP , EDA, Temperature, and ACC (x,y, and z) o o o o o o
+Worker E-Prime 3.0 5-10 Hz Self-reported labels (stress, arousal, valence, and
+suppression) xxxooo
+Table 4. Summary of dataset. Audio and video data are provided as derived features, while other sensor data are shared in
+their raw form as originally collected from each device. During baseline measurements, audio data were recorded only from the
+worker in B2. Video data and self-reported labels were only collected from C1, C2, and C3. E-prime 3.0 is software installed
+on a laptop.
+Category Distribution
+Sex Female = 24, Male = 7
+Education Graduated from high school = 19, Graduated from college or university = 12
+Dominant hand Right = 30, left = 1
+Age (year) Average = 36.19 (SD = 11.38)
+Career (year) Average = 3.29 (SD = 2.49)
+PHQ-9 No depression = 19, Light depression = 9, Moderate depression = 3, Moderately severe depression = 0, Severe depression = 0
+PSS Low stress = 10, Moderate stress = 18, High stress = 3
+RSE Low self-esteem = 4, Normal = 22, Above normal = 5
+SWLS Extremely dissatisfied = 1, Dissatisfied = 7, Below average = 8, Average = 7, Highly satisfied = 7, V ery highly satisfied = 1
+Table 5. Demography information of participants. This table presents the demographic distribution of participants, including
+sex, education level, dominant hand, age, and career length as call agents. Additionally, it summarizes psychological measures
+such as depression (PHQ-9), perceived stress (PSS), self-esteem (RSE), and life satisfaction (SWLS). All questionnaires for
+each measurement and information for calculation is included in shared code.
+18/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Sensor Data Unit Definition
+Audio F0 Hz Fundamental frequency (63 Hz–2,093 Hz, librosa.pyin), null = 0
+Audio Energy - Root mean square of energy (librosa.feature.rms)
+Audio ZCR - Rate of zero crossings in the signal (librosa.feature.zero_crossing_rate)
+Audio V oiced Flag 0 or 1 Binary indicator for detected fundamental frequency (63 Hz–2,093 Hz, librosa.pyin)
+Audio MFCCs 1–13 - 13 mel-frequency cepstral coefficients representing timbre (librosa.feature.mfcc, Hamming
+window applied)
+Audio Spectral Centroid Hz Center of mass of the spectrum (librosa.feature.spectral_centroid, Hamming window
+applied)
+Audio Spectral Bandwidth Hz Spread of frequencies around the spectral centroid (librosa.feature.spectral_bandwidth,
+Hamming window applied)
+Audio Roll-off Hz Frequency below which a 99% of the total signal energy is contained (li-
+brosa.feature.spectral_rolloff, roll percent = 0.99)
+Audio Roll-off min Hz Frequency below which a 1% of the total signal energy is contained (li-
+brosa.feature.spectral_rolloff, roll percent = 0.01)
+Audio Spectral contrast - Difference between spectral peaks and valleys (librosa.feature.spectral_contrast)
+Video Rotion_x, y, z radian 3 Rodrigues rotation vectors from head movemenets (cv2.solvePnP)
+Video Translation vector_x, y, z - 3D translation (or shift) between the world coordinate system and the camera coordinate
+system (cv.solvePnp)
+Video Translation vector_total - Absolute distance of face from camera
+Video Blink - A binary flag indicating a change in EAR (Eye Aspect Ratio). If one of the eyes’ EAR was
+below 0.3 in the previous frame and is ≥ 0.3 in the current frame, set to 1; otherwise, 0.
+Video Gaze X - Relative horizontal position of the iris center with respect to the nose tip (nose tip: landmark
+1, left iris: 474, 475, 476, 477, right iris: 469, 470, 471, 472)
+Video Gaze Y - Relative vertical position of the iris center with respect to the nose tip (nose tip: landmark
+1, left iris: 474, 475, 476, 477, right iris: 469, 470, 471, 472)
+Video Left Lip Corner - absolute distance of lip corner from the nose tip (nose tip: landmark 1, left lip corner: 61)
+Video Right Lip Corner - absolute distance of lip corner from the nose tip (nose tip: landmark 1, right lip corner:
+291)
+Video Error type - type of feature extraction results (0 : success, 1: fail to read frame, 2: fail to detect face
+and landmarks)
+Muse S TP9 µV electroencephalogram (EEG) signals from temporal posterior on the left side
+Muse S AF7 µV EEG signals from anterior frontal on the left side
+Muse S AF8 µV EEG signals from anterior frontal on the right side
+Muse S TP10 µV EEG signals from temporal posterior on the right side
+Polar H10 ECG µV Electrical activity of the heart, captured using electrocardiography
+Polar H10 Heart Rate (HR) BPM Number of heartbeats per minute
+Polar H10 RR Intervals ms Time interval between consecutive R-wave peaks in the ECG signal
+E4 EDA µS Electrodermal activity, measuring skin conductance as an indicator of physiological arousal
+E4 BVP - Blood volume pulse, measuring cardiovascular activity
+E4 IBI ms Interbeat interval, the time between successive heartbeats
+E4 Skin Temperature °C Temperature measured at the skin surface
+E4 Acceleration m/s² 3-axis accelerometer data capturing wrist movement
+Table 6. Types of sensor and data definition. This table provides an information on the collected data, including sensor type,
+data type, measurements units, and definitions for each feature. In case of extracted features such as audio and video,
+information on the functions are also provided.
+19/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Models AUC (std) Accuracy (std) F1-score (std) Precision (std) Recall (std)
+RandomForest 0.946 (0.110) 0.868 (0.150) 0.891 (0.165) 0.890 (0.122) 0.923 (0.192)
+SVM 0.914 (0.100) 0.840 (0.107) 0.875 (0.108) 0.881 (0.081) 0.884 (0.143)
+XGBoost 0.903 (0.172) 0.838 (0.163) 0.871 (0.178) 0.858 (0.155) 0.926 (0.197)
+kNN 0.770 (0.098) 0.747 (0.073) 0.822 (0.061) 0.773 (0.058) 0.884 (0.093)
+DecisionTree 0.751 (0.159) 0.768 (0.145) 0.814 (0.139) 0.837 (0.121) 0.822 (0.191)
+Table 7. Technical validation of dataset using five basic machine learning models. The reported values are the average
+performance across all test sets, and the standard deviation (std) indicates the variation among the test sets.
+Models Stress (mean) Stress (std) Suppress
+(mean)
+Suppress
+(std)
+V alence
+(mean)
+V alence
+(std)
+Arousal
+(mean)
+Arousal
+(std)
+RandomForest 0.783 0.132 0.739 0.115 0.745 0.166 0.649 0.117
+SVM 0.731 0.098 0.677 0.102 0.690 0.113 0.612 0.085
+XGBoost 0.732 0.165 0.718 0.172 0.713 0.169 0.637 0.173
+kNN 0.645 0.105 0.586 0.063 0.609 0.102 0.541 0.064
+DecisionTree 0.567 0.141 0.581 0.101 0.560 0.147 0.542 0.081
+Table 8. Summary of classification results of perceived stress, suppression, valence and emotion using five basic Machine
+Learning Models (AUC).
+20/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Figure legends636
+Figure 1. The room to collect data from call agents consisted of two spaces: a monitoring and data collection space. In the637
+data collection space, the webcam and headset were wired to a desktop. Muse S sent signals to a desktop, Polar H10, and638
+Empatica E4 sent signals to each assigned mobile device via Bluetooth. The call agents wore a headband (i.e., Muse S), headset,639
+wristbands (i.e., Empatica E4 and Galaxy Watch 5), and a chestband (i.e., Polar H10).640
+Figure 2. After scenario-based sensor data collection, call agents performed self-reported labeling in the order of suppression641
+(i.e., emotional workload), stress, and emotion (i.e., arousal and valence) through retrospective listening to the calls. They642
+listened to the same calls three times for each labeling process. While listening to the calls, they moved the mouse cursor on the643
+guided images to answer each question. We used an image of a slider with an anchor value ranging from 1 to 20 (20-Point644
+Likert-scale) that moved with the cursor for suppression and stress labeling, and utilized an image of a two-dimensional space,645
+which represents arousal and valence along each axis with values ranging from 1 to 9 (9-Point Likert-scale) for emotion labeling.646
+The order of calls was identical to that in the sensor data collection.647
+Figure 3. The experiment consisted of three phases: (1) baseline measurements (B1–B3), (2) the main phase involving648
+three customer interaction calls (C1–C3) under varied emotional conditions, and (3) retrospective self-reported data collection649
+for suppression, stress, and emotion.650
+Figure 4.Each .pkl is decomposed into a portable folder (CSV hierarchy: dictionary keys map to subfolders, and each651
+leaf-level dataframe is saved as an individual csv. Arrows indicate the mapping)652
+Figure 5.The top row shows kernel density plots of arousal and valence ratings in each condition (Normal, Shouting,653
+Swearing). The bottom row illustrates violin plots of perceived stress (left) and suppression (right) for each condition. Compared654
+to the Normal condition, Shouting and Swearing conditions elicited higher stress, suppression, and arousal with lower valence.655
+Figure 6. Each bar represents the average AUC over cross-validation folds for a single participant, sorted in ascending656
+order per model. Substantial interpersonal variability was observed in model performance in the data from some participants.657
+21/21
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Monitoring Space Data Collection Space
+Polar H10
+Empatica e4
+Muse S
+Webcam
+Headset
+Galaxy Note (B)
+Galaxy Note (A)
+ACC sensor
+EDA sensor
+Optical 
+thermometer
+PPG sensor
+Empatica E4
+Muse S
+Polar H10
+Headset microphone
+ECG sensor
+AF 7 AF 8
+TP 9 TP 10
+Desktop
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+How did you feel at that moment? 
+Valence
+Arousal
+Self-reported data collection
+ To what extent did you try to suppress 
+your emotion at that moment? 
+Step 1. Suppression Step 2. Stress Step 3. Emotion
+How much did you get stressed 
+at that moment? 
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Main Phase (Customer Interaction)
+B1 B2 B3
+Baseline Measurement Self-Reported Data Collection 
+x 3
+Call 1 Call 2 Call 3 Calls (Restrospective)
+Suppression Stress Emotion
+Call Agent
+ Customer
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+Stress
+Suppression
+Normal Shouting Swearing Normal Shouting Swearing
+0
+5
+10
+15
+20
+0
+5
+10
+15
+20
+Arousal
+Valence
+1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Normal Shouting Swearing
+ARTICLE IN PRESS
+ARTICLE IN PRESS
+
+ARTICLE IN PRESS
+ARTICLE IN PRESS

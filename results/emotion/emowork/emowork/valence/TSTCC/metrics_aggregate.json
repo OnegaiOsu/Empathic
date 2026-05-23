@@ -1,10 +1,10 @@
 {
-  "accuracy_mean": 0.7000366776625359,
-  "accuracy_std": 0.16460881772290883,
-  "balanced_accuracy_mean": 0.5444680871673906,
-  "macro_f1_mean": 0.47740786821864933,
-  "macro_f1_std": 0.13155481318020498,
-  "macro_recall_mean": 0.5444680871673906,
-  "weighted_f1_mean": 0.6982876931201948,
-  "cohen_kappa_mean": 0.03457635266713949
+  "accuracy_mean": 0.7147990694787034,
+  "accuracy_std": 0.16902574934875822,
+  "balanced_accuracy_mean": 0.5760235536522301,
+  "macro_f1_mean": 0.48579709513077596,
+  "macro_f1_std": 0.12239040529362785,
+  "macro_recall_mean": 0.5760235536522301,
+  "weighted_f1_mean": 0.7050027632756224,
+  "cohen_kappa_mean": 0.059059363719569866
 }

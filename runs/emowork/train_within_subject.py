@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import os
 import sys
+import tempfile
 import time
 from dataclasses import replace  # noqa: F401  (kept for ad-hoc cfg overrides)
 from typing import Dict, List, Optional
@@ -131,6 +132,22 @@ def _eval_deep(arch: str, num_classes: int,
     }
 
 
+def _safe_write_csv(df: pd.DataFrame, path: str) -> None:
+    """Write *df* to *path* via a temp file to avoid PermissionError on locked CSVs."""
+    dir_ = os.path.dirname(os.path.abspath(path))
+    fd, tmp = tempfile.mkstemp(dir=dir_, suffix=".csv.tmp")
+    try:
+        os.close(fd)
+        df.to_csv(tmp, index=False)
+        os.replace(tmp, path)  # atomic on same filesystem
+    except Exception:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
+        raise
+
+
 def _run_target(bundle: DatasetBundle, target: str) -> pd.DataFrame:
     print(f"\n{'#'*70}\n# WITHIN-SUBJECT TARGET = {target}\n{'#'*70}", flush=True)
     labels = _label_list(target, bundle)
@@ -225,8 +242,8 @@ def _run_target(bundle: DatasetBundle, target: str) -> pd.DataFrame:
 
     out_dir = os.path.join(RESULTS_ROOT, target)
     os.makedirs(out_dir, exist_ok=True)
-    df.to_csv(os.path.join(out_dir, "per_subject.csv"), index=False)
-    summary.to_csv(os.path.join(out_dir, "summary.csv"), index=False)
+    _safe_write_csv(df, os.path.join(out_dir, "per_subject.csv"))
+    _safe_write_csv(summary, os.path.join(out_dir, "summary.csv"))
 
     print(f"\n[within] {target} summary:", flush=True)
     print(summary.to_string(index=False), flush=True)

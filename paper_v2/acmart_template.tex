@@ -1,0 +1,137 @@
+\documentclass[sigconf,nonacm]{acmart}
+
+%% Pandoc helpers
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{calc}
+\usepackage{etoolbox}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+%% ACM bookkeeping
+\copyrightyear{2026}
+\acmYear{2026}
+\setcopyright{rightsretained}
+\acmConference[Conference'26]{ACM Conference}{2026}{Venue, City, Country}
+\acmBooktitle{Proceedings of ACM Conference (Conference'26)}
+\acmISBN{978-x-xxxx-xxxx-x/26/06}
+\acmDOI{10.1145/nnnnnnn.nnnnnnn}
+
+\begin{document}
+
+\title{Picking a Workplace Stress Detector by Ablation: An Honest
+Model \(\times\) Protocol \(\times\) Sensor \(\times\) Calibration
+Evaluation on EmoWork}
+
+\author{Mao Zeth Abel}
+\affiliation{%
+  \institution{Empathic Project}
+  \country{}}
+\email{}
+
+\author{Rona Margaret Dalistan}
+\affiliation{%
+  \institution{Empathic Project}
+  \country{}}
+\email{}
+
+\author{Jannbeau Amadeus Rain Astrero}
+\affiliation{%
+  \institution{Empathic Project}
+  \country{}}
+\email{}
+
+\renewcommand{\shortauthors}{Abel, Dalistan, and Astrero}
+
+\begin{abstract}
+We ask a single engineering question: \emph{given a 31-subject
+multimodal physiological corpus, which model--protocol--sensor--%
+calibration combination is the honest minimum for a deployable
+workplace stress detector, and what is the achievable ceiling once a
+per-employee calibration step is allowed?} We answer it on
+\textbf{EmoWork}, a 31-subject, 12-channel corpus combining cardiac
+(ECG, BVP, HR), electrodermal (EDA), thermal (TEMP), inertial (ACC)
+and EEG (TP9, AF7, AF8, TP10) recordings during simulated call-centre
+knowledge work, with binary stress, binary arousal, binary valence
+and four-class affect-quadrant labels. The published multimodal
+affect literature routinely reports macro-F1 above 0.80 and
+Cohen's \(\kappa\) above 0.60; we show on EmoWork that a substantial
+fraction of those numbers are protocol artefacts, that a much smaller
+fraction of channels is actually doing the predictive work, and that
+almost the entire residual gap to the literature can be closed by
+per-subject calibration rather than by architectural change.
+
+The study is structured as a four-axis ablation:
+\textbf{model \(\times\) evaluation protocol \(\times\) sensor subset
+\(\times\) calibration regime}. We benchmark eleven models---three
+classical (Random Forest, Logistic Regression, XGBoost), six deep
+fusion learners (1D-CNN, BiLSTM, TinyTCN, Conformer, multi-stream,
+DANN-Conformer), one self-supervised pre-trained encoder (TS-TCC),
+plus a soft-vote ensemble---under leave-one-subject-out
+cross-validation (LOSO). LOSO Cohen's \(\kappa\) peaks at \(0.38\)
+for stress (Random Forest), \(0.15\) for arousal (Conformer fusion),
+\(0.10\) for valence (BiLSTM fusion) and \(0.05\) for the four-class
+quadrant target (XGBoost). To explain the gap, we re-run the three
+classical models under three additional protocols: subject-grouped
+5-fold, window-stratified 10-fold and a window-stratified 80/20
+hold-out. Window-mixing protocols inflate stress \(\kappa\) from 0.31
+(LOSO) to \textbf{0.66} (window 80/20); arousal \(\kappa\) jumps from
+0.01 to 0.43. Subject-grouped 5-fold tracks LOSO closely, isolating
+the inflation to windows of the same subject crossing the train/test
+boundary. A per-modality ablation reframes the multimodal narrative:
+ECG alone (17 features) equals the full 149-feature fusion stack on
+stress, and adding EEG to an 89-d physio stack reduces arousal
+\(\kappa\) from 0.08 to 0.02. A within-subject 70/30 calibration
+regime (\(\approx\!14\) labelled windows per subject) lifts macro-F1
+to 0.91 (stress, LogReg), 0.82 (arousal, BiLSTM), 0.86 (valence,
+BiLSTM) and 0.72 (quadrant, CNN1D), exceeding DEAP/AMIGOS
+within-subject baselines by \(\approx\!+0.25\). The contribution is a
+defensible four-axis floor and ceiling: macro-F1 \(\approx 0.70\) for
+the generalisation problem, \(\approx 0.91\) for the personalisation
+problem, with explicit accounting for how every \(+0.05\) above
+either threshold in the literature is most plausibly explained by
+protocol leakage or by silent per-subject evaluation. Per-subject
+calibration, not model architecture, is the dominant lever.
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+  <concept>
+    <concept_id>10010147.10010178.10010179</concept_id>
+    <concept_desc>Computing methodologies~Machine learning</concept_desc>
+    <concept_significance>500</concept_significance>
+  </concept>
+  <concept>
+    <concept_id>10010520.10010553.10010562</concept_id>
+    <concept_desc>Computer systems organization~Embedded and cyber-physical systems</concept_desc>
+    <concept_significance>300</concept_significance>
+  </concept>
+  <concept>
+    <concept_id>10003120.10003123.10010860</concept_id>
+    <concept_desc>Human-centered computing~User studies</concept_desc>
+    <concept_significance>300</concept_significance>
+  </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computing methodologies~Machine learning}
+\ccsdesc[300]{Computer systems organization~Embedded and cyber-physical systems}
+\ccsdesc[300]{Human-centered computing~User studies}
+
+\keywords{EmoWork, multimodal affect recognition, leave-one-subject-out,
+data leakage, modality ablation, per-subject calibration,
+personalisation, electrocardiography, electrodermal activity,
+electroencephalography, stress detection, valence, arousal,
+Cohen's kappa}
+
+\maketitle
+
+$body$
+
+\end{document}
