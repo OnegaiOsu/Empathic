@@ -1,8 +1,8 @@
 # Paper (v2) — EmoWork honest evaluation
 
 This folder contains the academic-style write-up of the EmoWork
-multimodal study. It is the EmoWork counterpart of `paper/`, which
-covered WESAD.
+multimodal study. It is the EmoWork counterpart of
+[`archive/wesad/paper/`](../archive/wesad/paper/), which covered WESAD.
 
 ## Sections
 
